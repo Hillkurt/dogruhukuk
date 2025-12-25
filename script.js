@@ -126,17 +126,32 @@ const translations = {
         'dropdown-5': 'Boşanma Davaları',
         'dropdown-6': 'Borçlar Hukuku',
 
+        // Contact
+        'contact-office-de': 'Almanya Ofisi',
+        'contact-office-tr': 'Türkiye Ofisi',
+        'contact-phone': 'Telefon',
+        'contact-email': 'E-posta',
+        'form-option-select': 'Seçiniz',
+        'form-option-miras': 'Miras Hukuku',
+        'form-option-veraset': 'Veraset İlamı',
+        'form-option-gayrimenkul': 'Gayrimenkul Hukuku',
+        'form-option-is': 'İş Hukuku',
+        'form-option-bosanma': 'Boşanma Davaları',
+        'form-option-borclar': 'Borçlar Hukuku',
+        'form-option-diger': 'Diğer',
+        'form-note': '* Gönderdiğiniz bilgiler gizlilik kapsamında korunmaktadır.',
+
         // Footer
         'footer-desc': 'Türk hukuku alanında profesyonel danışmanlık ve temsil hizmeti sunmaktayız. Mannheim ve Ankara ofislerimizle yanınızdayız.',
-        'footer-corp': 'Kurumsal',
+        'footer-corporate': 'Kurumsal',
         'footer-home': 'Ana Sayfa',
         'footer-about': 'Hakkımızda',
         'footer-why': 'Neden Biz',
         'footer-vision': 'Vizyonumuz',
         'footer-contact': 'İletişim',
-        'footer-areas': 'Hukuk Alanları',
+        'footer-legal-areas': 'Hukuk Alanları',
         'footer-legal': 'Yasal',
-        'footer-privacy': 'Gizlilik Politikası',
+        'footer-policy': 'Gizlilik Politikası',
         'footer-kvkk': 'KVKK Aydınlatma',
         'footer-imprint': 'Künye',
         'footer-data': 'Veri Koruma',
@@ -175,6 +190,7 @@ const translations = {
         'vision-title': 'VİZYONUMUZ',
         'vision-text-1': 'Hukukun üstünlüğüne ilişkin güçlü bir anlayışla, öncelikli hedefimiz müvekkillerimizin haklarını ve çıkarlarını en üst düzeyde koruyan, güvenilir, çözüm odaklı ve zamanın taleplerine uyum sağlayan bir hukuk firması olmaktır.',
         'vision-text-2': 'Sadece güncel değil, aynı zamanda gelecekteki ihtiyaçları da öngören, etik değerlere bağlı, sürekli gelişen, dijital dönüşüme açık ve ulusal ve uluslararası alanda tanınan bir hukuk danışmanı olarak kendimizi farklılaştırmaya çalışıyoruz.',
+        'vision-text-3': 'Vizyonumuz, sadece bir hizmet sağlayıcı değil, aynı zamanda özel ve kurumsal müvekkillerimiz için uzun vadeli bir çözüm ortağı olmaktır.',
 
         // Mission
         'mission-title': 'MİSYONUMUZ',
@@ -358,7 +374,7 @@ const translations = {
         'nav-why': 'WARUM WIR',
         'nav-vision': 'UNSERE VISION',
         'nav-contact': 'KONTAKT',
-        'header-btn': 'Termin buchen',
+        'header-btn': 'Termin vereinbaren',
 
         // Hero
         'hero-badge': 'Experte für türkisches Recht',
@@ -392,7 +408,7 @@ const translations = {
         'contact-tag': 'Kontakt',
         'contact-title': 'Für Rechtsberatung<br><span class="highlight">Kontaktieren Sie uns</span>',
         'contact-desc': 'Das Erstgespräch ist kostenlos. Vereinbaren Sie einen Termin für Ihre rechtlichen Fragen. Überzeugen Sie sich selbst von der Qualität meiner Arbeit!',
-        'form-title': 'Terminanfrage',
+        'form-title': 'Terminvereinbarung',
         'form-name': 'Name *',
         'form-email': 'E-Mail *',
         'form-phone': 'Telefon',
@@ -418,18 +434,40 @@ const translations = {
         'dropdown-5': 'Scheidungsverfahren',
         'dropdown-6': 'Schuldrecht',
 
-        // Footer
-        'footer-desc': 'Wir bieten professionelle Beratung und Vertretung im türkischen Recht. Mit unseren Büros in Mannheim und Ankara sind wir für Sie da.',
-        'footer-corp': 'Unternehmen',
+        // Contact Form (DE)
+        'contact-office-de': 'Kanzlei Deutschland',
+        'contact-office-tr': 'Kanzlei Türkei',
+        'contact-phone': 'Telefon',
+        'contact-email': 'E-Mail',
+        'form-title': 'Kontaktieren Sie uns',
+        'form-name': 'Vorname Nachname *',
+        'form-email': 'E-Mail *',
+        'form-phone': 'Telefonnummer',
+        'form-subject': 'Betreff *',
+        'form-message': 'Ihre Nachricht *',
+        'form-submit': 'Senden',
+        'form-option-select': 'Bitte wählen',
+        'form-option-miras': 'Erbrecht',
+        'form-option-veraset': 'Erbschein',
+        'form-option-gayrimenkul': 'Immobilienrecht',
+        'form-option-is': 'Arbeitsrecht',
+        'form-option-bosanma': 'Scheidungsverfahren',
+        'form-option-borclar': 'Schuldrecht',
+        'form-option-diger': 'Sonstiges',
+        'form-note': '* Die von Ihnen gesendeten Informationen werden vertraulich behandelt.',
+
+        // Footer (DE)
+        'footer-desc': 'Wir bieten professionelle Beratung und Vertretung im türkischen Recht. Wir sind mit unseren Büros in Mannheim und Ankara für Sie da.',
+        'footer-corporate': 'Unternehmen',
         'footer-home': 'Startseite',
         'footer-about': 'Über Uns',
         'footer-why': 'Warum Wir',
         'footer-vision': 'Unsere Vision',
         'footer-contact': 'Kontakt',
-        'footer-areas': 'Rechtsgebiete',
+        'footer-legal-areas': 'Rechtsgebiete',
         'footer-legal': 'Rechtliches',
-        'footer-privacy': 'Datenschutzerklärung',
-        'footer-kvkk': 'DSGVO-Hinweise',
+        'footer-policy': 'Datenschutz',
+        'footer-kvkk': 'KVKK Info',
         'footer-imprint': 'Impressum',
         'footer-data': 'Datenschutz',
         'footer-copyright': '© 2024 DOĞRU Rechtsanwaltskanzlei. Alle Rechte vorbehalten.',
@@ -465,14 +503,15 @@ const translations = {
 
         // Vision - Extended
         'vision-title': 'UNSERE VISION',
-        'vision-text-1': 'Mit einem starken Verständnis für die Rechtsstaatlichkeit ist es unser vorrangiges Ziel, eine zuverlässige, lösungsorientierte Anwaltskanzlei zu sein, die die Rechte und Interessen unserer Mandanten auf höchstem Niveau schützt und sich den Anforderungen der Zeit anpasst.',
-        'vision-text-2': 'Wir streben danach, uns als Rechtsberater zu differenzieren, der nicht nur aktuelle, sondern auch zukünftige Bedürfnisse antizipiert, ethischen Werten verpflichtet ist, sich ständig weiterentwickelt, offen für die digitale Transformation ist und national sowie international anerkannt ist.',
+        'vision-text-1': 'Mit einem tiefen Verständnis für Rechtsstaatlichkeit ist es unser vorrangiges Ziel, eine vertrauenswürdige und lösungsorientierte Kanzlei zu sein, die die Rechte und Interessen unserer Mandanten auf höchstem Niveau wahrt.',
+        'vision-text-2': 'Wir streben danach, uns als Rechtsberater zu etablieren, der nicht nur aktuelle, sondern auch zukünftige Bedürfnisse antizipiert, ethischen Werten verpflichtet bleibt und sich stetig weiterentwickelt.',
+        'vision-text-3': 'Unsere Vision ist es, nicht nur ein Dienstleister zu sein, sondern ein langfristiger Lösungspartner für unsere privaten und gewerblichen Mandanten.',
 
         // Mission
         'mission-title': 'UNSERE MISSION',
-        'mission-text-1': 'Unser Ziel ist es, die Bedürfnisse und Erwartungen unserer Mandanten unter Einhaltung universeller Rechtsgrundsätze bestmöglich und effektiv zu erfüllen.',
-        'mission-text-2': 'Unsere Hauptaufgabe ist es, durch die sorgfältige Bearbeitung jedes Falles zur Rechtsprechung beizutragen und rechtliche Verfahren verständlich und nachvollziehbar zu machen.',
-        'mission-text-3': 'Wir informieren unsere Mandanten stets <strong>ehrlich, transparent und zeitnah</strong> und handeln immer im Einklang mit der Berufsethik. Wir sind uns unserer sozialen Verantwortung bewusst. Deshalb vertreten wir nicht nur die Menschen, die wir repräsentieren, sondern tragen auch zu einem fairen und nachhaltigen Rechtssystem bei.',
+        'mission-text-1': 'Unser Ziel ist es, die Bedürfnisse und Erwartungen unserer Mandanten unter Einhaltung universeller Rechtsgrundsätze bestmöglich zu erfüllen.',
+        'mission-text-2': 'Unsere Hauptaufgabe ist es, durch die sorgfältige Betreuung jedes Mandats zur Gerechtigkeit beizutragen und rechtliche Verfahren transparent und verständlich zu gestalten.',
+        'mission-text-3': 'Wir informieren unsere Mandanten stets <strong>ehrlich, transparent und zeitnah</strong> und handeln stets nach den Grundsätzen der Berufsethik.',
 
         // Service Titles & CTA (DE)
         'miras-title': 'Erbrecht',
@@ -481,7 +520,7 @@ const translations = {
         'is-title': 'Arbeitsrecht',
         'bosanma-title': 'Scheidungsverfahren',
         'borclar-title': 'Schuldrecht',
-        'service-cta': 'Termin buchen',
+        'service-cta': 'Termin vereinbaren',
 
         // Services - Miras (DE)
         'miras-subtitle': 'Was ist das Erbrecht? Was deckt es ab?',
@@ -710,18 +749,33 @@ const translations = {
         'dropdown-5': 'Divorce Proceedings',
         'dropdown-6': 'Contract Law',
 
-        // Footer
-        'footer-desc': 'We provide professional consultation and representation in Turkish law. With our offices in Mannheim and Ankara, we are here for you.',
-        'footer-corp': 'Corporate',
+        // Contact & Form (EN Translations)
+        'contact-office-de': 'Germany Office',
+        'contact-office-tr': 'Turkey Office',
+        'contact-phone': 'Phone',
+        'contact-email': 'E-mail',
+        'form-option-select': 'Select',
+        'form-option-miras': 'Inheritance Law',
+        'form-option-veraset': 'Certificate of Inheritance',
+        'form-option-gayrimenkul': 'Real Estate Law',
+        'form-option-is': 'Labor Law',
+        'form-option-bosanma': 'Divorce Cases',
+        'form-option-borclar': 'Law of Obligations',
+        'form-option-diger': 'Other',
+        'form-note': '* The information you send is protected under privacy.',
+
+        // Footer (EN)
+        'footer-desc': 'We provide professional consultancy and representation services in Turkish law. We are at your side with our offices in Mannheim and Ankara.',
+        'footer-corporate': 'Corporate',
         'footer-home': 'Home',
         'footer-about': 'About Us',
         'footer-why': 'Why Us',
         'footer-vision': 'Our Vision',
         'footer-contact': 'Contact',
-        'footer-areas': 'Legal Areas',
+        'footer-legal-areas': 'Legal Areas',
         'footer-legal': 'Legal',
-        'footer-privacy': 'Privacy Policy',
-        'footer-kvkk': 'GDPR Notice',
+        'footer-policy': 'Privacy Policy',
+        'footer-kvkk': 'PDPL Info',
         'footer-imprint': 'Imprint',
         'footer-data': 'Data Protection',
         'footer-copyright': '© 2024 DOĞRU Law Firm. All rights reserved.',
@@ -759,6 +813,7 @@ const translations = {
         'vision-title': 'OUR VISION',
         'vision-text-1': 'With a strong understanding of the rule of law, our primary goal is to be a reliable, solution-oriented law firm that protects our clients\' rights and interests at the highest level and adapts to the demands of the time.',
         'vision-text-2': 'We strive to differentiate ourselves as a legal consultant who anticipates not only current but also future needs, is committed to ethical values, constantly developing, open to digital transformation, and recognized nationally and internationally.',
+        'vision-text-3': 'Our vision is to be not just a service provider, but a long-term solution partner for our private and corporate clients.',
 
         // Mission
         'mission-title': 'OUR MISSION',
@@ -987,13 +1042,31 @@ function applyLanguage(lang) {
     // Update HTML lang attribute
     document.documentElement.lang = lang;
 
-    // Navigation
-    const navLinks = document.querySelectorAll('.nav-link');
-    if (navLinks[0]) navLinks[0].textContent = t['nav-home'];
-    if (navLinks[2]) navLinks[2].textContent = t['nav-about'];
-    if (navLinks[3]) navLinks[3].textContent = t['nav-why'];
-    if (navLinks[4]) navLinks[4].textContent = t['nav-vision'];
-    if (navLinks[5]) navLinks[5].textContent = t['nav-contact'];
+    // Generic translation update for all elements with data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (t[key]) {
+            // Handle inputs/placeholders if necessary, but for now textContent is primary
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                if (element.hasAttribute('placeholder')) {
+                    element.setAttribute('placeholder', t[key]);
+                }
+            } else {
+                element.innerHTML = t[key]; // Use innerHTML to support <br> or <strong> tags if any
+            }
+        }
+    });
+
+    // Handle standard placeholders separately if they use different keys (optional logic preservation)
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+
+    if (nameInput) nameInput.placeholder = t['form-name'].replace(' *', '');
+    if (emailInput) emailInput.placeholder = t['form-email'].replace(' *', '');
+    // Phone placeholder optional
+    if (messageInput) messageInput.placeholder = t['form-message'].replace(' *', '');
 
     // Navigation dropdown link (RECHTSGEBIETE/HUKUK ALANLARIMIZ)
     const navServicesLink = document.querySelector('.nav-link.has-dropdown');
@@ -1003,33 +1076,6 @@ function applyLanguage(lang) {
         navServicesLink.innerHTML = t['nav-services'] + ' ';
         if (arrow) navServicesLink.appendChild(arrow);
     }
-
-    // Header Logo Subtitle
-    const headerLogoSubtitle = document.querySelector('#header .logo-subtitle');
-    if (headerLogoSubtitle) headerLogoSubtitle.textContent = t['logo-subtitle'];
-
-    // Header button
-    const headerBtn = document.querySelector('.header-btn span');
-    if (headerBtn) headerBtn.textContent = t['header-btn'];
-
-    // Hero section
-    const heroBadge = document.querySelector('.hero-badge .badge-text');
-    if (heroBadge) heroBadge.textContent = t['hero-badge'];
-
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) heroTitle.innerHTML = t['hero-title'];
-
-    const heroDesc = document.querySelector('.hero-desc');
-    if (heroDesc) heroDesc.innerHTML = t['hero-desc'];
-
-    const heroCta1 = document.querySelector('.hero-cta .btn-primary span');
-    if (heroCta1) heroCta1.textContent = t['hero-cta-1'];
-
-    const heroCta2 = document.querySelector('.hero-cta .btn-outline span');
-    if (heroCta2) heroCta2.textContent = t['hero-cta-2'];
-
-    const heroNote = document.querySelector('.hero-note');
-    if (heroNote) heroNote.innerHTML = t['hero-note'];
 
     // Stats
     const statLabels = document.querySelectorAll('.stat-label');
@@ -1377,15 +1423,38 @@ langStyle.textContent = `
 `;
 document.head.appendChild(langStyle);
 
-// ===== Mobile Menu =====
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
+// ===== Mobile Menu Logic =====
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+const navLinksMobile = document.querySelectorAll('.nav-link');
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    nav.classList.toggle('active');
-    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
-});
+if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a link
+    navLinksMobile.forEach(link => {
+        link.addEventListener('click', () => {
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (nav.classList.contains('active') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
 
 // Toggle active state on menu button
 document.querySelectorAll('.menu-toggle').forEach(btn => {
