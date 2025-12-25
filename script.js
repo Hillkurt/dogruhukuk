@@ -141,7 +141,214 @@ const translations = {
         'footer-imprint': 'Künye',
         'footer-data': 'Veri Koruma',
         'footer-copyright': '© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.',
-        'footer-note': 'Alman hukuku kapsamında tavsiye veya temsil açıkça sağlanmamaktadır.'
+        'footer-note': 'Alman hukuku kapsamında tavsiye veya temsil açıkça sağlanmamaktadır.',
+
+        // Info Banner
+        'info-text': 'Almanya\'da yaşıyorsanız, Türk vatandaşlığına sahipseniz veya Mavi Kart sahibiyseniz ve Türkiye\'de Türk hukuku kapsamında danışmanlık ve temsile ihtiyaç duyduğunuz hukuki bir meseleniz varsa, <strong>Türk konsolosluğundan alınmış bir vekaletname</strong> ile Türkiye\'ye bizzat gitmenize gerek kalmadan sizi Türkiye\'deki mahkemelerde temsil edebilirim.',
+
+        // About - Extended
+        'about-text-1': 'Müvekkillerimi temsil etmeye tamamen kararlıyım. İster Türk hukukuna göre boşanma, ister Türk mahkemelerindeki davalar, ister Türk hukukuna göre önemli sözleşmesel konular veya diğer hukuki zorluklar olsun, size <strong>etkili, sonuç odaklı ve pratik çözümler</strong> sunuyorum.',
+        'about-text-2': 'Sadece bir "Türk avukatı" olarak hukuki açıdan değil, aynı zamanda yaşam durumunuzu gerçek anlamda anlayarak endişelerinize yanıt vereceğim.',
+        'about-list-title': 'Çalışma Alanlarım:',
+        'about-list-items': [
+            'Türk hukukunda <strong>miras hukuku</strong>',
+            'Türk hukukunda <strong>aile hukuku</strong>',
+            'Türk hukukunda <strong>boşanma davaları</strong>',
+            'Türk hukukunda <strong>gayrimenkul hukuku</strong>',
+            'Türk hukukunda <strong>iş hukuku</strong>',
+            'Türk hukukunda <strong>sözleşme hukuku</strong>'
+        ],
+
+        // Why Us - Cards
+        'why-title-1': 'Aracı Yok',
+        'why-desc-1': 'Üçüncü şahıs aracılığı olmadan doğrudan avukatınızla çalışırsınız. Tüm süreç şeffaf ve net.',
+        'why-title-2': 'Doğrudan İletişim',
+        'why-desc-2': 'Avukatınıza her zaman doğrudan ulaşabilirsiniz. Sorularınız anında yanıtlanır.',
+        'why-title-3': 'Türk Hukuku Deneyimi',
+        'why-desc-3': '15 yılı aşkın Türk hukuku deneyimi ve derin bilgi birikimi ile yanınızdayız.',
+        'why-title-4': 'Almanya & Türkiye',
+        'why-desc-4': 'Her iki ülkede de ofisler ve geniş müvekkil ağı. Nerede olursanız olun ulaşılabilir.',
+        'why-title-5': 'Yüksek Memnuniyet',
+        'why-desc-5': 'Google değerlendirmelerinde kanıtlanmış yüksek müvekkil memnuniyeti.',
+
+        // Vision - Extended
+        'vision-title': 'VİZYONUMUZ',
+        'vision-text-1': 'Hukukun üstünlüğüne ilişkin güçlü bir anlayışla, öncelikli hedefimiz müvekkillerimizin haklarını ve çıkarlarını en üst düzeyde koruyan, güvenilir, çözüm odaklı ve zamanın taleplerine uyum sağlayan bir hukuk firması olmaktır.',
+        'vision-text-2': 'Sadece güncel değil, aynı zamanda gelecekteki ihtiyaçları da öngören, etik değerlere bağlı, sürekli gelişen, dijital dönüşüme açık ve ulusal ve uluslararası alanda tanınan bir hukuk danışmanı olarak kendimizi farklılaştırmaya çalışıyoruz.',
+
+        // Mission
+        'mission-title': 'MİSYONUMUZ',
+        'mission-text-1': 'Amacımız, evrensel hukuk ilkelerine bağlı kalarak müvekkillerimizin ihtiyaç ve beklentilerini en iyi ve etkili şekilde karşılamaktır.',
+        'mission-text-2': 'Temel görevimiz, her bir davanın dikkatli bir şekilde ele alınması yoluyla adaletin uygulanmasına katkıda bulunmak ve hukuki işlemleri anlaşılır ve anlaşılır hale getirmektir.',
+        'mission-text-3': 'Müvekkillerimize her zaman <strong>dürüst, şeffaf ve zamanında bilgi</strong> sağlarız ve her zaman mesleki etiğe uygun hareket ederiz. Sosyal sorumluluğumuzun farkındayız. Bu nedenle, yalnızca temsil ettiğimiz kişilerin savunuculuğunu yapmıyoruz, aynı zamanda adil ve sürdürülebilir bir hukuk sistemine de katkıda bulunuyoruz.',
+
+        // Service Titles & CTA (TR)
+        'miras-title': 'Miras Hukuku',
+        'veraset-title': 'Veraset İlamı',
+        'gayr-title': 'Gayrimenkul Hukuku',
+        'is-title': 'İş Hukuku',
+        'bosanma-title': 'Boşanma Davaları',
+        'borclar-title': 'Borçlar Hukuku',
+        'service-cta': 'Randevu Al',
+
+        // Services - Miras (TR)
+        'miras-subtitle': 'Miras Hukuku Nedir? Hangi Durumları Kapsar?',
+        'miras-intro': 'Miras hukuku, bir kişinin vefatından sonra geride bıraktığı malvarlığının kanuni mirasçılara nasıl geçeceğini düzenleyen hukuk dalıdır. Aile içi paylaşım, vasiyet, mal rejimi, reddi miras gibi pek çok konuyu kapsar.',
+        'miras-col1-title': '📌 Miras Hukuku Hangi Alanları Kapsar?',
+        'miras-col1-list': [
+            '<strong>Yasal Mirasçılık:</strong> Kimlerin hangi oranda mirasçı olduğunu belirler.',
+            '<strong>Vasiyetname Hazırlama:</strong> Malvarlığının isteğe göre paylaştırılması.',
+            '<strong>Reddi Miras:</strong> Borçlu mirasın reddedilmesi süreci.',
+            '<strong>Tenkis Davaları:</strong> Saklı paylara zarar verildiğinde mirasın düzeltilmesi.',
+            '<strong>İzale-i Şuyu:</strong> Miras kalan taşınmazların paylaşılması.'
+        ],
+        'miras-col2-title': '🧾 Miras Süreci Nasıl İşler?',
+        'miras-col2-list': [
+            'Vefat gerçekleşir ve nüfus müdürlüğüne bildirilir.',
+            'Veraset ilamı alınır (noterden veya mahkemeden).',
+            'Tapu, banka, araç, şirket gibi işlemler yapılır.',
+            'Veraset ve intikal vergisi ödenir.',
+            'Gerekirse hukuki dava süreçleri başlatılır.'
+        ],
+        'miras-info-title': '🧠 Kimler Mirasçıdır?',
+        'miras-info-list': [
+            '✓ Eş, çocuklar, torunlar',
+            '✓ Anne-baba, kardeşler',
+            '✓ Daha uzak akrabalar (önceki gruplar yoksa)',
+            '✓ Evlatlıklar da yasal mirasçıdır'
+        ],
+        'miras-warning-title': '⚠️ Önemli Uyarılar',
+        'miras-warning-list': [
+            'Her miras, sadece mal değil <strong>borç da içerebilir</strong>. Gerekirse reddi miras hakkınızı kullanabilirsiniz.',
+            'Uluslararası durumlarda (örneğin Almanya\'da ölen bir kişi) <strong>farklı hukuk sistemleri</strong> geçerli olabilir.',
+            'Haklarınızı zamanında kullanmanız için <strong>profesyonel destek</strong> önemlidir.'
+        ],
+
+        // Services - Veraset (TR)
+        'veraset-subtitle': 'Veraset İlamı Nedir? Nasıl Alınır?',
+        'veraset-intro': 'Veraset ilamı, bir kişinin vefatından sonra yasal mirasçılarının kim olduğunu resmi olarak gösteren belgedir. Bu belge sayesinde mirasçılar; bankalardaki işlemleri, tapu devirlerini, araç satışlarını ve vergi bildirimlerini yapabilir.',
+        'veraset-col1-title': '📌 Kimler Alabilir?',
+        'veraset-col1-desc': 'Veraset ilamı, yasal mirasçılar tarafından alınabilir:',
+        'veraset-col1-list': [
+            'Eş',
+            'Çocuklar',
+            'Anne-baba',
+            'Kardeşler ve gerekirse daha uzak akrabalar'
+        ],
+        'veraset-col2-title': '📌 Nereden Alınır?',
+        'veraset-col2-list': [
+            '<strong>Noterden:</strong> Tüm mirasçılar Türk vatandaşı ise ve soybağı net ise',
+            '<strong>Sulh Hukuk Mahkemesi\'nden:</strong> Daha karmaşık durumlar veya yabancı uyruklu mirasçılar varsa'
+        ],
+        'veraset-info-title': '📋 Gerekli Belgeler',
+        'veraset-info-list': [
+            '✓ Vefat eden kişinin ölüm belgesi veya nüfus kayıt örneği',
+            '✓ Mirasçıların kimlik fotokopileri',
+            '✓ Noter başvurularında nüfus kayıt örneği (vukuatlı)'
+        ],
+        'veraset-warning-title': '⚠️ Dikkat Edilmesi Gerekenler',
+        'veraset-warning-list': [
+            'Veraset ilamı alınmadan <strong>miras işlemleri başlatılamaz</strong>.',
+            'Her mirasçı <strong>ayrı ayrı başvuru</strong> yapabilir.',
+            'Yabancı ülkelerde yaşayanlar için <strong>noter onaylı tercüme ve apostil</strong> gerekebilir.'
+        ],
+
+        // Services - Gayrimenkul (TR)
+        'gayr-subtitle': 'Gayrimenkul Hukuku Nedir? Hangi Durumlarda Gerekli Olur?',
+        'gayr-intro': 'Gayrimenkul hukuku, arsa, konut, işyeri gibi taşınmazlarla ilgili tüm alım-satım, kira, tapu ve mülkiyet süreçlerini düzenleyen hukuk dalıdır.',
+        'gayr-col1-title': '📌 Gayrimenkul Hukuku Hangi Alanları Kapsar?',
+        'gayr-col1-list': [
+            'Tapu iptal ve tescil davaları',
+            'Kat mülkiyeti ve ortak alan ihtilafları',
+            'Kira sözleşmeleri ve tahliye davaları',
+            'Şufa (önalım), izale-i şuyu davaları',
+            'İnşaat sözleşmeleri (kat karşılığı – anahtar teslim)',
+            'Kamulaştırma ve değer tespiti uyuşmazlıkları'
+        ],
+        'gayr-col2-title': '🧾 Neden Hukuki Destek Almalısınız?',
+        'gayr-col2-desc': 'Taşınmaz işlemlerinde yapılan küçük bir hata, büyük maddi kayıplara ve uzun dava süreçlerine yol açabilir.',
+        'gayr-col2-list': [
+            'Tapu işlemleri <strong>güvenli şekilde</strong> yürütülür',
+            'Kira alacakları <strong>hızlı tahsil</strong> edilir',
+            'Ortak mülkiyetler <strong>hukuka uygun</strong> şekilde bölüştürülür'
+        ],
+
+        // Services - Is (TR)
+        'is-subtitle': 'İş Hukuku Nedir? Hangi Hakları Kapsar?',
+        'is-intro': 'İş hukuku, çalışan ile işveren arasındaki iş ilişkisini düzenleyen, hem işçilerin haklarını hem işverenin yükümlülüklerini güvence altına alan hukuk dalıdır. İş sözleşmesinden feshe, tazminattan iş kazasına kadar geniş bir alanı kapsar.',
+        'is-col1-title': '📌 İş Hukuku Hangi Konuları Kapsar?',
+        'is-col1-list': [
+            'Haksız fesih ve işe iade davaları',
+            'Kıdem ve ihbar tazminatı talepleri',
+            'Fazla mesai, hafta tatili, yıllık izin alacakları',
+            'SGK prim uyuşmazlıkları ve hizmet tespiti',
+            'İş kazası ve meslek hastalığı davaları',
+            'Disiplin işlemleri ve personel savunmaları',
+            'Toplu iş sözleşmeleri ve sendikal süreçler'
+        ],
+        'is-col2-title': '👷 Kimler İçin Gereklidir?',
+        'is-col2-group1-title': 'Çalışanlar için:',
+        'is-col2-group1-desc': 'Haksız işten çıkarılma, ödenmeyen alacaklar, mobbing, hak ihlalleri.',
+        'is-col2-group2-title': 'İşverenler için:',
+        'is-col2-group2-desc': 'Yasalara uygun sözleşmeler hazırlama, ihtar ve fesih süreçleri, risk yönetimi.',
+        'is-warning-title': '⚠️ Önemli Süreler',
+        'is-warning-text': 'İş hukuku süreçleri hak düşürücü süreler içerir. Zamanında ve doğru adım atılmazsa hak kaybı yaşanabilir:',
+        'is-warning-list': [
+            'İşe iade için <strong>30 gün</strong>',
+            'Alacak davaları için <strong>5 yıl</strong>',
+            'İş kazaları için <strong>10 yıl</strong>'
+        ],
+
+        // Services - Bosanma (TR)
+        'bosanma-subtitle': 'Boşanma Süreci: Haklarınızı Biliyor Musunuz?',
+        'bosanma-intro': 'Boşanma, sadece iki insanın evliliğini sonlandırması değil; mal paylaşımı, çocukların velayeti, nafaka ve duygusal yüklerin de hukuki düzlemde çözümlenmesi sürecidir. Bu süreçte doğru adımlar atmak, geleceğinizi güvence altına almak adına büyük önem taşır.',
+        'bosanma-col1-title': '📌 Anlaşmalı Boşanma',
+        'bosanma-col1-desc': 'Tarafların her konuda uzlaşması durumunda, kısa sürede ve tek celsede sonuçlanabilir.',
+        'bosanma-col1-sub': 'Şartlar:',
+        'bosanma-col1-list': [
+            '✔ Evliliğin en az 1 yıl sürmüş olması',
+            '✔ Protokol hazırlanması (mal paylaşımı, nafaka, velayet gibi)',
+            '✔ Tarafların birlikte mahkemeye başvurması'
+        ],
+        'bosanma-col2-title': '📌 Çekişmeli Boşanma',
+        'bosanma-col2-desc': 'Taraflar arasında anlaşmazlık varsa; sebeplerin ispatlanması, tanıklar, deliller ve uzun yargılama süreci söz konusudur.',
+        'bosanma-col2-sub': 'Nedenler:',
+        'bosanma-col2-list': [
+            '• Aldatma',
+            '• Şiddet',
+            '• Terk',
+            '• Geçimsizlik',
+            '• Suistimal',
+            '• Akıl hastalığı'
+        ],
+        'bosanma-info-title': '👶 Velayet ve Nafaka',
+        'bosanma-info-text': 'Boşanma sürecinde en hassas konulardan biri çocukların velayeti ve nafaka konusudur. Mahkeme, <strong>çocuğun üstün yararını</strong> gözeterek karar verir. Ortak velayet, kişisel ilişki kurulması ve iştirak nafakası detaylı değerlendirilir.',
+        'bosanma-warning-title': '⚠️ Unutmayın!',
+        'bosanma-warning-list': [
+            'Mal paylaşımı, boşanma davasından <strong>ayrı bir dava</strong> olarak açılabilir.',
+            'Boşanma sonrası <strong>soyadı kullanımı, nafaka iptali/artırımı, velayet değişikliği</strong> gibi haklarınız da vardır.',
+            'Avukat desteği, hem süreci hızlandırır hem de <strong>hak kayıplarınızı önler</strong>.'
+        ],
+
+        // Services - Borclar (TR)
+        'borclar-subtitle': 'Borçlar Hukuku Nedir? Sizi Nasıl Korur?',
+        'borclar-intro': 'Borçlar hukuku, kişiler veya şirketler arasında doğan borç-alacak ilişkilerini, sözleşmeleri, sorumlulukları ve tazminat yükümlülüklerini düzenleyen temel hukuk dalıdır. Gündelik yaşamda yapılan her sözleşme, borçlar hukukunun kapsamına girer.',
+        'borclar-col1-title': '📌 Borçlar Hukuku Hangi Konuları Kapsar?',
+        'borclar-col1-list': [
+            'Sözleşme hazırlama ve incelenmesi (satış, kira, hizmet, vekâlet, taşeronluk vb.)',
+            'Borçların ifası ve temerrüt (gecikme)',
+            'Alacak tahsili ve ihtar süreçleri',
+            'Haksız fiil (zarar verme) ve maddi/manevi tazminat davaları',
+            'Sebepsiz zenginleşme talepleri',
+            'Sorumluluk davaları (kusur, garanti, ayıplı mal)'
+        ],
+        'borclar-col2-title': '👥 Kimler İçin Gerekli?',
+        'borclar-col2-group1-title': 'Bireyler:',
+        'borclar-col2-group1-desc': 'Alacak-verecek ilişkileri, tazminat davaları, hizmet veya kira sözleşmeleriyle ilgili ihtilaflar.',
+        'borclar-col2-group2-title': 'Şirketler:',
+        'borclar-col2-group2-desc': 'Ticari sözleşmelerin hazırlanması, tahsilat süreçlerinin takibi, yüklenici-alt yüklenici ilişkileri, teminat ve sorumluluk düzenlemeleri.',
+        'borclar-warning-title': '⚠️ Neden Önemlidir?',
+        'borclar-warning-text': 'Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve bireysel ilişkilerde güven sağlar.'
     },
     de: {
         // Navigation
@@ -226,7 +433,214 @@ const translations = {
         'footer-imprint': 'Impressum',
         'footer-data': 'Datenschutz',
         'footer-copyright': '© 2024 DOĞRU Rechtsanwaltskanzlei. Alle Rechte vorbehalten.',
-        'footer-note': 'Beratung oder Vertretung im deutschen Recht wird ausdrücklich nicht angeboten.'
+        'footer-note': 'Beratung oder Vertretung im deutschen Recht wird ausdrücklich nicht angeboten.',
+
+        // Info Banner
+        'info-text': 'Wenn Sie in Deutschland leben, die türkische Staatsbürgerschaft besitzen oder Inhaber einer Blauen Karte sind und rechtliche Angelegenheiten in der Türkei haben, die eine Beratung und Vertretung im türkischen Recht erfordern, kann ich Sie mit einer <strong>Vollmacht des türkischen Konsulats</strong> vor türkischen Gerichten vertreten, ohne dass Sie persönlich in die Türkei reisen müssen.',
+
+        // About - Extended
+        'about-text-1': 'Ich setze mich voll und ganz für die Vertretung meiner Mandanten ein. Ob Scheidung nach türkischem Recht, Gerichtsverfahren in der Türkei, wichtige vertragsrechtliche Fragen nach türkischem Recht oder andere rechtliche Herausforderungen – ich biete Ihnen <strong>effektive, ergebnisorientierte und praktische Lösungen</strong>.',
+        'about-text-2': 'Ich werde nicht nur als "türkischer Anwalt" rechtlich auf Ihre Anliegen eingehen, sondern auch Ihre Lebenssituation wirklich verstehen und Ihre Sorgen ernst nehmen.',
+        'about-list-title': 'Meine Tätigkeitsbereiche:',
+        'about-list-items': [
+            '<strong>Erbrecht</strong> im türkischen Recht',
+            '<strong>Familienrecht</strong> im türkischen Recht',
+            '<strong>Scheidungsverfahren</strong> im türkischen Recht',
+            '<strong>Immobilienrecht</strong> im türkischen Recht',
+            '<strong>Arbeitsrecht</strong> im türkischen Recht',
+            '<strong>Vertragsrecht</strong> im türkischen Recht'
+        ],
+
+        // Why Us - Cards
+        'why-title-1': 'Keine Vermittler',
+        'why-desc-1': 'Sie arbeiten direkt mit Ihrem Anwalt, ohne Dritte. Der gesamte Prozess ist transparent und klar.',
+        'why-title-2': 'Direkter Kontakt',
+        'why-desc-2': 'Sie können Ihren Anwalt jederzeit direkt erreichen. Ihre Fragen werden sofort beantwortet.',
+        'why-title-3': 'Erfahrung im türkischen Recht',
+        'why-desc-3': 'Wir stehen Ihnen mit über 15 Jahren Erfahrung im türkischen Recht und tiefem Fachwissen zur Seite.',
+        'why-title-4': 'Deutschland & Türkei',
+        'why-desc-4': 'Büros in beiden Ländern und ein großes Mandantennetzwerk. Wir sind überall erreichbar.',
+        'why-title-5': 'Hohe Zufriedenheit',
+        'why-desc-5': 'Bewährt hohe Mandantenzufriedenheit in Google-Bewertungen.',
+
+        // Vision - Extended
+        'vision-title': 'UNSERE VISION',
+        'vision-text-1': 'Mit einem starken Verständnis für die Rechtsstaatlichkeit ist es unser vorrangiges Ziel, eine zuverlässige, lösungsorientierte Anwaltskanzlei zu sein, die die Rechte und Interessen unserer Mandanten auf höchstem Niveau schützt und sich den Anforderungen der Zeit anpasst.',
+        'vision-text-2': 'Wir streben danach, uns als Rechtsberater zu differenzieren, der nicht nur aktuelle, sondern auch zukünftige Bedürfnisse antizipiert, ethischen Werten verpflichtet ist, sich ständig weiterentwickelt, offen für die digitale Transformation ist und national sowie international anerkannt ist.',
+
+        // Mission
+        'mission-title': 'UNSERE MISSION',
+        'mission-text-1': 'Unser Ziel ist es, die Bedürfnisse und Erwartungen unserer Mandanten unter Einhaltung universeller Rechtsgrundsätze bestmöglich und effektiv zu erfüllen.',
+        'mission-text-2': 'Unsere Hauptaufgabe ist es, durch die sorgfältige Bearbeitung jedes Falles zur Rechtsprechung beizutragen und rechtliche Verfahren verständlich und nachvollziehbar zu machen.',
+        'mission-text-3': 'Wir informieren unsere Mandanten stets <strong>ehrlich, transparent und zeitnah</strong> und handeln immer im Einklang mit der Berufsethik. Wir sind uns unserer sozialen Verantwortung bewusst. Deshalb vertreten wir nicht nur die Menschen, die wir repräsentieren, sondern tragen auch zu einem fairen und nachhaltigen Rechtssystem bei.',
+
+        // Service Titles & CTA (DE)
+        'miras-title': 'Erbrecht',
+        'veraset-title': 'Erbschein',
+        'gayr-title': 'Immobilienrecht',
+        'is-title': 'Arbeitsrecht',
+        'bosanma-title': 'Scheidungsverfahren',
+        'borclar-title': 'Schuldrecht',
+        'service-cta': 'Termin buchen',
+
+        // Services - Miras (DE)
+        'miras-subtitle': 'Was ist das Erbrecht? Was deckt es ab?',
+        'miras-intro': 'Das Erbrecht regelt den Übergang des Vermögens einer Person nach deren Tod auf die gesetzlichen Erben. Es umfasst viele Themen wie die Aufteilung innerhalb der Familie, Testamente, Güterstände und Erbausschlagung.',
+        'miras-col1-title': '📌 Welche Bereiche deckt das Erbrecht ab?',
+        'miras-col1-list': [
+            '<strong>Gesetzliche Erbfolge:</strong> Bestimmt, wer in welchem Umfang Erbe wird.',
+            '<strong>Testamentserstellung:</strong> Verteilung des Vermögens nach Wunsch.',
+            '<strong>Erbausschlagung:</strong> Prozess der Ablehnung einer überschuldeten Erbschaft.',
+            '<strong>Pflichtteilsansprüche:</strong> Korrektur des Erbes bei Verletzung von Pflichtteilen.',
+            '<strong>Erbauseinandersetzung:</strong> Aufteilung von geerbten Immobilien.'
+        ],
+        'miras-col2-title': '🧾 Wie läuft der Erbprozess ab?',
+        'miras-col2-list': [
+            'Der Tod tritt ein und wird dem Standesamt gemeldet.',
+            'Ein Erbschein wird eingeholt (beim Notar oder Gericht).',
+            'Transaktionen wie Grundbuch, Bank, Fahrzeug, Firma werden durchgeführt.',
+            'Erbschaftssteuer wird gezahlt.',
+            'Bei Bedarf werden rechtliche Schritte eingeleitet.'
+        ],
+        'miras-info-title': '🧠 Wer sind die Erben?',
+        'miras-info-list': [
+            '✓ Ehepartner, Kinder, Enkelkinder',
+            '✓ Eltern, Geschwister',
+            '✓ Entferntere Verwandte (wenn keine der vorherigen Gruppen vorhanden)',
+            '✓ Auch Adoptivkinder sind gesetzliche Erben'
+        ],
+        'miras-warning-title': '⚠️ Wichtige Warnungen',
+        'miras-warning-list': [
+            'Jedes Erbe kann nicht nur Vermögen, sondern auch <strong>Schulden beinhalten</strong>. Bei Bedarf können Sie Ihr Recht zur Ausschlagung nutzen.',
+            'In internationalen Fällen (z. B. eine in Deutschland verstorbene Person) können <strong>unterschiedliche Rechtssysteme</strong> gelten.',
+            '<strong>Professionelle Unterstützung</strong> ist wichtig, um Ihre Rechte fristgerecht wahrzunehmen.'
+        ],
+
+        // Services - Veraset (DE)
+        'veraset-subtitle': 'Was ist ein Erbschein? Wie bekommt man ihn?',
+        'veraset-intro': 'Der Erbschein ist ein offizielles Dokument, das zeigt, wer die gesetzlichen Erben einer verstorbenen Person sind. Mit diesem Dokument können Erben Bankgeschäfte, Grundbuchübertragungen, Fahrzeugverkäufe und Steuermeldungen durchführen.',
+        'veraset-col1-title': '📌 Wer kann ihn erhalten?',
+        'veraset-col1-desc': 'Der Erbschein kann von gesetzlichen Erben beantragt werden:',
+        'veraset-col1-list': [
+            'Ehepartner',
+            'Kinder',
+            'Eltern',
+            'Geschwister und gegebenenfalls entferntere Verwandte'
+        ],
+        'veraset-col2-title': '📌 Wo bekommt man ihn?',
+        'veraset-col2-list': [
+            '<strong>Beim Notar:</strong> Wenn alle Erben türkische Staatsbürger sind und die Abstammung klar ist.',
+            '<strong>Beim Zivilgericht:</strong> Bei komplexeren Situationen oder ausländischen Erben.'
+        ],
+        'veraset-info-title': '📋 Notwendige Dokumente',
+        'veraset-info-list': [
+            '✓ Sterbeurkunde oder Personenstandsregisterauszug des Verstorbenen',
+            '✓ Ausweiskopien der Erben',
+            '✓ Personenstandsregisterauszug für Notaranträge'
+        ],
+        'veraset-warning-title': '⚠️ Worauf muss geachtet werden?',
+        'veraset-warning-list': [
+            'Ohne Erbschein können <strong>keine Erbtransaktionen</strong> eingeleitet werden.',
+            'Jeder Erbe kann <strong>individuell einen Antrag</strong> stellen.',
+            'Für im Ausland lebende Personen können <strong>notariell beglaubigte Übersetzungen und Apostillen</strong> erforderlich sein.'
+        ],
+
+        // Services - Gayrimenkul (DE)
+        'gayr-subtitle': 'Was ist Immobilienrecht? Wann ist es notwendig?',
+        'gayr-intro': 'Das Immobilienrecht regelt alle Kauf-, Verkaufs-, Miet-, Grundbuch- und Eigentumsprozesse in Bezug auf Immobilien wie Grundstücke, Wohnungen und Arbeitsstätten.',
+        'gayr-col1-title': '📌 Was deckt das Immobilienrecht ab?',
+        'gayr-col1-list': [
+            'Klagen auf Löschung und Eintragung im Grundbuch',
+            'Wohnungseigentums- und Gemeinschaftsflächenstreitigkeiten',
+            'Mietverträge und Räumungsklagen',
+            'Vorkaufsrecht und Teilungsklagen',
+            'Bauverträge (gegen Wohnungstausch – schlüsselfertig)',
+            'Enteignungs- und Wertermittlungsstreitigkeiten'
+        ],
+        'gayr-col2-title': '🧾 Warum sollten Sie rechtliche Unterstützung in Anspruch nehmen?',
+        'gayr-col2-desc': 'Ein kleiner Fehler bei Immobilientransaktionen kann zu großen finanziellen Verlusten und langen Gerichtsprozessen führen.',
+        'gayr-col2-list': [
+            'Grundbuchtransaktionen werden <strong>sicher</strong> durchgeführt',
+            'Mietforderungen werden <strong>schnell eingezogen</strong>',
+            'Gemeinschaftseigentum wird <strong>gesetzeskonform</strong> aufgeteilt'
+        ],
+
+        // Services - Is (DE)
+        'is-subtitle': 'Was ist Arbeitsrecht? Welche Rechte umfasst es?',
+        'is-intro': 'Das Arbeitsrecht regelt das Arbeitsverhältnis zwischen Arbeitnehmer und Arbeitgeber und sichert sowohl die Rechte der Arbeitnehmer als auch die Pflichten der Arbeitgeber. Es deckt ein breites Spektrum ab, vom Arbeitsvertrag bis zur Kündigung, von der Entschädigung bis zum Arbeitsunfall.',
+        'is-col1-title': '📌 Was deckt das Arbeitsrecht ab?',
+        'is-col1-list': [
+            'Ungerechtfertigte Kündigung und Wiedereinstellungsklagen',
+            'Abfindungs- und Kündigungsentschädigungsforderungen',
+            'Überstunden, Wochenruhe, Jahresurlaubsansprüche',
+            'Streitigkeiten über Sozialversicherungsprämien und Dienstfeststellung',
+            'Arbeitsunfall- und Berufskrankheitsklagen',
+            'Disziplinarverfahren und Personalverteidigung',
+            'Tarifverträge und gewerkschaftliche Prozesse'
+        ],
+        'is-col2-title': '👷 Für wen ist es notwendig?',
+        'is-col2-group1-title': 'Für Arbeitnehmer:',
+        'is-col2-group1-desc': 'Ungerechtfertigte Entlassung, unbezahlte Forderungen, Mobbing, Rechtsverletzungen.',
+        'is-col2-group2-title': 'Für Arbeitgeber:',
+        'is-col2-group2-desc': 'Erstellung gesetzeskonformer Verträge, Abmahnungs- und Kündigungsprozesse, Risikomanagement.',
+        'is-warning-title': '⚠️ Wichtige Fristen',
+        'is-warning-text': 'Arbeitsrechtliche Prozesse beinhalten Ausschlussfristen. Wenn nicht rechtzeitig und korrekt gehandelt wird, können Rechte verloren gehen:',
+        'is-warning-list': [
+            'Für Wiedereinstellung <strong>30 Tage</strong>',
+            'Für Forderungsklagen <strong>5 Jahre</strong>',
+            'Für Arbeitsunfälle <strong>10 Jahre</strong>'
+        ],
+
+        // Services - Bosanma (DE)
+        'bosanma-subtitle': 'Scheidungsprozess: Kennen Sie Ihre Rechte?',
+        'bosanma-intro': 'Eine Scheidung ist nicht nur die Beendigung der Ehe zweier Menschen; es ist auch ein Prozess der rechtlichen Lösung von Vermögensaufteilung, Sorgerecht für Kinder, Unterhalt und emotionalen Belastungen. In diesem Prozess die richtigen Schritte zu unternehmen, ist von großer Bedeutung, um Ihre Zukunft zu sichern.',
+        'bosanma-col1-title': '📌 Einvernehmliche Scheidung',
+        'bosanma-col1-desc': 'Wenn sich die Parteien in allen Punkten einig sind, kann dies in kurzer Zeit und in einer einzigen Sitzung abgeschlossen werden.',
+        'bosanma-col1-sub': 'Bedingungen:',
+        'bosanma-col1-list': [
+            '✔ Die Ehe muss mindestens 1 Jahr gedauert haben',
+            '✔ Erstellung eines Protokolls (Vermögensaufteilung, Unterhalt, Sorgerecht usw.)',
+            '✔ Gemeinsamer Antrag der Parteien bei Gericht'
+        ],
+        'bosanma-col2-title': '📌 Streitige Scheidung',
+        'bosanma-col2-desc': 'Wenn es Unstimmigkeiten zwischen den Parteien gibt; Beweis der Gründe, Zeugen, Beweise und ein langer Gerichtsprozess sind involviert.',
+        'bosanma-col2-sub': 'Gründe:',
+        'bosanma-col2-list': [
+            '• Ehebruch',
+            '• Gewalt',
+            '• Verlassen',
+            '• Unvereinbarkeit',
+            '• Missbrauch',
+            '• Geisteskrankheit'
+        ],
+        'bosanma-info-title': '👶 Sorgerecht und Unterhalt',
+        'bosanma-info-text': 'Eines der sensibelsten Themen im Scheidungsprozess ist das Sorgerecht für Kinder und Unterhalt. Das Gericht entscheidet unter Berücksichtigung des <strong>höchsten Wohls des Kindes</strong>. Gemeinsames Sorgerecht, persönlicher Umgang und Kindesunterhalt werden detailliert bewertet.',
+        'bosanma-warning-title': '⚠️ Nicht vergessen!',
+        'bosanma-warning-list': [
+            'Die Vermögensaufteilung kann als <strong>separater Fall</strong> vom Scheidungsfall eröffnet werden.',
+            'Sie haben auch Rechte wie <strong>Namensnutzung, Unterhaltsstreichung/-erhöhung, Sorgerechtsänderung</strong> nach der Scheidung.',
+            'Anwaltliche Unterstützung beschleunigt den Prozess und <strong>verhindert Rechtsverluste</strong>.'
+        ],
+
+        // Services - Borclar (DE)
+        'borclar-subtitle': 'Was ist Schuldrecht? Wie schützt es Sie?',
+        'borclar-intro': 'Das Schuldrecht ist das grundlegende Rechtsgebiet, das Schuld-Forderungs-Beziehungen, Verträge, Verantwortlichkeiten und Schadenersatzpflichten zwischen Personen oder Unternehmen regelt. Jeder im täglichen Leben abgeschlossene Vertrag fällt in den Anwendungsbereich des Schuldrechts.',
+        'borclar-col1-title': '📌 Was deckt das Schuldrecht ab?',
+        'borclar-col1-list': [
+            'Vertragserstellung und -prüfung (Verkauf, Miete, Dienstleistung, Vollmacht, Subunternehmer usw.)',
+            'Leistung von Schulden und Verzug',
+            'Forderungseinzug und Mahnverfahren',
+            'Unerlaubte Handlung (Schadenszufügung) und materielle/immaterielle Schadenersatzklagen',
+            'Ungerechtfertigte Bereicherungsansprüche',
+            'Haftungsklagen (Mangel, Garantie, fehlerhafte Ware)'
+        ],
+        'borclar-col2-title': '👥 Für wen ist es notwendig?',
+        'borclar-col2-group1-title': 'Privatpersonen:',
+        'borclar-col2-group1-desc': 'Streitigkeiten im Zusammenhang mit Forderungen-Schulden-Beziehungen, Schadenersatzklagen, Dienstleistungs- oder Mietverträgen.',
+        'borclar-col2-group2-title': 'Unternehmen:',
+        'borclar-col2-group2-desc': 'Vorbereitung von Handelsverträgen, Verfolgung von Inkasso-, Auftragnehmer-Subunternehmer-Beziehungen, Garantie- und Haftungsregelungen.',
+        'borclar-warning-title': '⚠️ Warum ist es wichtig?',
+        'borclar-warning-text': 'Ein falsch oder unvollständig vorbereiteter Vertrag kann in Zukunft zu langen und kostspieligen Gerichtsprozessen führen. Eine <strong>starke rechtliche Infrastruktur</strong> schafft Vertrauen in geschäftlichen und individuellen Beziehungen.'
     },
     en: {
         // Navigation
@@ -311,7 +725,214 @@ const translations = {
         'footer-imprint': 'Imprint',
         'footer-data': 'Data Protection',
         'footer-copyright': '© 2024 DOĞRU Law Firm. All rights reserved.',
-        'footer-note': 'Advice or representation under German law is expressly not provided.'
+        'footer-note': 'Advice or representation under German law is expressly not provided.',
+
+        // Info Banner
+        'info-text': 'If you live in Germany, hold Turkish citizenship or are a Blue Card holder and have a legal matter in Turkey requiring consultation and representation under Turkish law, I can represent you in Turkish courts with a <strong>power of attorney from the Turkish consulate</strong>, without you needing to travel to Turkey personally.',
+
+        // About - Extended
+        'about-text-1': 'I am fully committed to representing my clients. Whether it is divorce under Turkish law, lawsuits in Turkish courts, important contractual matters under Turkish law, or other legal challenges, I offer you <strong>effective, result-oriented, and practical solutions</strong>.',
+        'about-text-2': 'I will respond to your concerns not only as a "Turkish lawyer" from a legal perspective but also by truly understanding your life situation.',
+        'about-list-title': 'My Areas of Practice:',
+        'about-list-items': [
+            '<strong>Inheritance Law</strong> in Turkish Law',
+            '<strong>Family Law</strong> in Turkish Law',
+            '<strong>Divorce Proceedings</strong> in Turkish Law',
+            '<strong>Real Estate Law</strong> in Turkish Law',
+            '<strong>Labor Law</strong> in Turkish Law',
+            '<strong>Contract Law</strong> in Turkish Law'
+        ],
+
+        // Why Us - Cards
+        'why-title-1': 'No Intermediaries',
+        'why-desc-1': 'You work directly with your lawyer without third parties. The entire process is transparent and clear.',
+        'why-title-2': 'Direct Contact',
+        'why-desc-2': 'You can always reach your lawyer directly. Your questions are answered immediately.',
+        'why-title-3': 'Turkish Law Experience',
+        'why-desc-3': 'We are by your side with over 15 years of experience in Turkish law and deep knowledge.',
+        'why-title-4': 'Germany & Turkey',
+        'why-desc-4': 'Offices in both countries and a large client network. We are accessible wherever you are.',
+        'why-title-5': 'High Satisfaction',
+        'why-desc-5': 'Proven high client satisfaction in Google reviews.',
+
+        // Vision - Extended
+        'vision-title': 'OUR VISION',
+        'vision-text-1': 'With a strong understanding of the rule of law, our primary goal is to be a reliable, solution-oriented law firm that protects our clients\' rights and interests at the highest level and adapts to the demands of the time.',
+        'vision-text-2': 'We strive to differentiate ourselves as a legal consultant who anticipates not only current but also future needs, is committed to ethical values, constantly developing, open to digital transformation, and recognized nationally and internationally.',
+
+        // Mission
+        'mission-title': 'OUR MISSION',
+        'mission-text-1': 'Our goal is to meet the needs and expectations of our clients in the best and most effective way, while adhering to universal legal principles.',
+        'mission-text-2': 'Our main duty is to contribute to the administration of justice through the careful handling of each case and to make legal proceedings understandable and clear.',
+        'mission-text-3': 'We always provide our clients with <strong>honest, transparent, and timely information</strong> and always act in accordance with professional ethics. We are aware of our social responsibility. Therefore, we do not only advocate for the people we represent, but also contribute to a fair and sustainable legal system.',
+
+        // Service Titles & CTA (EN)
+        'miras-title': 'Inheritance Law',
+        'veraset-title': 'Certificate of Inheritance',
+        'gayr-title': 'Real Estate Law',
+        'is-title': 'Labor Law',
+        'bosanma-title': 'Divorce Proceedings',
+        'borclar-title': 'Law of Obligations',
+        'service-cta': 'Book Appointment',
+
+        // Services - Miras (EN)
+        'miras-subtitle': 'What is Inheritance Law? What Does It Cover?',
+        'miras-intro': 'Inheritance law is the branch of law that regulates how a person\'s assets will pass to legal heirs after their death. It covers many topics such as family sharing, wills, property regimes, and refusal of inheritance.',
+        'miras-col1-title': '📌 What Areas Does Inheritance Law Cover?',
+        'miras-col1-list': [
+            '<strong>Legal Heirship:</strong> Determines who inherits at what rate.',
+            '<strong>Will Preparation:</strong> Distribution of assets according to wishes.',
+            '<strong>Refusal of Inheritance:</strong> The process of rejecting indebted inheritance.',
+            '<strong>Abatement Lawsuits:</strong> Correction of inheritance when reserved shares are violated.',
+            '<strong>Partition Lawsuits:</strong> Sharing of inherited real estate.'
+        ],
+        'miras-col2-title': '🧾 How Does the Inheritance Process Work?',
+        'miras-col2-list': [
+            'Death occurs and is reported to the registry office.',
+            'Certificate of inheritance is obtained (from notary or court).',
+            'Transactions such as title deed, bank, vehicle, company are carried out.',
+            'Inheritance and transfer tax is paid.',
+            'If necessary, legal proceedings are initiated.'
+        ],
+        'miras-info-title': '🧠 Who Are the Heirs?',
+        'miras-info-list': [
+            '✓ Spouse, children, grandchildren',
+            '✓ Parents, siblings',
+            '✓ More distant relatives (if previous groups do not exist)',
+            '✓ Adopted children are also legal heirs'
+        ],
+        'miras-warning-title': '⚠️ Important Warnings',
+        'miras-warning-list': [
+            'Every inheritance may include not only assets but also <strong>debts</strong>. You can use your right to refuse inheritance if necessary.',
+            'In international cases (e.g., a person dying in Germany), <strong>different legal systems</strong> may apply.',
+            '<strong>Professional support</strong> is important to exercise your rights on time.'
+        ],
+
+        // Services - Veraset (EN)
+        'veraset-subtitle': 'What is a Certificate of Inheritance? How to Get It?',
+        'veraset-intro': 'A certificate of inheritance is an official document showing who the legal heirs of a deceased person are. Thanks to this document, heirs can carry out bank transactions, title deed transfers, vehicle sales, and tax notifications.',
+        'veraset-col1-title': '📌 What Can Get It?',
+        'veraset-col1-desc': 'The certificate of inheritance can be obtained by legal heirs:',
+        'veraset-col1-list': [
+            'Spouse',
+            'Children',
+            'Parents',
+            'Siblings and, if necessary, more distant relatives'
+        ],
+        'veraset-col2-title': '📌 Where to Get It?',
+        'veraset-col2-list': [
+            '<strong>From Notary:</strong> If all heirs are Turkish citizens and lineage is clear.',
+            '<strong>From Civil Court of Peace:</strong> If there are more complex situations or foreign national heirs.'
+        ],
+        'veraset-info-title': '📋 Required Documents',
+        'veraset-info-list': [
+            '✓ Death certificate or population register copy of the deceased',
+            '✓ Identity copies of heirs',
+            '✓ Population register copy for notary applications'
+        ],
+        'veraset-warning-title': '⚠️ Things to Consider',
+        'veraset-warning-list': [
+            '<strong>Inheritance transactions cannot be started</strong> without a certificate of inheritance.',
+            'Each heir can apply <strong>individually</strong>.',
+            '<strong>Notarized translation and apostille</strong> may be required for those living in foreign countries.'
+        ],
+
+        // Services - Gayrimenkul (EN)
+        'gayr-subtitle': 'What is Real Estate Law? When is it Necessary?',
+        'gayr-intro': 'Real estate law is the branch of law that regulates all buying-selling, rental, title deed, and property processes regarding real estate such as land, housing, and workplaces.',
+        'gayr-col1-title': '📌 What Areas Does Real Estate Law Cover?',
+        'gayr-col1-list': [
+            'Title deed cancellation and registration lawsuits',
+            'Condominium and common area disputes',
+            'Rental contracts and eviction lawsuits',
+            'Pre-emption and partition lawsuits',
+            'Construction contracts (in return for flat – turnkey)',
+            'Expropriation and valuation disputes'
+        ],
+        'gayr-col2-title': '🧾 Why Should You Get Legal Support?',
+        'gayr-col2-desc': 'A small mistake in real estate transactions can lead to large financial losses and long legal processes.',
+        'gayr-col2-list': [
+            'Title deed transactions are carried out <strong>safely</strong>',
+            'Rental receivables are <strong>collected quickly</strong>',
+            'Joint ownerships are distributed <strong>in accordance with the law</strong>'
+        ],
+
+        // Services - Is (EN)
+        'is-subtitle': 'What is Labor Law? What Rights Does It Cover?',
+        'is-intro': 'Labor law is the branch of law that regulates the employment relationship between employee and employer, guaranteeing both the rights of employees and the obligations of employers. It covers a wide area from employment contract to termination, from compensation to work accidents.',
+        'is-col1-title': '📌 What Topics Does Labor Law Cover?',
+        'is-col1-list': [
+            'Unfair termination and re-employment lawsuits',
+            'Severance and notice pay claims',
+            'Overtime, weekly rest, annual leave receivables',
+            'SSI premium disputes and service determination',
+            'Work accident and occupational disease lawsuits',
+            'Disciplinary proceedings and personnel defenses',
+            'Collective bargaining agreements and union processes'
+        ],
+        'is-col2-title': '👷 For Who Is It Necessary?',
+        'is-col2-group1-title': 'For Employees:',
+        'is-col2-group1-desc': 'Unfair dismissal, unpaid receivables, mobbing, rights violations.',
+        'is-col2-group2-title': 'For Employers:',
+        'is-col2-group2-desc': 'Preparing contracts in accordance with laws, warning and termination processes, risk management.',
+        'is-warning-title': '⚠️ Important Periods',
+        'is-warning-text': 'Labor law processes include forfeiture periods. If steps are not taken on time and incorrectly, rights may be lost:',
+        'is-warning-list': [
+            '<strong>30 days</strong> for re-employment',
+            '<strong>5 years</strong> for receivable lawsuits',
+            '<strong>10 years</strong> for work accidents'
+        ],
+
+        // Services - Bosanma (EN)
+        'bosanma-subtitle': 'Divorce Process: Do You Know Your Rights?',
+        'bosanma-intro': 'Divorce is not just the termination of the marriage of two people; it is also the process of resolving property division, child custody, alimony, and emotional burdens on a legal plane. Taking the right steps in this process is of great importance to secure your future.',
+        'bosanma-col1-title': '📌 Uncontested Divorce',
+        'bosanma-col1-desc': 'If the parties agree on all issues, it can be concluded in a short time and in a single session.',
+        'bosanma-col1-sub': 'Conditions:',
+        'bosanma-col1-list': [
+            '✔ Marriage must have lasted at least 1 year',
+            '✔ Preparation of protocol (property division, alimony, custody, etc.)',
+            '✔ Joint application of parties to court'
+        ],
+        'bosanma-col2-title': '📌 Contested Divorce',
+        'bosanma-col2-desc': 'If there is disagreement between parties; proof of reasons, witnesses, evidence, and a long trial process are involved.',
+        'bosanma-col2-sub': 'Reasons:',
+        'bosanma-col2-list': [
+            '• Adultery',
+            '• Violence',
+            '• Desertion',
+            '• Incompatibility',
+            '• Abuse',
+            '• Mental illness'
+        ],
+        'bosanma-info-title': '👶 Custody and Alimony',
+        'bosanma-info-text': 'One of the most sensitive issues in the divorce process is child custody and alimony. The court decides by considering the <strong>best interests of the child</strong>. Joint custody, establishing personal relationships, and child support are evaluated in detail.',
+        'bosanma-warning-title': '⚠️ Don\'t Forget!',
+        'bosanma-warning-list': [
+            'Property division can be opened as a <strong>separate case</strong> from the divorce case.',
+            'You also have rights such as <strong>surname usage, alimony cancellation/increase, custody change</strong> after divorce.',
+            'Legal support both speeds up the process and <strong>prevents loss of rights</strong>.'
+        ],
+
+        // Services - Borclar (EN)
+        'borclar-subtitle': 'What is the Code of Obligations? How Does It Protect You?',
+        'borclar-intro': 'The Code of Obligations is the fundamental branch of law that regulates debt-credit relationships, contracts, responsibilities, and compensation obligations between people or companies. Every contract made in daily life falls within the scope of the Code of Obligations.',
+        'borclar-col1-title': '📌 What Topics Does the Code of Obligations Cover?',
+        'borclar-col1-list': [
+            'Contract preparation and review (sales, rental, service, proxy, subcontracting, etc.)',
+            'Performance of debts and default (delay)',
+            'Receivable collection and warning processes',
+            'Tort (causing damage) and material/moral compensation lawsuits',
+            'Unjust enrichment claims',
+            'Liability lawsuits (defect, warranty, defective goods)'
+        ],
+        'borclar-col2-title': '👥 For Who Is It Necessary?',
+        'borclar-col2-group1-title': 'Individuals:',
+        'borclar-col2-group1-desc': 'Disputes regarding credit-debt relationships, compensation lawsuits, service or rental contracts.',
+        'borclar-col2-group2-title': 'Companies:',
+        'borclar-col2-group2-desc': 'Preparation of commercial contracts, follow-up of collection processes, contractor-subcontractor relationships, guarantee and liability regulations.',
+        'borclar-warning-title': '⚠️ Why Is It Important?',
+        'borclar-warning-text': 'A wrongly or incompletely prepared contract can lead to long and financially damaging lawsuits in the future. A <strong>strong legal infrastructure</strong> provides trust in business and individual relationships.'
     }
 };
 
@@ -524,6 +1145,192 @@ function applyLanguage(lang) {
 
     const footerNote = document.querySelector('.footer-note');
     if (footerNote) footerNote.textContent = t['footer-note'];
+
+    // Info Banner Text
+    const infoText = document.querySelector('.info-text');
+    if (infoText) infoText.innerHTML = t['info-text'];
+
+    // About Texts
+    const aboutText1 = document.querySelector('.about-text-1');
+    if (aboutText1) aboutText1.innerHTML = t['about-text-1'];
+
+    const aboutText2 = document.querySelector('.about-text-2');
+    if (aboutText2) aboutText2.textContent = t['about-text-2'];
+
+    const aboutListTitle = document.querySelector('.about-list-title');
+    if (aboutListTitle) aboutListTitle.textContent = t['about-list-title'];
+
+    const aboutListItems = document.querySelector('.about-list-items');
+    if (aboutListItems && t['about-list-items']) {
+        aboutListItems.innerHTML = t['about-list-items'].map(item => `<li>${item}</li>`).join('');
+    }
+
+    // Why Us Cards
+    const whyCards = document.querySelectorAll('.why-card');
+    whyCards.forEach(card => {
+        const index = card.getAttribute('data-index');
+        if (index) {
+            const title = card.querySelector('h4');
+            const desc = card.querySelector('p');
+            if (title) title.textContent = t[`why-title-${index}`];
+            if (desc) desc.textContent = t[`why-desc-${index}`];
+        }
+    });
+
+    // Vision Texts
+    const visionTitle = document.querySelector('.vision-title');
+    if (visionTitle) visionTitle.textContent = t['vision-title'];
+
+    const visionText1 = document.querySelector('.vision-text-1');
+    if (visionText1) visionText1.textContent = t['vision-text-1'];
+
+    const visionText2 = document.querySelector('.vision-text-2');
+    if (visionText2) visionText2.textContent = t['vision-text-2'];
+
+    // Mission Texts
+    const missionTitle = document.querySelector('.mission-title');
+    if (missionTitle) missionTitle.textContent = t['mission-title'];
+
+    const missionText1 = document.querySelector('.mission-text-1');
+    if (missionText1) missionText1.textContent = t['mission-text-1'];
+
+    const missionText2 = document.querySelector('.mission-text-2');
+    if (missionText2) missionText2.textContent = t['mission-text-2'];
+
+    const missionText3 = document.querySelector('.mission-text-3');
+    if (missionText3) missionText3.innerHTML = t['mission-text-3'];
+
+    // Helper function to update lists
+    const updateList = (selector, listData) => {
+        const listEl = document.querySelector(selector);
+        if (listEl && listData) {
+            listEl.innerHTML = '';
+            listData.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = item;
+                listEl.appendChild(li);
+            });
+        }
+    };
+
+    // Helper function to update text content
+    const updateText = (selector, key, isHTML = false) => {
+        const el = document.querySelector(selector);
+        if (el && t[key]) {
+            if (isHTML) el.innerHTML = t[key];
+            else el.textContent = t[key];
+        }
+    };
+
+    // --- Services Translations Application ---
+
+    // Service CTA Buttons
+    const serviceCtas = document.querySelectorAll('.service-cta');
+    serviceCtas.forEach(btn => {
+        if (btn) btn.textContent = t['service-cta'];
+    });
+
+    // Miras
+    updateText('.miras-title', 'miras-title');
+    updateText('.miras-subtitle', 'miras-subtitle');
+    updateText('.miras-intro', 'miras-intro');
+    updateText('.miras-col1-title', 'miras-col1-title');
+    updateList('.miras-col1-list', t['miras-col1-list']);
+    updateText('.miras-col2-title', 'miras-col2-title');
+    updateList('.miras-col2-list', t['miras-col2-list']);
+    updateText('.miras-info-title', 'miras-info-title');
+    updateList('.miras-info-list', t['miras-info-list']);
+    updateText('.miras-warning-title', 'miras-warning-title');
+    updateList('.miras-warning-list', t['miras-warning-list']);
+
+    // Veraset
+    updateText('.veraset-title', 'veraset-title');
+    updateText('.veraset-subtitle', 'veraset-subtitle');
+    updateText('.veraset-intro', 'veraset-intro');
+    updateText('.veraset-col1-title', 'veraset-col1-title');
+    updateText('.veraset-col1-desc', 'veraset-col1-desc');
+    updateList('.veraset-col1-list', t['veraset-col1-list']);
+    updateText('.veraset-col2-title', 'veraset-col2-title');
+    updateList('.veraset-col2-list', t['veraset-col2-list']);
+    updateText('.veraset-info-title', 'veraset-info-title');
+    updateList('.veraset-info-list', t['veraset-info-list']);
+    updateText('.veraset-warning-title', 'veraset-warning-title');
+    updateList('.veraset-warning-list', t['veraset-warning-list']);
+
+    // Gayrimenkul
+    updateText('.gayrimenkul-title', 'gayr-title');
+    updateText('.gayrimenkul-subtitle', 'gayr-subtitle');
+    updateText('.gayrimenkul-intro', 'gayr-intro');
+    updateText('.gayrimenkul-col1-title', 'gayr-col1-title');
+    updateList('.gayrimenkul-col1-list', t['gayr-col1-list']);
+    updateText('.gayrimenkul-col2-title', 'gayr-col2-title');
+    updateText('.gayrimenkul-col2-desc', 'gayr-col2-desc');
+    updateList('.gayrimenkul-col2-list', t['gayr-col2-list']);
+
+    // Is Hukuku
+    updateText('.is-title', 'is-title');
+    updateText('.is-subtitle', 'is-subtitle');
+    updateText('.is-intro', 'is-intro');
+    updateText('.is-col1-title', 'is-col1-title');
+    updateList('.is-col1-list', t['is-col1-list']);
+    updateText('.is-col2-title', 'is-col2-title');
+
+    // Is Hukuku nested groups - Manually update h5 and p inside groups
+    const isGroup1 = document.querySelector('.is-col2-group1');
+    if (isGroup1) {
+        if (t['is-col2-group1-title']) isGroup1.querySelector('h5').innerText = t['is-col2-group1-title'];
+        if (t['is-col2-group1-desc']) isGroup1.querySelector('p').innerText = t['is-col2-group1-desc'];
+    }
+    const isGroup2 = document.querySelector('.is-col2-group2');
+    if (isGroup2) {
+        if (t['is-col2-group2-title']) isGroup2.querySelector('h5').innerText = t['is-col2-group2-title'];
+        if (t['is-col2-group2-desc']) isGroup2.querySelector('p').innerText = t['is-col2-group2-desc'];
+    }
+
+    updateText('.is-warning-title', 'is-warning-title');
+    updateText('.is-warning-text', 'is-warning-text');
+    updateList('.is-warning-list', t['is-warning-list']);
+
+    // Bosanma
+    updateText('.bosanma-title', 'bosanma-title');
+    updateText('.bosanma-subtitle', 'bosanma-subtitle');
+    updateText('.bosanma-intro', 'bosanma-intro');
+    updateText('.bosanma-col1-title', 'bosanma-col1-title');
+    updateText('.bosanma-col1-desc', 'bosanma-col1-desc');
+    updateText('.bosanma-col1-sub', 'bosanma-col1-sub');
+    updateList('.bosanma-col1-list', t['bosanma-col1-list']);
+    updateText('.bosanma-col2-title', 'bosanma-col2-title');
+    updateText('.bosanma-col2-desc', 'bosanma-col2-desc');
+    updateText('.bosanma-col2-sub', 'bosanma-col2-sub');
+    updateList('.bosanma-col2-list', t['bosanma-col2-list']);
+    updateText('.bosanma-info-title', 'bosanma-info-title');
+    updateText('.bosanma-info-text', 'bosanma-info-text', true);
+    updateText('.bosanma-warning-title', 'bosanma-warning-title');
+    updateList('.bosanma-warning-list', t['bosanma-warning-list']);
+
+    // Borclar
+    updateText('.borclar-title', 'borclar-title');
+    updateText('.borclar-subtitle', 'borclar-subtitle');
+    updateText('.borclar-intro', 'borclar-intro');
+    updateText('.borclar-col1-title', 'borclar-col1-title');
+    updateList('.borclar-col1-list', t['borclar-col1-list']);
+    updateText('.borclar-col2-title', 'borclar-col2-title');
+
+    // Borclar nested groups
+    const borclarGroup1 = document.querySelector('.borclar-col2-group1');
+    if (borclarGroup1) {
+        if (t['borclar-col2-group1-title']) borclarGroup1.querySelector('h5').innerText = t['borclar-col2-group1-title'];
+        if (t['borclar-col2-group1-desc']) borclarGroup1.querySelector('p').innerText = t['borclar-col2-group1-desc'];
+    }
+    const borclarGroup2 = document.querySelector('.borclar-col2-group2');
+    if (borclarGroup2) {
+        if (t['borclar-col2-group2-title']) borclarGroup2.querySelector('h5').innerText = t['borclar-col2-group2-title'];
+        if (t['borclar-col2-group2-desc']) borclarGroup2.querySelector('p').innerText = t['borclar-col2-group2-desc'];
+    }
+
+    updateText('.borclar-warning-title', 'borclar-warning-title');
+    updateText('.borclar-warning-text', 'borclar-warning-text', true);
+
 }
 
 function showNotification(message) {

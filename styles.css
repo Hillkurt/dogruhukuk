@@ -355,9 +355,11 @@ img {
     color: var(--gold);
 }
 
-.logo-icon svg {
+.logo-icon svg,
+.logo-icon img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .logo-text {
