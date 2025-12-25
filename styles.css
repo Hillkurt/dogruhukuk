@@ -236,6 +236,37 @@ body {
     max-width: 300px;
 }
 
+/* ===== Floating WhatsApp Button ===== */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 99999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.floating-whatsapp svg {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
+
 h1,
 h2,
 h3,
@@ -1584,7 +1615,20 @@ img {
     }
 
     .header {
-        padding: 1rem 0;
+        padding: 0.75rem 0;
+    }
+
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-title {
+        font-size: 1.5rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.6rem;
     }
 
     .menu-toggle {
@@ -1801,8 +1845,24 @@ img {
 }
 
 @media (max-width: 480px) {
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-title {
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+    }
+
+    .logo-subtitle {
+        font-size: 0.55rem;
+        letter-spacing: 0.1em;
+    }
+
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        word-wrap: break-word;
     }
 
     .section-title {
@@ -1813,5 +1873,19 @@ img {
         width: 100%;
         /* Full width buttons on small mobile */
         justify-content: center;
+        padding: 0.8rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    /* Prevent service header overflow */
+    .service-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .service-cta {
+        width: 100%;
+        text-align: center;
     }
 }
