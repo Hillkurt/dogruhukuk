@@ -1428,6 +1428,70 @@ const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const navLinksMobile = document.querySelectorAll('.nav-link');
 
+// Elements to move/clone for mobile
+const headerElement = document.querySelector('.header');
+const topBar = document.querySelector('.top-bar');
+const headerBtnOriginal = document.querySelector('.header-btn');
+
+function setupMobileMenu() {
+    if (!nav || !menuToggle) return;
+
+    // Create a container for mobile extras if not exists
+    let mobileExtras = nav.querySelector('.mobile-extras');
+    if (!mobileExtras) {
+        mobileExtras = document.createElement('div');
+        mobileExtras.className = 'mobile-extras';
+        nav.appendChild(mobileExtras);
+    }
+
+    // 1. Clone Language Switcher
+    const langSwitcher = document.querySelector('.lang-switcher');
+    if (langSwitcher && !mobileExtras.querySelector('.lang-switcher')) {
+        const langClone = langSwitcher.cloneNode(true);
+        mobileExtras.appendChild(langClone);
+
+        // Re-attach listeners to cloned buttons if needed
+        // (Note: Original listeners might not stick to clones depending on implementation)
+        // Since original listeners use delegate event or direct, we might need to delegate.
+        // Let's rely on global delegates or simple re-query
+        const clonedBtns = langClone.querySelectorAll('.lang-btn');
+        clonedBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = btn.getAttribute('data-lang');
+                // Reuse existing logic functions if available globally or dispatch event
+                // Find original button and click it to trigger logic? Simpler.
+                const originalBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
+                if (originalBtn) originalBtn.click();
+            });
+        });
+    }
+
+    // 2. Clone Theme Toggle
+    const themeToggleOriginal = document.getElementById('themeToggle');
+    if (themeToggleOriginal && !mobileExtras.querySelector('#themeToggleMobile')) {
+        const themeClone = themeToggleOriginal.cloneNode(true);
+        themeClone.id = 'themeToggleMobile'; // Avoid duplicate IDs
+        mobileExtras.appendChild(themeClone);
+
+        themeClone.addEventListener('click', () => {
+            // Sync with original
+            themeToggleOriginal.click();
+        });
+    }
+
+    // 3. Clone Appointment Button
+    if (headerBtnOriginal && !mobileExtras.querySelector('.header-btn')) {
+        const btnClone = headerBtnOriginal.cloneNode(true);
+        btnClone.style.display = 'flex'; // Ensure it's visible in mobile menu
+        btnClone.classList.add('mobile-nav-btn');
+        mobileExtras.insertBefore(btnClone, mobileExtras.firstChild);
+    }
+}
+
+// Run setup
+setupMobileMenu();
+
 if (menuToggle && nav) {
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');

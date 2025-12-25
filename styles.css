@@ -1578,16 +1578,21 @@ img {
         max-width: 300px;
         height: 100vh;
         background: var(--primary-dark);
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        /* Start from top */
         align-items: center;
-        padding: 2rem;
+        padding: 5rem 2rem 2rem;
+        /* Add top padding to clear toggle */
         gap: 1.5rem;
         transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
         /* Smooth easing */
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
         z-index: 1000;
         border-left: 1px solid var(--gold);
+        overflow-y: auto;
+        /* Enable scrolling */
     }
 
     .nav.active {
@@ -1600,19 +1605,25 @@ img {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        /* Use viewport width */
+        height: 100vh;
         background: rgba(0, 0, 0, 0.6);
         z-index: -1;
         backdrop-filter: blur(3px);
+        /* Fix backdrop positioning relative to fixed nav */
+        transform: translateX(-100%);
+        /* Move it left of the nav */
     }
 
     .nav-link {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         width: 100%;
         text-align: center;
-        padding: 1rem 0;
+        padding: 0.75rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: block;
+        /* Ensure full width clickable */
     }
 
     .nav-link:last-child {
@@ -1623,9 +1634,64 @@ img {
         display: none;
     }
 
+    /* Mobile Extras Styling */
+    .mobile-extras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: auto;
+        /* Push to bottom if space permits, or just stack */
+        width: 100%;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-nav-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+        background: var(--gold);
+        /* Ensure visible */
+        color: var(--primary-dark);
+    }
+
+    .mobile-extras .lang-switcher {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .mobile-extras .lang-btn {
+        color: var(--white);
+        padding: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .mobile-extras .lang-btn.active {
+        background: var(--gold);
+        color: var(--primary-dark);
+        border-color: var(--gold);
+    }
+
+    #themeToggleMobile {
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        padding: 0.5rem;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .header-btn {
         display: none;
-        /* Moved inside menu potentially or hidden */
+        /* Hide original in header, clone shows in menu */
     }
 
     /* Inject Action Button into Menu via JS or duplicate in HTML usually, 
