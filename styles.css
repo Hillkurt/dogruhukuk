@@ -201,6 +201,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 body {
@@ -209,6 +211,29 @@ body {
     color: var(--text);
     line-height: 1.7;
     font-size: 16px;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    position: relative;
+    /* Context for absolute positioning */
+}
+
+/* ... existing styles ... */
+
+/* Ensure WhatsApp button is clickable */
+.floating-whatsapp {
+    /* ... existing props ... */
+    z-index: 99999;
+    /* Ensure it's above everything including masks */
+    pointer-events: auto;
+    /* Force clickable */
+}
+
+/* Ensure mobile menu doesn't cause overflow */
+.nav {
+    /* ... existing props ... */
+    width: 85vw;
+    /* Use viewport unit constraints */
+    max-width: 300px;
 }
 
 h1,
@@ -1634,41 +1659,44 @@ img {
         display: none;
     }
 
-    /* Mobile Extras Styling */
+    /* Mobile Extras Styling - Top of Menu */
     .mobile-extras {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
-        margin-top: auto;
-        /* Push to bottom if space permits, or just stack */
+        gap: 1rem;
         width: 100%;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .mobile-nav-btn {
         width: 100%;
         justify-content: center;
-        margin-bottom: 1rem;
         background: var(--gold);
-        /* Ensure visible */
         color: var(--primary-dark);
+        border-radius: 50px;
+        font-weight: 700;
+        padding: 0.8rem;
     }
 
     .mobile-extras .lang-switcher {
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
+        justify-content: center;
+        width: 100%;
     }
 
     .mobile-extras .lang-btn {
         color: var(--white);
-        padding: 0.5rem;
+        padding: 0.4rem 0.8rem;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 4px;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
+        font-size: 0.85rem;
     }
 
     .mobile-extras .lang-btn.active {
