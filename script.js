@@ -160,6 +160,11 @@ const translations = {
         'footer-kvkk': 'KVKK Aydınlatma',
         'footer-imprint': 'Künye',
         'footer-data': 'Veri Koruma',
+        'footer-hours-title': 'Çalışma Saatleri',
+        'footer-weekdays': 'Pazartesi - Cuma',
+        'footer-saturday': 'Cumartesi',
+        'footer-sunday': 'Pazar',
+        'footer-closed': 'Kapalı',
         'footer-copyright': '© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.',
         'footer-note': 'Alman hukuku kapsamında tavsiye veya temsil açıkça sağlanmamaktadır.',
         'whatsapp-title': 'WhatsApp\'tan Yazın',
@@ -374,7 +379,24 @@ const translations = {
         'borclar-col2-group2-title': 'Şirketler:',
         'borclar-col2-group2-desc': 'Ticari sözleşmelerin hazırlanması, tahsilat süreçlerinin takibi, yüklenici-alt yüklenici ilişkileri, teminat ve sorumluluk düzenlemeleri.',
         'borclar-warning-title': '⚠️ Neden Önemlidir?',
-        'borclar-warning-text': 'Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve bireysel ilişkilerde güven sağlar.'
+        'borclar-warning-text': 'Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve bireysel ilişkilerde güven sağlar.',
+
+        // FAQ / SSS
+        'faq-tag': 'SSS',
+        'faq-title': 'Sıkça Sorulan Sorular',
+        'faq-desc': 'Müvekkillerimizin en çok sorduğu sorulara hızlı yanıtlar.',
+        'faq-q1': 'Türkiye\'de vekaletname nasıl alınır?',
+        'faq-a1': 'Almanya\'da Türk konsolosluğuna giderek vekaletname alabilirsiniz. Pasaportunuz ve kimlik bilgilerinizle başvuru yapmanız yeterlidir. Vekaletname genellikle aynı gün içinde hazırlanır ve avukatınıza doğrudan gönderilebilir.',
+        'faq-q2': 'Miras davası ne kadar sürer?',
+        'faq-a2': 'Miras davaları, davanın karmaşıklığına göre 6 ay ile 2 yıl arasında sürebilir. Veraset ilamı genellikle 1-3 ay içinde alınabilir. Anlaşmazlık durumlarında süre uzayabilir.',
+        'faq-q3': 'Almanya\'dan Türkiye\'deki davaları nasıl takip edebilirim?',
+        'faq-a3': 'Türk konsolosluğundan alacağınız vekaletname ile sizi Türkiye\'de temsil edebilirim. Türkiye\'ye gitmenize gerek kalmadan tüm işlemler uzaktan yürütülebilir. Düzenli olarak dava ilerlemesi hakkında bilgilendirilirsiniz.',
+        'faq-q4': 'Boşanma davasında mal paylaşımı nasıl yapılır?',
+        'faq-a4': 'Türk hukukunda evlilik süresince edinilen mallar eşit olarak paylaşılır (edinilmiş mallara katılma rejimi). Evlilik öncesi mallar kişisel mal olarak kalır. Anlaşmalı veya çekişmeli boşanmaya göre süreç farklılık gösterebilir.',
+        'faq-q5': 'Veraset ilamı için hangi belgeler gerekli?',
+        'faq-a5': 'Ölüm belgesi veya nüfus kayıt örneği, mirasçıların kimlik fotokopileri ve vukuatlı nüfus kayıt örneği gereklidir. Yabancı uyruklu mirasçılar için apostil ve noter onaylı tercüme de istenebilir.',
+        'faq-q6': 'İlk görüşme ücretli mi?',
+        'faq-a6': 'Hayır, ilk görüşme tamamen ücretsizdir. Bu görüşmede hukuki durumunuzu değerlendirir, olası çözüm yollarını tartışır ve size en uygun stratejiyi belirlememize yardımcı olur.'
     },
     de: {
         // Navigation
@@ -485,6 +507,11 @@ const translations = {
         'footer-kvkk': 'KVKK Info',
         'footer-imprint': 'Impressum',
         'footer-data': 'Datenschutz',
+        'footer-hours-title': 'Öffnungszeiten',
+        'footer-weekdays': 'Montag - Freitag',
+        'footer-saturday': 'Samstag',
+        'footer-sunday': 'Sonntag',
+        'footer-closed': 'Geschlossen',
         'footer-copyright': '© 2024 DOĞRU Rechtsanwaltskanzlei. Alle Rechte vorbehalten.',
         'footer-note': 'Beratung oder Vertretung im deutschen Recht wird ausdrücklich nicht angeboten.',
         'whatsapp-title': 'Schreiben Sie uns auf WhatsApp',
@@ -699,7 +726,24 @@ const translations = {
         'borclar-col2-group2-title': 'Unternehmen:',
         'borclar-col2-group2-desc': 'Vorbereitung von Handelsverträgen, Verfolgung von Inkasso-, Auftragnehmer-Subunternehmer-Beziehungen, Garantie- und Haftungsregelungen.',
         'borclar-warning-title': '⚠️ Warum ist es wichtig?',
-        'borclar-warning-text': 'Ein falsch oder unvollständig vorbereiteter Vertrag kann in Zukunft zu langen und kostspieligen Gerichtsprozessen führen. Eine <strong>starke rechtliche Infrastruktur</strong> schafft Vertrauen in geschäftlichen und individuellen Beziehungen.'
+        'borclar-warning-text': 'Ein falsch oder unvollständig vorbereiteter Vertrag kann in Zukunft zu langen und kostspieligen Gerichtsprozessen führen. Eine <strong>starke rechtliche Infrastruktur</strong> schafft Vertrauen in geschäftlichen und individuellen Beziehungen.',
+
+        // FAQ / SSS
+        'faq-tag': 'FAQ',
+        'faq-title': 'Häufig gestellte Fragen',
+        'faq-desc': 'Schnelle Antworten auf die häufigsten Fragen unserer Mandanten.',
+        'faq-q1': 'Wie bekomme ich eine Vollmacht in der Türkei?',
+        'faq-a1': 'Sie können eine Vollmacht beim türkischen Konsulat in Deutschland erhalten. Ein Besuch mit Ihrem Reisepass und Personalausweis genügt. Die Vollmacht wird in der Regel am selben Tag ausgestellt und kann direkt an Ihren Anwalt gesendet werden.',
+        'faq-q2': 'Wie lange dauert ein Erbschaftsverfahren?',
+        'faq-a2': 'Erbschaftsverfahren können je nach Komplexität 6 Monate bis 2 Jahre dauern. Ein Erbschein kann in der Regel innerhalb von 1-3 Monaten erhalten werden. Bei Streitigkeiten kann sich die Dauer verlängern.',
+        'faq-q3': 'Wie kann ich von Deutschland aus Verfahren in der Türkei verfolgen?',
+        'faq-a3': 'Mit einer Vollmacht vom türkischen Konsulat kann ich Sie in der Türkei vertreten. Alle Verfahren können remote durchgeführt werden, ohne dass Sie persönlich in die Türkei reisen müssen. Sie werden regelmäßig über den Fortschritt informiert.',
+        'faq-q4': 'Wie funktioniert die Vermögensaufteilung bei einer Scheidung?',
+        'faq-a4': 'Nach türkischem Recht wird das während der Ehe erworbene Vermögen zu gleichen Teilen aufgeteilt (Zugewinngemeinschaft). Vor der Ehe erworbenes Vermögen bleibt persönliches Eigentum. Der Prozess kann je nach einvernehmlicher oder streitiger Scheidung variieren.',
+        'faq-q5': 'Welche Dokumente werden für einen Erbschein benötigt?',
+        'faq-a5': 'Eine Sterbeurkunde oder ein Personenstandsregisterauszug des Verstorbenen, Ausweiskopien der Erben und ein detaillierter Personenstandsregisterauszug sind erforderlich. Für ausländische Erben können auch Apostille und notariell beglaubigte Übersetzungen verlangt werden.',
+        'faq-q6': 'Ist die Erstberatung kostenpflichtig?',
+        'faq-a6': 'Nein, die Erstberatung ist völlig kostenlos. In diesem Gespräch bewerten wir Ihre rechtliche Situation, besprechen mögliche Lösungswege und helfen Ihnen, die beste Strategie für Ihren Fall zu bestimmen.'
     },
     en: {
         // Navigation
@@ -803,6 +847,11 @@ const translations = {
         'footer-kvkk': 'PDPL Info',
         'footer-imprint': 'Imprint',
         'footer-data': 'Data Protection',
+        'footer-hours-title': 'Working Hours',
+        'footer-weekdays': 'Monday - Friday',
+        'footer-saturday': 'Saturday',
+        'footer-sunday': 'Sunday',
+        'footer-closed': 'Closed',
         'footer-copyright': '© 2024 DOĞRU Law Firm. All rights reserved.',
         'footer-note': 'Advice or representation under German law is expressly not provided.',
         'whatsapp-title': 'Chat on WhatsApp',
@@ -1017,7 +1066,24 @@ const translations = {
         'borclar-col2-group2-title': 'Companies:',
         'borclar-col2-group2-desc': 'Preparation of commercial contracts, follow-up of collection processes, contractor-subcontractor relationships, guarantee and liability regulations.',
         'borclar-warning-title': '⚠️ Why Is It Important?',
-        'borclar-warning-text': 'A wrongly or incompletely prepared contract can lead to long and financially damaging lawsuits in the future. A <strong>strong legal infrastructure</strong> provides trust in business and individual relationships.'
+        'borclar-warning-text': 'A wrongly or incompletely prepared contract can lead to long and financially damaging lawsuits in the future. A <strong>strong legal infrastructure</strong> provides trust in business and individual relationships.',
+
+        // FAQ / SSS
+        'faq-tag': 'FAQ',
+        'faq-title': 'Frequently Asked Questions',
+        'faq-desc': 'Quick answers to the most common questions from our clients.',
+        'faq-q1': 'How do I get a power of attorney in Turkey?',
+        'faq-a1': 'You can obtain a power of attorney at the Turkish consulate in Germany. A visit with your passport and ID is sufficient. The power of attorney is usually issued on the same day and can be sent directly to your lawyer.',
+        'faq-q2': 'How long does an inheritance case take?',
+        'faq-a2': 'Inheritance cases can take between 6 months and 2 years depending on their complexity. A certificate of inheritance can usually be obtained within 1-3 months. In case of disputes, the duration may be extended.',
+        'faq-q3': 'How can I follow up on cases in Turkey from Germany?',
+        'faq-a3': 'With a power of attorney from the Turkish consulate, I can represent you in Turkey. All procedures can be conducted remotely without you having to travel to Turkey personally. You will be regularly informed about the progress.',
+        'faq-q4': 'How is property division done in a divorce?',
+        'faq-a4': 'Under Turkish law, property acquired during marriage is divided equally (participation in acquired property regime). Pre-marriage assets remain personal property. The process may vary depending on whether it is an amicable or contested divorce.',
+        'faq-q5': 'What documents are required for a certificate of inheritance?',
+        'faq-a5': 'A death certificate or population register excerpt, ID copies of the heirs, and a detailed population register excerpt are required. For foreign heirs, apostille and notarized translations may also be requested.',
+        'faq-q6': 'Is the first consultation free?',
+        'faq-a6': 'Yes, the first consultation is completely free. In this meeting, we evaluate your legal situation, discuss possible solutions, and help determine the best strategy for your case.'
     }
 };
 
@@ -1665,6 +1731,25 @@ if (lazyImages.length > 0) {
 
     lazyImages.forEach(img => imageObserver.observe(img));
 }
+
+// ===== FAQ Accordion =====
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+        // Close other items
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+            }
+        });
+
+        // Toggle current item
+        item.classList.toggle('active');
+    });
+});
 
 // ===== Console Branding =====
 console.log('%c⚖️ DOĞRU HUKUK BÜROSU', 'font-size: 24px; font-weight: bold; color: #1e3a5f;');
