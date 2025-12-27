@@ -1,3 +1,30 @@
+// ===== Page Loader =====
+const pageLoader = document.getElementById('pageLoader');
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        pageLoader.classList.add('hidden');
+    }, 800); // Show loader for 0.8 seconds minimum
+});
+
+// ===== Back to Top Button =====
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        backToTopBtn.classList.add('visible');
+    } else {
+        backToTopBtn.classList.remove('visible');
+    }
+});
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 // ===== Header Scroll =====
 const header = document.getElementById('header');
 
@@ -381,6 +408,19 @@ const translations = {
         'borclar-warning-title': '⚠️ Neden Önemlidir?',
         'borclar-warning-text': 'Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve bireysel ilişkilerde güven sağlar.',
 
+        // Process Timeline
+        'process-tag': 'Süreç',
+        'process-title': 'Nasıl Çalışırız?',
+        'process-desc': 'Hukuki süreciniz net ve şeffaf adımlarla ilerler.',
+        'process-step1-title': 'Ücretsiz İlk Görüşme',
+        'process-step1-desc': 'Hukuki durumunuzu değerlendirir, sorularınızı yanıtlar ve size en uygun stratejiyi belirleriz.',
+        'process-step2-title': 'Vekaletname Alımı',
+        'process-step2-desc': 'Türk konsolosluğundan vekaletname alarak resmi süreci başlatırız. Tüm belgeler düzenlenir.',
+        'process-step3-title': 'Dava Takibi',
+        'process-step3-desc': 'Türkiye\'deki mahkemelerde sizi temsil eder, düzenli bilgilendirmelerle süreci takip ederiz.',
+        'process-step4-title': 'Sonuç ve Teslim',
+        'process-step4-desc': 'Davanız sonuçlandığında tüm belgeler size iletilir. Başarılı sonuç garantili çalışma.',
+
         // FAQ / SSS
         'faq-tag': 'SSS',
         'faq-title': 'Sıkça Sorulan Sorular',
@@ -728,6 +768,19 @@ const translations = {
         'borclar-warning-title': '⚠️ Warum ist es wichtig?',
         'borclar-warning-text': 'Ein falsch oder unvollständig vorbereiteter Vertrag kann in Zukunft zu langen und kostspieligen Gerichtsprozessen führen. Eine <strong>starke rechtliche Infrastruktur</strong> schafft Vertrauen in geschäftlichen und individuellen Beziehungen.',
 
+        // Process Timeline
+        'process-tag': 'Ablauf',
+        'process-title': 'Wie arbeiten wir?',
+        'process-desc': 'Ihr rechtliches Verfahren verläuft mit klaren und transparenten Schritten.',
+        'process-step1-title': 'Kostenlose Erstberatung',
+        'process-step1-desc': 'Wir bewerten Ihre rechtliche Situation, beantworten Ihre Fragen und bestimmen die beste Strategie für Sie.',
+        'process-step2-title': 'Vollmacht erteilen',
+        'process-step2-desc': 'Wir starten das offizielle Verfahren mit einer Vollmacht vom türkischen Konsulat. Alle Dokumente werden vorbereitet.',
+        'process-step3-title': 'Fallverfolgung',
+        'process-step3-desc': 'Wir vertreten Sie vor türkischen Gerichten und halten Sie mit regelmäßigen Updates auf dem Laufenden.',
+        'process-step4-title': 'Ergebnis & Übergabe',
+        'process-step4-desc': 'Wenn Ihr Fall abgeschlossen ist, werden alle Dokumente an Sie übergeben. Garantiert erfolgreiches Arbeiten.',
+
         // FAQ / SSS
         'faq-tag': 'FAQ',
         'faq-title': 'Häufig gestellte Fragen',
@@ -1067,6 +1120,19 @@ const translations = {
         'borclar-col2-group2-desc': 'Preparation of commercial contracts, follow-up of collection processes, contractor-subcontractor relationships, guarantee and liability regulations.',
         'borclar-warning-title': '⚠️ Why Is It Important?',
         'borclar-warning-text': 'A wrongly or incompletely prepared contract can lead to long and financially damaging lawsuits in the future. A <strong>strong legal infrastructure</strong> provides trust in business and individual relationships.',
+
+        // Process Timeline
+        'process-tag': 'Process',
+        'process-title': 'How Do We Work?',
+        'process-desc': 'Your legal process proceeds with clear and transparent steps.',
+        'process-step1-title': 'Free Initial Consultation',
+        'process-step1-desc': 'We evaluate your legal situation, answer your questions, and determine the best strategy for you.',
+        'process-step2-title': 'Power of Attorney',
+        'process-step2-desc': 'We start the official process with a power of attorney from the Turkish consulate. All documents are prepared.',
+        'process-step3-title': 'Case Follow-up',
+        'process-step3-desc': 'We represent you in Turkish courts and keep you informed with regular updates on the process.',
+        'process-step4-title': 'Result & Delivery',
+        'process-step4-desc': 'Once your case is concluded, all documents are delivered to you. Guaranteed successful work.',
 
         // FAQ / SSS
         'faq-tag': 'FAQ',

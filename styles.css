@@ -1704,6 +1704,110 @@ img {
     font-size: 0.95rem;
 }
 
+/* ===== Process Timeline ===== */
+.process {
+    padding: 5rem 0;
+    background: var(--bg-secondary);
+}
+
+.process .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.process-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--gold);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.process-connector {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    align-self: center;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .process-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .process-step {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .process-connector {
+        width: 2px;
+        height: 30px;
+    }
+}
+
+/* Google Maps */
+.contact-map {
+    margin-top: 1.5rem;
+}
+
+.contact-map iframe {
+    box-shadow: var(--shadow);
+}
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -2123,4 +2227,120 @@ img {
         width: 100%;
         text-align: center;
     }
+}
+
+/* ===== Page Loader ===== */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    color: var(--gold);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.loader-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(201, 169, 98, 0.2);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--gold);
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
 }
