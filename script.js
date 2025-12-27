@@ -1026,7 +1026,7 @@ const langBtns = document.querySelectorAll('.lang-btn');
 let currentLang = 'de'; // Varsayılan Almanca
 
 // Sayfa yüklendiğinde varsayılan dili uygula
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // localStorage'dan kayıtlı dil varsa onu kullan
     const savedLang = localStorage.getItem('lang');
     if (savedLang && translations[savedLang]) {
