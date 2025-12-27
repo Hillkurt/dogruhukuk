@@ -25,7 +25,7 @@
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                         <circle cx="12" cy="10" r="3" />
                     </svg>
-                    Mannheim, Deutschland & Ankara, Türkei
+                    <span data-i18n="top-address">Mannheim, Deutschland & Ankara, Türkei</span>
                 </span>
                 <span class="top-divider">|</span>
                 <span class="top-item">
@@ -33,7 +33,9 @@
                         <path
                             d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                     </svg>
-                    +49 176 6122 1210 / +90 533 237 5918
+                    <a href="tel:+4917661221210" class="top-phone">+49 176 6122 1210</a>
+                    <span style="opacity: 0.4;">/</span>
+                    <a href="tel:+905332375918" class="top-phone">+90 533 237 5918</a>
                 </span>
             </div>
             <div class="top-right">
@@ -75,7 +77,8 @@
                     </a>
                 </div>
                 <span class="top-divider">|</span>
-                <button class="theme-toggle" id="themeToggle" title="Tema Değiştir">
+                <button class="theme-toggle" id="themeToggle" title="Tema Değiştir"
+                    data-i18n-title="theme-toggle-title">
                     <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5" />
                         <line x1="12" y1="1" x2="12" y2="3" />
@@ -104,37 +107,37 @@
                 </div>
                 <div class="logo-text">
                     <span class="logo-title">DOĞRU</span>
-                    <span class="logo-subtitle">RECHTSANWALTSKANZLEI</span>
+                    <span class="logo-subtitle" data-i18n="logo-subtitle">HUKUK BÜROSU</span>
                 </div>
             </a>
 
             <nav class="nav" id="nav">
-                <a href="#anasayfa" class="nav-link active">STARTSEITE</a>
+                <a href="#anasayfa" class="nav-link active" data-i18n="nav-home">ANASAYFA</a>
                 <div class="nav-dropdown">
-                    <a href="#hizmetler" class="nav-link has-dropdown">
-                        RECHTSGEBIETE
+                    <a href="#hizmetler" class="nav-link has-dropdown" data-i18n="nav-services">
+                        HUKUK ALANLARIMIZ
                         <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <polyline points="6 9 12 15 18 9" />
                         </svg>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="#miras-hukuku">Miras Hukuku</a>
-                        <a href="#veraset-ilami">Veraset İlamı</a>
-                        <a href="#gayrimenkul">Gayrimenkul Hukuku</a>
-                        <a href="#is-hukuku">İş Hukuku</a>
-                        <a href="#bosanma">Boşanma Davaları</a>
-                        <a href="#borclar">Borçlar Hukuku</a>
+                        <a href="#miras-hukuku" data-i18n="dropdown-1">Miras Hukuku</a>
+                        <a href="#veraset-ilami" data-i18n="dropdown-2">Veraset İlamı</a>
+                        <a href="#gayrimenkul" data-i18n="dropdown-3">Gayrimenkul Hukuku</a>
+                        <a href="#is-hukuku" data-i18n="dropdown-4">İş Hukuku</a>
+                        <a href="#bosanma" data-i18n="dropdown-5">Boşanma Davaları</a>
+                        <a href="#borclar" data-i18n="dropdown-6">Borçlar Hukuku</a>
                     </div>
                 </div>
-                <a href="#hakkimizda" class="nav-link">ÜBER UNS</a>
-                <a href="#neden-biz" class="nav-link">WARUM WIR</a>
-                <a href="#vizyon" class="nav-link">UNSERE VISION</a>
-                <a href="#iletisim" class="nav-link">KONTAKT</a>
+                <a href="#hakkimizda" class="nav-link" data-i18n="nav-about">HAKKIMIZDA</a>
+                <a href="#neden-biz" class="nav-link" data-i18n="nav-why">NEDEN BİZ</a>
+                <a href="#vizyon" class="nav-link" data-i18n="nav-vision">VİZYONUMUZ</a>
+                <a href="#iletisim" class="nav-link" data-i18n="nav-contact">İLETİŞİM</a>
             </nav>
 
-            <a href="#iletisim" class="header-btn" data-i18n="header-btn">
-                <span>Termin vereinbaren</span>
+            <a href="#iletisim" class="header-btn">
+                <span data-i18n="header-btn">Randevu Al</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
@@ -159,13 +162,13 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-icon">⚖️</span>
-                    <span class="badge-text">Experte für türkisches Recht</span>
+                    <span class="badge-text" data-i18n="hero-badge">Experte für türkisches Recht</span>
                 </div>
-                <h1 class="hero-title">
+                <h1 class="hero-title" data-i18n="hero-title">
                     Ihr zuverlässiger<br>
                     <span class="highlight">Partner</span> im türkischen Recht
                 </h1>
-                <p class="hero-desc">
+                <p class="hero-desc" data-i18n="hero-desc">
                     Als Rechtsanwalt biete ich meinen Mandanten ausschließlich Beratung und Vertretung im türkischen
                     Recht an.
                     Mit unseren Büros in <strong>Mannheim</strong> und <strong>Ankara</strong>
@@ -177,30 +180,30 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        <span>Erbrecht</span>
+                        <span data-i18n="hero-feature-1">Erbrecht</span>
                     </div>
                     <div class="hero-feature">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        <span>Familienrecht</span>
+                        <span data-i18n="hero-feature-2">Familienrecht</span>
                     </div>
                     <div class="hero-feature">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        <span>Immobilienrecht</span>
+                        <span data-i18n="hero-feature-3">Immobilienrecht</span>
                     </div>
                     <div class="hero-feature">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        <span>Arbeitsrecht</span>
+                        <span data-i18n="hero-feature-4">Arbeitsrecht</span>
                     </div>
                 </div>
                 <div class="hero-cta">
                     <a href="#iletisim" class="btn btn-primary">
-                        <span>Kostenlose Erstberatung</span>
+                        <span data-i18n="hero-cta-1">Ücretsiz Ön Görüşme</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12" />
                             <polyline points="12 5 19 12 12 19" />
@@ -211,10 +214,10 @@
                             <path
                                 d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                         </svg>
-                        <span>Jetzt anrufen</span>
+                        <span data-i18n="hero-cta-2">Hemen Arayın</span>
                     </a>
                 </div>
-                <p class="hero-note">
+                <p class="hero-note" data-i18n="hero-note">
                     <strong>Hinweis:</strong> Beratung oder Vertretung im deutschen Recht wird ausdrücklich nicht
                     angeboten.
                 </p>
@@ -233,7 +236,7 @@
                         <line x1="12" y1="8" x2="12.01" y2="8" />
                     </svg>
                 </div>
-                <p class="info-text">
+                <p class="info-text" data-i18n="info-text">
                     Almanya'da yaşıyorsanız, Türk vatandaşlığına sahipseniz veya Mavi Kart sahibiyseniz ve
                     Türkiye'de Türk hukuku kapsamında danışmanlık ve temsile ihtiyaç duyduğunuz hukuki bir meseleniz
                     varsa,
@@ -252,22 +255,22 @@
                 <div class="stat-card">
                     <div class="stat-icon">⚖️</div>
                     <span class="stat-number" data-count="500">0</span>
-                    <span class="stat-label">Başarılı Dava</span>
+                    <span class="stat-label" data-i18n="stat-1">Başarılı Dava</span>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">📅</div>
                     <span class="stat-number" data-count="15">0</span>
-                    <span class="stat-label">Yıllık Deneyim</span>
+                    <span class="stat-label" data-i18n="stat-2">Yıllık Deneyim</span>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">⭐</div>
                     <span class="stat-number" data-count="98">0</span>
-                    <span class="stat-label">% Müvekkil Memnuniyeti</span>
+                    <span class="stat-label" data-i18n="stat-3">% Müvekkil Memnuniyeti</span>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">🌍</div>
                     <span class="stat-number">2</span>
-                    <span class="stat-label">Ülkede Ofis</span>
+                    <span class="stat-label" data-i18n="stat-4">Ülkede Ofis</span>
                 </div>
             </div>
         </div>
@@ -293,28 +296,30 @@
                 <div class="about-content">
                     <div class="section-tag">
                         <span class="tag-line"></span>
-                        <span class="tag-text">Hakkımızda</span>
+                        <span class="tag-text" data-i18n="about-tag">Hakkımızda</span>
                     </div>
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-i18n="about-title">
                         Türk Hukukunda<br>
                         <span class="highlight">Profesyonel Temsil</span>
                     </h2>
                     <div class="about-text">
-                        <p class="about-text-1">
+                        <p class="about-text-1" data-i18n="about-text-1">
                             Müvekkillerimi temsil etmeye tamamen kararlıyım. İster Türk hukukuna göre boşanma,
                             ister Türk mahkemelerindeki davalar, ister Türk hukukuna göre önemli sözleşmesel
                             konular veya diğer hukuki zorluklar olsun, size <strong>etkili, sonuç odaklı ve
                                 pratik çözümler</strong> sunuyorum.
                         </p>
-                        <p class="about-text-2">
+                        <p class="about-text-2" data-i18n="about-text-2">
                             Sadece bir "Türk avukatı" olarak hukuki açıdan değil, aynı zamanda yaşam
                             durumunuzu gerçek anlamda anlayarak endişelerinize yanıt vereceğim.
                         </p>
                     </div>
 
                     <div class="about-areas">
-                        <h4 class="about-list-title">Çalışma Alanlarım:</h4>
+                        <h4 class="about-list-title" data-i18n="about-list-title">Çalışma Alanlarım:</h4>
                         <ul class="areas-list about-list-items">
+                            <!-- JS will populate if needed, but data-i18n can be problematic for list items if they are fixed. 
+                                 For now, we leave the hardcoded list but will handle it in JS as currently implemented. -->
                             <li>Türk hukukunda <strong>miras hukuku</strong></li>
                             <li>Türk hukukunda <strong>aile hukuku</strong></li>
                             <li>Türk hukukunda <strong>boşanma davaları</strong></li>
@@ -325,7 +330,7 @@
                     </div>
 
                     <a href="#iletisim" class="btn btn-primary">
-                        <span>İletişime Geçin</span>
+                        <span data-i18n="about-btn">İletişime Geçin</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12" />
                             <polyline points="12 5 19 12 12 19" />
@@ -342,11 +347,11 @@
             <div class="section-header">
                 <div class="section-tag center">
                     <span class="tag-line"></span>
-                    <span class="tag-text">Uzmanlık Alanlarımız</span>
+                    <span class="tag-text" data-i18n="services-tag">Uzmanlık Alanlarımız</span>
                     <span class="tag-line"></span>
                 </div>
-                <h2 class="section-title center">HUKUK ALANLARIMIZ</h2>
-                <p class="section-desc">
+                <h2 class="section-title center" data-i18n="services-title">HUKUK ALANLARIMIZ</h2>
+                <p class="section-desc" data-i18n="services-desc">
                     Türk hukuku kapsamında aşağıdaki alanlarda profesyonel danışmanlık ve temsil hizmeti sunmaktayız.
                 </p>
             </div>
@@ -356,15 +361,16 @@
                 <div class="service-header">
                     <div class="service-icon-large">⚖️</div>
                     <div class="service-header-content">
-                        <h3 class="service-title miras-title">Miras Hukuku</h3>
-                        <p class="service-subtitle miras-subtitle">Miras Hukuku Nedir? Hangi Durumları Kapsar?</p>
+                        <h3 class="service-title miras-title" data-i18n="miras-title">Miras Hukuku</h3>
+                        <p class="service-subtitle miras-subtitle" data-i18n="miras-subtitle">Miras Hukuku Nedir? Hangi
+                            Durumları Kapsar?</p>
                     </div>
-                    <a href="#iletisim" class="service-cta">Randevu Al</a>
+                    <a href="#iletisim" class="service-cta" data-i18n="service-cta">Randevu Al</a>
                 </div>
 
                 <div class="service-body">
                     <div class="service-intro">
-                        <p class="miras-intro">
+                        <p class="miras-intro" data-i18n="miras-intro">
                             Miras hukuku, bir kişinin vefatından sonra geride bıraktığı malvarlığının kanuni
                             mirasçılara nasıl geçeceğini düzenleyen hukuk dalıdır. Aile içi paylaşım, vasiyet,
                             mal rejimi, reddi miras gibi pek çok konuyu kapsar.
@@ -373,7 +379,8 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="miras-col1-title">📌 Miras Hukuku Hangi Alanları Kapsar?</h4>
+                            <h4 class="miras-col1-title" data-i18n="miras-col1-title">📌 Miras Hukuku Hangi Alanları
+                                Kapsar?</h4>
                             <ul class="service-list miras-col1-list">
                                 <li><strong>Yasal Mirasçılık:</strong> Kimlerin hangi oranda mirasçı olduğunu belirler.
                                 </li>
@@ -387,7 +394,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="miras-col2-title">🧾 Miras Süreci Nasıl İşler?</h4>
+                            <h4 class="miras-col2-title" data-i18n="miras-col2-title">🧾 Miras Süreci Nasıl İşler?</h4>
                             <ol class="service-steps miras-col2-list">
                                 <li>Vefat gerçekleşir ve nüfus müdürlüğüne bildirilir.</li>
                                 <li>Veraset ilamı alınır (noterden veya mahkemeden).</li>
@@ -399,7 +406,7 @@
                     </div>
 
                     <div class="service-info-box">
-                        <h4 class="miras-info-title">🧠 Kimler Mirasçıdır?</h4>
+                        <h4 class="miras-info-title" data-i18n="miras-info-title">🧠 Kimler Mirasçıdır?</h4>
                         <div class="info-grid miras-info-list">
                             <span>✓ Eş, çocuklar, torunlar</span>
                             <span>✓ Anne-baba, kardeşler</span>
@@ -409,7 +416,7 @@
                     </div>
 
                     <div class="service-warning">
-                        <h4 class="miras-warning-title">⚠️ Önemli Uyarılar</h4>
+                        <h4 class="miras-warning-title" data-i18n="miras-warning-title">⚠️ Önemli Uyarılar</h4>
                         <ul class="miras-warning-list">
                             <li>Her miras, sadece mal değil <strong>borç da içerebilir</strong>. Gerekirse reddi miras
                                 hakkınızı kullanabilirsiniz.</li>
@@ -427,15 +434,16 @@
                 <div class="service-header">
                     <div class="service-icon-large">🧾</div>
                     <div class="service-header-content">
-                        <h3 class="service-title veraset-title">Veraset İlamı</h3>
-                        <p class="service-subtitle veraset-subtitle">Veraset İlamı Nedir? Nasıl Alınır?</p>
+                        <h3 class="service-title veraset-title" data-i18n="veraset-title">Veraset İlamı</h3>
+                        <p class="service-subtitle veraset-subtitle" data-i18n="veraset-subtitle">Veraset İlamı Nedir?
+                            Nasıl Alınır?</p>
                     </div>
-                    <a href="#iletisim" class="service-cta">Randevu Al</a>
+                    <a href="#iletisim" class="service-cta" data-i18n="service-cta">Randevu Al</a>
                 </div>
 
                 <div class="service-body">
                     <div class="service-intro">
-                        <p class="veraset-intro">
+                        <p class="veraset-intro" data-i18n="veraset-intro">
                             Veraset ilamı, bir kişinin vefatından sonra yasal mirasçılarının kim olduğunu
                             resmi olarak gösteren belgedir. Bu belge sayesinde mirasçılar; bankalardaki
                             işlemleri, tapu devirlerini, araç satışlarını ve vergi bildirimlerini yapabilir.
@@ -490,16 +498,17 @@
                 <div class="service-header">
                     <div class="service-icon-large">🏠</div>
                     <div class="service-header-content">
-                        <h3 class="service-title gayrimenkul-title">Gayrimenkul Hukuku</h3>
-                        <p class="service-subtitle gayrimenkul-subtitle">Gayrimenkul Hukuku Nedir? Hangi Durumlarda
+                        <h3 class="service-title gayrimenkul-title" data-i18n="gayr-title">Gayrimenkul Hukuku</h3>
+                        <p class="service-subtitle gayrimenkul-subtitle" data-i18n="gayr-subtitle">Gayrimenkul Hukuku
+                            Nedir? Hangi Durumlarda
                             Gerekli Olur?</p>
                     </div>
-                    <a href="#iletisim" class="service-cta">Randevu Al</a>
+                    <a href="#iletisim" class="service-cta" data-i18n="service-cta">Randevu Al</a>
                 </div>
 
                 <div class="service-body">
                     <div class="service-intro">
-                        <p class="gayrimenkul-intro">
+                        <p class="gayrimenkul-intro" data-i18n="gayr-intro">
                             Gayrimenkul hukuku, arsa, konut, işyeri gibi taşınmazlarla ilgili tüm alım-satım,
                             kira, tapu ve mülkiyet süreçlerini düzenleyen hukuk dalıdır.
                         </p>
@@ -507,7 +516,8 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="gayrimenkul-col1-title">📌 Gayrimenkul Hukuku Hangi Alanları Kapsar?</h4>
+                            <h4 class="gayrimenkul-col1-title" data-i18n="gayr-col1-title">📌 Gayrimenkul Hukuku Hangi
+                                Alanları Kapsar?</h4>
                             <ul class="service-list gayrimenkul-col1-list">
                                 <li>Tapu iptal ve tescil davaları</li>
                                 <li>Kat mülkiyeti ve ortak alan ihtilafları</li>
@@ -519,8 +529,10 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="gayrimenkul-col2-title">🧾 Neden Hukuki Destek Almalısınız?</h4>
-                            <p class="gayrimenkul-col2-desc">Taşınmaz işlemlerinde yapılan küçük bir hata, büyük maddi
+                            <h4 class="gayrimenkul-col2-title" data-i18n="gayr-col2-title">🧾 Neden Hukuki Destek
+                                Almalısınız?</h4>
+                            <p class="gayrimenkul-col2-desc" data-i18n="gayr-col2-desc">Taşınmaz işlemlerinde yapılan
+                                küçük bir hata, büyük maddi
                                 kayıplara ve uzun dava
                                 süreçlerine yol açabilir.</p>
                             <ul class="service-list gayrimenkul-col2-list">
@@ -538,15 +550,16 @@
                 <div class="service-header">
                     <div class="service-icon-large">⚙️</div>
                     <div class="service-header-content">
-                        <h3 class="service-title is-title">İş Hukuku</h3>
-                        <p class="service-subtitle is-subtitle">İş Hukuku Nedir? Hangi Hakları Kapsar?</p>
+                        <h3 class="service-title is-title" data-i18n="is-title">İş Hukuku</h3>
+                        <p class="service-subtitle is-subtitle" data-i18n="is-subtitle">İş Hukuku Nedir? Hangi Hakları
+                            Kapsar?</p>
                     </div>
-                    <a href="#iletisim" class="service-cta">Randevu Al</a>
+                    <a href="#iletisim" class="service-cta" data-i18n="service-cta">Randevu Al</a>
                 </div>
 
                 <div class="service-body">
                     <div class="service-intro">
-                        <p class="is-intro">
+                        <p class="is-intro" data-i18n="is-intro">
                             İş hukuku, çalışan ile işveren arasındaki iş ilişkisini düzenleyen, hem işçilerin
                             haklarını hem işverenin yükümlülüklerini güvence altına alan hukuk dalıdır.
                             İş sözleşmesinden feshe, tazminattan iş kazasına kadar geniş bir alanı kapsar.
@@ -555,7 +568,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="is-col1-title">📌 İş Hukuku Hangi Konuları Kapsar?</h4>
+                            <h4 class="is-col1-title" data-i18n="is-col1-title">📌 İş Hukuku Hangi Konuları Kapsar?</h4>
                             <ul class="service-list is-col1-list">
                                 <li>Haksız fesih ve işe iade davaları</li>
                                 <li>Kıdem ve ihbar tazminatı talepleri</li>
@@ -568,7 +581,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="is-col2-title">👷 Kimler İçin Gereklidir?</h4>
+                            <h4 class="is-col2-title" data-i18n="is-col2-title">👷 Kimler İçin Gereklidir?</h4>
                             <div class="service-group is-col2-group1">
                                 <h5>Çalışanlar için:</h5>
                                 <p>Haksız işten çıkarılma, ödenmeyen alacaklar, mobbing, hak ihlalleri.</p>
@@ -599,15 +612,16 @@
                 <div class="service-header">
                     <div class="service-icon-large">💔</div>
                     <div class="service-header-content">
-                        <h3 class="service-title bosanma-title">Boşanma Davaları</h3>
-                        <p class="service-subtitle bosanma-subtitle">Boşanma Süreci: Haklarınızı Biliyor Musunuz?</p>
+                        <h3 class="service-title bosanma-title" data-i18n="bosanma-title">Boşanma Davaları</h3>
+                        <p class="service-subtitle bosanma-subtitle" data-i18n="bosanma-subtitle">Boşanma Süreci:
+                            Haklarınızı Biliyor Musunuz?</p>
                     </div>
-                    <a href="#iletisim" class="service-cta">Randevu Al</a>
+                    <a href="#iletisim" class="service-cta" data-i18n="service-cta">Randevu Al</a>
                 </div>
 
                 <div class="service-body">
                     <div class="service-intro">
-                        <p class="bosanma-intro">
+                        <p class="bosanma-intro" data-i18n="bosanma-intro">
                             Boşanma, sadece iki insanın evliliğini sonlandırması değil; mal paylaşımı,
                             çocukların velayeti, nafaka ve duygusal yüklerin de hukuki düzlemde çözümlenmesi
                             sürecidir. Bu süreçte doğru adımlar atmak, geleceğinizi güvence altına almak
@@ -617,7 +631,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="bosanma-col1-title">📌 Anlaşmalı Boşanma</h4>
+                            <h4 class="bosanma-col1-title" data-i18n="bosanma-col1-title">📌 Anlaşmalı Boşanma</h4>
                             <p class="bosanma-col1-desc">Tarafların her konuda uzlaşması durumunda, kısa sürede ve tek
                                 celsede sonuçlanabilir.</p>
                             <h5 class="bosanma-col1-sub">Şartlar:</h5>
@@ -629,7 +643,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="bosanma-col2-title">📌 Çekişmeli Boşanma</h4>
+                            <h4 class="bosanma-col2-title" data-i18n="bosanma-col2-title">📌 Çekişmeli Boşanma</h4>
                             <p class="bosanma-col2-desc">Taraflar arasında anlaşmazlık varsa; sebeplerin ispatlanması,
                                 tanıklar, deliller ve uzun
                                 yargılama süreci söz konusudur.</p>
@@ -646,7 +660,7 @@
                     </div>
 
                     <div class="service-info-box">
-                        <h4 class="bosanma-info-title">👶 Velayet ve Nafaka</h4>
+                        <h4 class="bosanma-info-title" data-i18n="bosanma-info-title">👶 Velayet ve Nafaka</h4>
                         <p class="bosanma-info-text">
                             Boşanma sürecinde en hassas konulardan biri çocukların velayeti ve nafaka konusudur.
                             Mahkeme, <strong>çocuğun üstün yararını</strong> gözeterek karar verir.
@@ -672,15 +686,16 @@
                 <div class="service-header">
                     <div class="service-icon-large">📄</div>
                     <div class="service-header-content">
-                        <h3 class="service-title borclar-title">Borçlar Hukuku</h3>
-                        <p class="service-subtitle borclar-subtitle">Borçlar Hukuku Nedir? Sizi Nasıl Korur?</p>
+                        <h3 class="service-title borclar-title" data-i18n="borclar-title">Borçlar Hukuku</h3>
+                        <p class="service-subtitle borclar-subtitle" data-i18n="borclar-subtitle">Borçlar Hukuku Nedir?
+                            Sizi Nasıl Korur?</p>
                     </div>
-                    <a href="#iletisim" class="service-cta">Randevu Al</a>
+                    <a href="#iletisim" class="service-cta" data-i18n="service-cta">Randevu Al</a>
                 </div>
 
                 <div class="service-body">
                     <div class="service-intro">
-                        <p class="borclar-intro">
+                        <p class="borclar-intro" data-i18n="borclar-intro">
                             Borçlar hukuku, kişiler veya şirketler arasında doğan borç-alacak ilişkilerini,
                             sözleşmeleri, sorumlulukları ve tazminat yükümlülüklerini düzenleyen temel hukuk
                             dalıdır. Gündelik yaşamda yapılan her sözleşme, borçlar hukukunun kapsamına girer.
@@ -689,7 +704,8 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="borclar-col1-title">📌 Borçlar Hukuku Hangi Konuları Kapsar?</h4>
+                            <h4 class="borclar-col1-title" data-i18n="borclar-col1-title">📌 Borçlar Hukuku Hangi
+                                Konuları Kapsar?</h4>
                             <ul class="service-list borclar-col1-list">
                                 <li>Sözleşme hazırlama ve incelenmesi (satış, kira, hizmet, vekâlet, taşeronluk vb.)
                                 </li>
@@ -702,7 +718,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="borclar-col2-title">👥 Kimler İçin Gerekli?</h4>
+                            <h4 class="borclar-col2-title" data-i18n="borclar-col2-title">👥 Kimler İçin Gerekli?</h4>
                             <div class="service-group borclar-col2-group1">
                                 <h5>Bireyler:</h5>
                                 <p>Alacak-verecek ilişkileri, tazminat davaları, hizmet veya kira sözleşmeleriyle ilgili
@@ -717,7 +733,7 @@
                     </div>
 
                     <div class="service-warning">
-                        <h4 class="borclar-warning-title">⚠️ Neden Önemlidir?</h4>
+                        <h4 class="borclar-warning-title" data-i18n="borclar-warning-title">⚠️ Neden Önemlidir?</h4>
                         <p class="borclar-warning-text">
                             Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava
                             süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve
@@ -735,10 +751,10 @@
             <div class="section-header">
                 <div class="section-tag center">
                     <span class="tag-line"></span>
-                    <span class="tag-text">Avantajlarımız</span>
+                    <span class="tag-text" data-i18n="why-tag">Avantajlarımız</span>
                     <span class="tag-line"></span>
                 </div>
-                <h2 class="section-title center">Neden DOĞRU Hukuk Bürosu?</h2>
+                <h2 class="section-title center" data-i18n="why-title">Neden DOĞRU Hukuk Bürosu?</h2>
             </div>
 
             <div class="why-grid">
@@ -777,8 +793,8 @@
             <div class="vision-grid">
                 <div class="vision-card">
                     <div class="vision-icon">🔭</div>
-                    <h3 class="vision-title">VİZYONUMUZ</h3>
-                    <p class="vision-text-1">
+                    <h3 class="vision-title" data-i18n="vision-title">VİZYONUMUZ</h3>
+                    <p class="vision-text-1" data-i18n="vision-text-1">
                         Hukukun üstünlüğüne ilişkin güçlü bir anlayışla, öncelikli hedefimiz müvekkillerimizin
                         haklarını ve çıkarlarını en üst düzeyde koruyan, güvenilir, çözüm odaklı ve zamanın
                         taleplerine uyum sağlayan bir hukuk firması olmaktır.
@@ -796,16 +812,16 @@
 
                 <div class="vision-card">
                     <div class="vision-icon">🎯</div>
-                    <h3 class="mission-title">MİSYONUMUZ</h3>
-                    <p class="mission-text-1">
+                    <h3 class="mission-title" data-i18n="mission-title">MİSYONUMUZ</h3>
+                    <p class="mission-text-1" data-i18n="mission-text-1">
                         Amacımız, evrensel hukuk ilkelerine bağlı kalarak müvekkillerimizin ihtiyaç ve
                         beklentilerini en iyi ve etkili şekilde karşılamaktır.
                     </p>
-                    <p class="mission-text-2">
+                    <p class="mission-text-2" data-i18n="mission-text-2">
                         Temel görevimiz, her bir davanın dikkatli bir şekilde ele alınması yoluyla adaletin
                         uygulanmasına katkıda bulunmak ve hukuki işlemleri anlaşılır ve anlaşılır hale getirmektir.
                     </p>
-                    <p class="mission-text-3">
+                    <p class="mission-text-3" data-i18n="mission-text-3">
                         Müvekkillerimize her zaman <strong>dürüst, şeffaf ve zamanında bilgi</strong> sağlarız
                         ve her zaman mesleki etiğe uygun hareket ederiz. Sosyal sorumluluğumuzun farkındayız.
                         Bu nedenle, yalnızca temsil ettiğimiz kişilerin savunuculuğunu yapmıyoruz, aynı zamanda
@@ -915,7 +931,8 @@
 
                         <div class="form-group full">
                             <label for="message" data-i18n="form-message">Mesajınız *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required data-i18n="form-message"
+                                placeholder="Mesajınız *"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-full">
@@ -986,23 +1003,25 @@
                 </div>
 
                 <div class="footer-nav">
-                    <h4>Yasal</h4>
-                    <a href="#">Gizlilik Politikası</a>
-                    <a href="#">KVKK Aydınlatma</a>
-                    <a href="#">Künye</a>
-                    <a href="#">Veri Koruma</a>
+                    <h4 data-i18n="footer-legal">Yasal</h4>
+                    <a href="#" data-i18n="footer-policy">Gizlilik Politikası</a>
+                    <a href="#" data-i18n="footer-kvkk">KVKK Aydınlatma</a>
+                    <a href="#" data-i18n="footer-imprint">Künye</a>
+                    <a href="#" data-i18n="footer-data">Veri Koruma</a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.</p>
-                <p class="footer-note">Alman hukuku kapsamında tavsiye veya temsil açıkça sağlanmamaktadır.</p>
+                <p data-i18n="footer-copyright">© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.</p>
+                <p class="footer-note" data-i18n="footer-note">Alman hukuku kapsamında tavsiye veya temsil açıkça
+                    sağlanmamaktadır.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/905332375918" class="floating-whatsapp" target="_blank" title="WhatsApp'tan Yazın">
+    <a href="https://wa.me/905332375918" class="floating-whatsapp" target="_blank" rel="noopener">
+        <span class="whatsapp-label" data-i18n="whatsapp-title">Schreiben Sie uns auf WhatsApp</span>
         <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />

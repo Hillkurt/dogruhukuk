@@ -68,6 +68,11 @@ const translations = {
         'nav-contact': 'İLETİŞİM',
         'header-btn': 'Randevu Al',
 
+        // Top Bar & Page Title
+        'top-address': 'Mannheim, Almanya & Ankara, Türkiye',
+        'theme-toggle-title': 'Tema Değiştir',
+        'page-title': 'DOĞRU HUKUK BÜROSU | Türk Hukuku Uzmanı - Mannheim & Ankara',
+
         // Hero
         'hero-badge': 'Türk Hukuku Uzmanı',
         'hero-title': 'Türk Hukukunda<br><span class="highlight">Güvenilir</span> Çözüm Ortağınız',
@@ -157,6 +162,11 @@ const translations = {
         'footer-data': 'Veri Koruma',
         'footer-copyright': '© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.',
         'footer-note': 'Alman hukuku kapsamında tavsiye veya temsil açıkça sağlanmamaktadır.',
+        'whatsapp-title': 'WhatsApp\'tan Yazın',
+        'form-submitting': 'Gönderiliyor...',
+        'form-success': 'Başarıyla Gönderildi! ✓',
+        'copy-hint': 'Kopyalamak için tıklayın',
+        'copy-success': 'Kopyalandı! ✓',
 
         // Info Banner
         'info-text': 'Almanya\'da yaşıyorsanız, Türk vatandaşlığına sahipseniz veya Mavi Kart sahibiyseniz ve Türkiye\'de Türk hukuku kapsamında danışmanlık ve temsile ihtiyaç duyduğunuz hukuki bir meseleniz varsa, <strong>Türk konsolosluğundan alınmış bir vekaletname</strong> ile Türkiye\'ye bizzat gitmenize gerek kalmadan sizi Türkiye\'deki mahkemelerde temsil edebilirim.',
@@ -376,6 +386,11 @@ const translations = {
         'nav-contact': 'KONTAKT',
         'header-btn': 'Termin vereinbaren',
 
+        // Top Bar & Page Title
+        'top-address': 'Mannheim, Deutschland & Ankara, Türkei',
+        'theme-toggle-title': 'Thema wechseln',
+        'page-title': 'DOĞRU RECHTSANWALTSKANZLEI | Experte für türkisches Recht - Mannheim & Ankara',
+
         // Hero
         'hero-badge': 'Experte für türkisches Recht',
         'hero-title': 'Ihr zuverlässiger<br><span class="highlight">Partner</span> im türkischen Recht',
@@ -472,6 +487,11 @@ const translations = {
         'footer-data': 'Datenschutz',
         'footer-copyright': '© 2024 DOĞRU Rechtsanwaltskanzlei. Alle Rechte vorbehalten.',
         'footer-note': 'Beratung oder Vertretung im deutschen Recht wird ausdrücklich nicht angeboten.',
+        'whatsapp-title': 'Schreiben Sie uns auf WhatsApp',
+        'form-submitting': 'Wird gesendet...',
+        'form-success': 'Erfolgreich gesendet! ✓',
+        'copy-hint': 'Klicken zum Kopieren',
+        'copy-success': 'Kopiert! ✓',
 
         // Info Banner
         'info-text': 'Wenn Sie in Deutschland leben, die türkische Staatsbürgerschaft besitzen oder Inhaber einer Blauen Karte sind und rechtliche Angelegenheiten in der Türkei haben, die eine Beratung und Vertretung im türkischen Recht erfordern, kann ich Sie mit einer <strong>Vollmacht des türkischen Konsulats</strong> vor türkischen Gerichten vertreten, ohne dass Sie persönlich in die Türkei reisen müssen.',
@@ -691,6 +711,11 @@ const translations = {
         'nav-contact': 'CONTACT',
         'header-btn': 'Book Appointment',
 
+        // Top Bar & Page Title
+        'top-address': 'Mannheim, Germany & Ankara, Turkey',
+        'theme-toggle-title': 'Switch Theme',
+        'page-title': 'DOĞRU LAW FIRM | Turkish Law Expert - Mannheim & Ankara',
+
         // Hero
         'hero-badge': 'Turkish Law Expert',
         'hero-title': 'Your Trusted<br><span class="highlight">Partner</span> in Turkish Law',
@@ -780,6 +805,11 @@ const translations = {
         'footer-data': 'Data Protection',
         'footer-copyright': '© 2024 DOĞRU Law Firm. All rights reserved.',
         'footer-note': 'Advice or representation under German law is expressly not provided.',
+        'whatsapp-title': 'Chat on WhatsApp',
+        'form-submitting': 'Sending...',
+        'form-success': 'Sent Successfully! ✓',
+        'copy-hint': 'Click to copy',
+        'copy-success': 'Copied! ✓',
 
         // Info Banner
         'info-text': 'If you live in Germany, hold Turkish citizenship or are a Blue Card holder and have a legal matter in Turkey requiring consultation and representation under Turkish law, I can represent you in Turkish courts with a <strong>power of attorney from the Turkish consulate</strong>, without you needing to travel to Turkey personally.',
@@ -1011,14 +1041,13 @@ langBtns.forEach(btn => {
         e.preventDefault();
         const lang = btn.getAttribute('data-lang');
 
-        // Update active button
-        langBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
         // Save and apply language
         currentLang = lang;
         localStorage.setItem('lang', lang);
         applyLanguage(lang);
+
+        // Update active state document-wide (Desktop + Mobile)
+        updateActiveLangBtn(lang);
 
         // Show notification
         const langNames = { 'tr': 'Türkçe', 'de': 'Deutsch', 'en': 'English' };
@@ -1027,7 +1056,9 @@ langBtns.forEach(btn => {
 });
 
 function updateActiveLangBtn(lang) {
-    langBtns.forEach(btn => {
+    // Find ALL lang buttons, including those cloned into the mobile menu
+    const allLangBtns = document.querySelectorAll('.lang-btn');
+    allLangBtns.forEach(btn => {
         btn.classList.remove('active');
         if (btn.getAttribute('data-lang') === lang) {
             btn.classList.add('active');
@@ -1046,174 +1077,40 @@ function applyLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (t[key]) {
-            // Handle inputs/placeholders if necessary, but for now textContent is primary
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 if (element.hasAttribute('placeholder')) {
                     element.setAttribute('placeholder', t[key]);
                 }
             } else {
-                element.innerHTML = t[key]; // Use innerHTML to support <br> or <strong> tags if any
+                // Aggressive update: set innerHTML directly. 
+                // We've moved data-i18n to internal spans in index.html to protect SVGs.
+                element.innerHTML = t[key];
             }
         }
     });
 
-    // Handle standard placeholders separately if they use different keys (optional logic preservation)
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const subjectInput = document.getElementById('subject');
-    const messageInput = document.getElementById('message');
-
-    if (nameInput) nameInput.placeholder = t['form-name'].replace(' *', '');
-    if (emailInput) emailInput.placeholder = t['form-email'].replace(' *', '');
-    // Phone placeholder optional
-    if (messageInput) messageInput.placeholder = t['form-message'].replace(' *', '');
-
-    // Navigation dropdown link (RECHTSGEBIETE/HUKUK ALANLARIMIZ)
-    const navServicesLink = document.querySelector('.nav-link.has-dropdown');
-    if (navServicesLink) {
-        // Preserve the arrow SVG when updating text
-        const arrow = navServicesLink.querySelector('.dropdown-arrow');
-        navServicesLink.innerHTML = t['nav-services'] + ' ';
-        if (arrow) navServicesLink.appendChild(arrow);
-    }
-
-    // Stats
-    const statLabels = document.querySelectorAll('.stat-label');
-    if (statLabels[0]) statLabels[0].textContent = t['stat-1'];
-    if (statLabels[1]) statLabels[1].textContent = t['stat-2'];
-    if (statLabels[2]) statLabels[2].textContent = t['stat-3'];
-    if (statLabels[3]) statLabels[3].textContent = t['stat-4'];
-
-    // About
-    const aboutTag = document.querySelector('#hakkimizda .tag-text');
-    if (aboutTag) aboutTag.textContent = t['about-tag'];
-
-    const aboutTitle = document.querySelector('#hakkimizda .section-title');
-    if (aboutTitle) aboutTitle.innerHTML = t['about-title'];
-
-    const aboutBtn = document.querySelector('#hakkimizda .btn-primary span');
-    if (aboutBtn) aboutBtn.textContent = t['about-btn'];
-
-    // Services
-    const servicesTag = document.querySelector('#hizmetler .section-header .tag-text');
-    if (servicesTag) servicesTag.textContent = t['services-tag'];
-
-    const servicesTitle = document.querySelector('#hizmetler .section-title');
-    if (servicesTitle) servicesTitle.textContent = t['services-title'];
-
-    const servicesDesc = document.querySelector('#hizmetler .section-desc');
-    if (servicesDesc) servicesDesc.textContent = t['services-desc'];
-
-    // Why Us
-    const whyTag = document.querySelector('#neden-biz .tag-text');
-    if (whyTag) whyTag.textContent = t['why-tag'];
-
-    const whyTitle = document.querySelector('#neden-biz .section-title');
-    if (whyTitle) whyTitle.textContent = t['why-title'];
-
-    // Contact
-    const contactTag = document.querySelector('#iletisim .tag-text');
-    if (contactTag) contactTag.textContent = t['contact-tag'];
-
-    const contactTitle = document.querySelector('#iletisim .section-title');
-    if (contactTitle) contactTitle.innerHTML = t['contact-title'];
-
-    const contactDesc = document.querySelector('.contact-desc');
-    if (contactDesc) contactDesc.textContent = t['contact-desc'];
-
-    const formTitle = document.querySelector('.contact-form-wrapper h3');
-    if (formTitle) formTitle.textContent = t['form-title'];
-
-    // Form labels
-    const formLabels = document.querySelectorAll('.form-group label');
-    if (formLabels[0]) formLabels[0].textContent = t['form-name'];
-    if (formLabels[1]) formLabels[1].textContent = t['form-email'];
-    if (formLabels[2]) formLabels[2].textContent = t['form-phone'];
-    if (formLabels[3]) formLabels[3].textContent = t['form-subject'];
-    if (formLabels[4]) formLabels[4].textContent = t['form-message'];
-
-    const formSubmit = document.querySelector('.contact-form .btn-primary span');
-    if (formSubmit) formSubmit.textContent = t['form-submit'];
-
-    const formNote = document.querySelector('.form-note');
-    if (formNote) formNote.textContent = t['form-note'];
-
-    // Logo Subtitles (Header and Footer)
-    const logoSubtitles = document.querySelectorAll('.logo-subtitle');
-    logoSubtitles.forEach(el => {
-        if (el) el.textContent = t['logo-subtitle'];
+    // Update title attributes (like tooltip)
+    document.querySelectorAll('[data-i18n-title]').forEach(element => {
+        const key = element.getAttribute('data-i18n-title');
+        if (t[key]) {
+            element.setAttribute('title', t[key]);
+        }
     });
 
-    // Hero Features
-    const heroFeatures = document.querySelectorAll('.hero-feature span');
-    if (heroFeatures[0]) heroFeatures[0].textContent = t['hero-feature-1'];
-    if (heroFeatures[1]) heroFeatures[1].textContent = t['hero-feature-2'];
-    if (heroFeatures[2]) heroFeatures[2].textContent = t['hero-feature-3'];
-    if (heroFeatures[3]) heroFeatures[3].textContent = t['hero-feature-4'];
-
-    // Dropdown Menu
-    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
-    if (dropdownLinks[0]) dropdownLinks[0].textContent = t['dropdown-1'];
-    if (dropdownLinks[1]) dropdownLinks[1].textContent = t['dropdown-2'];
-    if (dropdownLinks[2]) dropdownLinks[2].textContent = t['dropdown-3'];
-    if (dropdownLinks[3]) dropdownLinks[3].textContent = t['dropdown-4'];
-    if (dropdownLinks[4]) dropdownLinks[4].textContent = t['dropdown-5'];
-    if (dropdownLinks[5]) dropdownLinks[5].textContent = t['dropdown-6'];
-
-    // Footer Description
-    const footerDesc = document.querySelector('.footer-desc');
-    if (footerDesc) footerDesc.textContent = t['footer-desc'];
-
-    // Footer Navigation Headers
-    const footerNavHeaders = document.querySelectorAll('.footer-nav h4');
-    if (footerNavHeaders[0]) footerNavHeaders[0].textContent = t['footer-corp'];
-    if (footerNavHeaders[1]) footerNavHeaders[1].textContent = t['footer-areas'];
-    if (footerNavHeaders[2]) footerNavHeaders[2].textContent = t['footer-legal'];
-
-    // Footer Corporate Links
-    const footerCorpLinks = document.querySelectorAll('.footer-nav:nth-child(2) a');
-    if (footerCorpLinks[0]) footerCorpLinks[0].textContent = t['footer-home'];
-    if (footerCorpLinks[1]) footerCorpLinks[1].textContent = t['footer-about'];
-    if (footerCorpLinks[2]) footerCorpLinks[2].textContent = t['footer-why'];
-    if (footerCorpLinks[3]) footerCorpLinks[3].textContent = t['footer-vision'];
-    if (footerCorpLinks[4]) footerCorpLinks[4].textContent = t['footer-contact'];
-
-    // Footer Legal Links
-    const footerLegalLinks = document.querySelectorAll('.footer-nav:nth-child(4) a');
-    if (footerLegalLinks[0]) footerLegalLinks[0].textContent = t['footer-privacy'];
-    if (footerLegalLinks[1]) footerLegalLinks[1].textContent = t['footer-kvkk'];
-    if (footerLegalLinks[2]) footerLegalLinks[2].textContent = t['footer-imprint'];
-    if (footerLegalLinks[3]) footerLegalLinks[3].textContent = t['footer-data'];
-
-    // Footer Bottom
-    const footerCopyright = document.querySelector('.footer-bottom p:first-child');
-    if (footerCopyright) footerCopyright.textContent = t['footer-copyright'];
-
-    const footerNote = document.querySelector('.footer-note');
-    if (footerNote) footerNote.textContent = t['footer-note'];
-
-    // Info Banner Text
-    const infoText = document.querySelector('.info-text');
-    if (infoText) infoText.innerHTML = t['info-text'];
-
-    // About Texts
-    const aboutText1 = document.querySelector('.about-text-1');
-    if (aboutText1) aboutText1.innerHTML = t['about-text-1'];
-
-    const aboutText2 = document.querySelector('.about-text-2');
-    if (aboutText2) aboutText2.textContent = t['about-text-2'];
-
-    const aboutListTitle = document.querySelector('.about-list-title');
-    if (aboutListTitle) aboutListTitle.textContent = t['about-list-title'];
-
-    const aboutListItems = document.querySelector('.about-list-items');
-    if (aboutListItems && t['about-list-items']) {
-        aboutListItems.innerHTML = t['about-list-items'].map(item => `<li>${item}</li>`).join('');
+    // Update page title
+    if (t['page-title']) {
+        document.title = t['page-title'];
     }
 
-    // Why Us Cards
-    const whyCards = document.querySelectorAll('.why-card');
-    whyCards.forEach(card => {
+    // Specialty: Navigation dropdown link (preserves SVG arrow)
+    document.querySelectorAll('.nav-link.has-dropdown').forEach(link => {
+        const arrow = link.querySelector('.dropdown-arrow');
+        link.innerHTML = t['nav-services'] + ' ';
+        if (arrow) link.appendChild(arrow);
+    });
+
+    // Specialty: Why Us Cards (handles data-index mapping)
+    document.querySelectorAll('.why-card').forEach(card => {
         const index = card.getAttribute('data-index');
         if (index) {
             const title = card.querySelector('h4');
@@ -1223,160 +1120,61 @@ function applyLanguage(lang) {
         }
     });
 
-    // Vision Texts
-    const visionTitle = document.querySelector('.vision-title');
-    if (visionTitle) visionTitle.textContent = t['vision-title'];
-
-    const visionText1 = document.querySelector('.vision-text-1');
-    if (visionText1) visionText1.textContent = t['vision-text-1'];
-
-    const visionText2 = document.querySelector('.vision-text-2');
-    if (visionText2) visionText2.textContent = t['vision-text-2'];
-
-    // Mission Texts
-    const missionTitle = document.querySelector('.mission-title');
-    if (missionTitle) missionTitle.textContent = t['mission-title'];
-
-    const missionText1 = document.querySelector('.mission-text-1');
-    if (missionText1) missionText1.textContent = t['mission-text-1'];
-
-    const missionText2 = document.querySelector('.mission-text-2');
-    if (missionText2) missionText2.textContent = t['mission-text-2'];
-
-    const missionText3 = document.querySelector('.mission-text-3');
-    if (missionText3) missionText3.innerHTML = t['mission-text-3'];
-
-    // Helper function to update lists
-    const updateList = (selector, listData) => {
-        const listEl = document.querySelector(selector);
-        if (listEl && listData) {
-            listEl.innerHTML = '';
-            listData.forEach(item => {
-                const li = document.createElement('li');
-                li.innerHTML = item;
-                listEl.appendChild(li);
-            });
-        }
+    // Helper function for list updates (Modified for multiple instances)
+    const updateMultiList = (selector, listData) => {
+        document.querySelectorAll(selector).forEach(listEl => {
+            if (listData) {
+                listEl.innerHTML = '';
+                listData.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = item;
+                    listEl.appendChild(li);
+                });
+            }
+        });
     };
 
-    // Helper function to update text content
-    const updateText = (selector, key, isHTML = false) => {
-        const el = document.querySelector(selector);
-        if (el && t[key]) {
-            if (isHTML) el.innerHTML = t[key];
-            else el.textContent = t[key];
-        }
+    // --- Complex List Updates (Arrays in translations) ---
+    if (t['about-list-items']) updateMultiList('.about-list-items', t['about-list-items']);
+
+    // Services Lists
+    if (t['miras-col1-list']) updateMultiList('.miras-col1-list', t['miras-col1-list']);
+    if (t['miras-col2-list']) updateMultiList('.miras-col2-list', t['miras-col2-list']);
+    if (t['miras-info-list']) updateMultiList('.miras-info-list', t['miras-info-list']);
+    if (t['miras-warning-list']) updateMultiList('.miras-warning-list', t['miras-warning-list']);
+
+    if (t['veraset-col1-list']) updateMultiList('.veraset-col1-list', t['veraset-col1-list']);
+    if (t['veraset-col2-list']) updateMultiList('.veraset-col2-list', t['veraset-col2-list']);
+    if (t['veraset-info-list']) updateMultiList('.veraset-info-list', t['veraset-info-list']);
+    if (t['veraset-warning-list']) updateMultiList('.veraset-warning-list', t['veraset-warning-list']);
+
+    if (t['gayr-col1-list']) updateMultiList('.gayrimenkul-col1-list', t['gayr-col1-list']);
+    if (t['gayr-col2-list']) updateMultiList('.gayrimenkul-col2-list', t['gayr-col2-list']);
+
+    if (t['is-col1-list']) updateMultiList('.is-col1-list', t['is-col1-list']);
+    if (t['is-warning-list']) updateMultiList('.is-warning-list', t['is-warning-list']);
+
+    if (t['bosanma-col1-list']) updateMultiList('.bosanma-col1-list', t['bosanma-col1-list']);
+    if (t['bosanma-col2-list']) updateMultiList('.bosanma-col2-list', t['bosanma-col2-list']);
+    if (t['bosanma-warning-list']) updateMultiList('.bosanma-warning-list', t['bosanma-warning-list']);
+
+    if (t['borclar-col1-list']) updateMultiList('.borclar-col1-list', t['borclar-col1-list']);
+
+    // Specialty: Nested Group Titles (Is & Borclar)
+    const updateMultiGroup = (selector, titleKey, descKey) => {
+        document.querySelectorAll(selector).forEach(group => {
+            if (t[titleKey]) group.querySelector('h5').innerText = t[titleKey];
+            if (t[descKey]) group.querySelector('p').innerText = t[descKey];
+        });
     };
 
-    // --- Services Translations Application ---
+    updateMultiGroup('.is-col2-group1', 'is-col2-group1-title', 'is-col2-group1-desc');
+    updateMultiGroup('.is-col2-group2', 'is-col2-group2-title', 'is-col2-group2-desc');
+    updateMultiGroup('.borclar-col2-group1', 'borclar-col2-group1-title', 'borclar-col2-group1-desc');
+    updateMultiGroup('.borclar-col2-group2', 'borclar-col2-group2-title', 'borclar-col2-group2-desc');
 
-    // Service CTA Buttons
-    const serviceCtas = document.querySelectorAll('.service-cta');
-    serviceCtas.forEach(btn => {
-        if (btn) btn.textContent = t['service-cta'];
-    });
-
-    // Miras
-    updateText('.miras-title', 'miras-title');
-    updateText('.miras-subtitle', 'miras-subtitle');
-    updateText('.miras-intro', 'miras-intro');
-    updateText('.miras-col1-title', 'miras-col1-title');
-    updateList('.miras-col1-list', t['miras-col1-list']);
-    updateText('.miras-col2-title', 'miras-col2-title');
-    updateList('.miras-col2-list', t['miras-col2-list']);
-    updateText('.miras-info-title', 'miras-info-title');
-    updateList('.miras-info-list', t['miras-info-list']);
-    updateText('.miras-warning-title', 'miras-warning-title');
-    updateList('.miras-warning-list', t['miras-warning-list']);
-
-    // Veraset
-    updateText('.veraset-title', 'veraset-title');
-    updateText('.veraset-subtitle', 'veraset-subtitle');
-    updateText('.veraset-intro', 'veraset-intro');
-    updateText('.veraset-col1-title', 'veraset-col1-title');
-    updateText('.veraset-col1-desc', 'veraset-col1-desc');
-    updateList('.veraset-col1-list', t['veraset-col1-list']);
-    updateText('.veraset-col2-title', 'veraset-col2-title');
-    updateList('.veraset-col2-list', t['veraset-col2-list']);
-    updateText('.veraset-info-title', 'veraset-info-title');
-    updateList('.veraset-info-list', t['veraset-info-list']);
-    updateText('.veraset-warning-title', 'veraset-warning-title');
-    updateList('.veraset-warning-list', t['veraset-warning-list']);
-
-    // Gayrimenkul
-    updateText('.gayrimenkul-title', 'gayr-title');
-    updateText('.gayrimenkul-subtitle', 'gayr-subtitle');
-    updateText('.gayrimenkul-intro', 'gayr-intro');
-    updateText('.gayrimenkul-col1-title', 'gayr-col1-title');
-    updateList('.gayrimenkul-col1-list', t['gayr-col1-list']);
-    updateText('.gayrimenkul-col2-title', 'gayr-col2-title');
-    updateText('.gayrimenkul-col2-desc', 'gayr-col2-desc');
-    updateList('.gayrimenkul-col2-list', t['gayr-col2-list']);
-
-    // Is Hukuku
-    updateText('.is-title', 'is-title');
-    updateText('.is-subtitle', 'is-subtitle');
-    updateText('.is-intro', 'is-intro');
-    updateText('.is-col1-title', 'is-col1-title');
-    updateList('.is-col1-list', t['is-col1-list']);
-    updateText('.is-col2-title', 'is-col2-title');
-
-    // Is Hukuku nested groups - Manually update h5 and p inside groups
-    const isGroup1 = document.querySelector('.is-col2-group1');
-    if (isGroup1) {
-        if (t['is-col2-group1-title']) isGroup1.querySelector('h5').innerText = t['is-col2-group1-title'];
-        if (t['is-col2-group1-desc']) isGroup1.querySelector('p').innerText = t['is-col2-group1-desc'];
-    }
-    const isGroup2 = document.querySelector('.is-col2-group2');
-    if (isGroup2) {
-        if (t['is-col2-group2-title']) isGroup2.querySelector('h5').innerText = t['is-col2-group2-title'];
-        if (t['is-col2-group2-desc']) isGroup2.querySelector('p').innerText = t['is-col2-group2-desc'];
-    }
-
-    updateText('.is-warning-title', 'is-warning-title');
-    updateText('.is-warning-text', 'is-warning-text');
-    updateList('.is-warning-list', t['is-warning-list']);
-
-    // Bosanma
-    updateText('.bosanma-title', 'bosanma-title');
-    updateText('.bosanma-subtitle', 'bosanma-subtitle');
-    updateText('.bosanma-intro', 'bosanma-intro');
-    updateText('.bosanma-col1-title', 'bosanma-col1-title');
-    updateText('.bosanma-col1-desc', 'bosanma-col1-desc');
-    updateText('.bosanma-col1-sub', 'bosanma-col1-sub');
-    updateList('.bosanma-col1-list', t['bosanma-col1-list']);
-    updateText('.bosanma-col2-title', 'bosanma-col2-title');
-    updateText('.bosanma-col2-desc', 'bosanma-col2-desc');
-    updateText('.bosanma-col2-sub', 'bosanma-col2-sub');
-    updateList('.bosanma-col2-list', t['bosanma-col2-list']);
-    updateText('.bosanma-info-title', 'bosanma-info-title');
-    updateText('.bosanma-info-text', 'bosanma-info-text', true);
-    updateText('.bosanma-warning-title', 'bosanma-warning-title');
-    updateList('.bosanma-warning-list', t['bosanma-warning-list']);
-
-    // Borclar
-    updateText('.borclar-title', 'borclar-title');
-    updateText('.borclar-subtitle', 'borclar-subtitle');
-    updateText('.borclar-intro', 'borclar-intro');
-    updateText('.borclar-col1-title', 'borclar-col1-title');
-    updateList('.borclar-col1-list', t['borclar-col1-list']);
-    updateText('.borclar-col2-title', 'borclar-col2-title');
-
-    // Borclar nested groups
-    const borclarGroup1 = document.querySelector('.borclar-col2-group1');
-    if (borclarGroup1) {
-        if (t['borclar-col2-group1-title']) borclarGroup1.querySelector('h5').innerText = t['borclar-col2-group1-title'];
-        if (t['borclar-col2-group1-desc']) borclarGroup1.querySelector('p').innerText = t['borclar-col2-group1-desc'];
-    }
-    const borclarGroup2 = document.querySelector('.borclar-col2-group2');
-    if (borclarGroup2) {
-        if (t['borclar-col2-group2-title']) borclarGroup2.querySelector('h5').innerText = t['borclar-col2-group2-title'];
-        if (t['borclar-col2-group2-desc']) borclarGroup2.querySelector('p').innerText = t['borclar-col2-group2-desc'];
-    }
-
-    updateText('.borclar-warning-title', 'borclar-warning-title');
-    updateText('.borclar-warning-text', 'borclar-warning-text', true);
-
+    // Final Sync for Active Buttons (Ensure mobile clones are also updated)
+    updateActiveLangBtn(lang);
 }
 
 function showNotification(message) {
@@ -1456,13 +1254,27 @@ function setupMobileMenu() {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const lang = btn.getAttribute('data-lang');
-                const originalBtn = document.querySelector(`.top-bar .lang-btn[data-lang="${lang}"]`);
-                if (originalBtn) originalBtn.click();
 
-                // Close menu after selection for better UX
+                // Select language through standard logic
+                currentLang = lang;
+                localStorage.setItem('lang', lang);
+                applyLanguage(lang);
+                updateActiveLangBtn(lang);
+
+                // Show notification
+                const langNames = { 'tr': 'Türkçe', 'de': 'Deutsch', 'en': 'English' };
+                showNotification(`${langNames[lang]} ✓`);
+
+                // Close menu after selection
                 nav.classList.remove('active');
                 menuToggle.classList.remove('active');
                 document.body.style.overflow = '';
+
+                // Reset burger icon spans
+                const spans = menuToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
             });
         });
     }
@@ -1706,13 +1518,13 @@ if (contactForm) {
         const originalContent = submitBtn.innerHTML;
 
         // Loading state
-        submitBtn.innerHTML = '<span>Gönderiliyor...</span>';
+        submitBtn.innerHTML = `<span>${translations[currentLang]['form-submitting']}</span>`;
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.7';
 
         // Simulate submission
         setTimeout(() => {
-            submitBtn.innerHTML = '<span>Başarıyla Gönderildi! ✓</span>';
+            submitBtn.innerHTML = `<span>${translations[currentLang]['form-success']}</span>`;
             submitBtn.style.background = '#22c55e';
 
             setTimeout(() => {
@@ -1733,7 +1545,7 @@ contactDetails.forEach(item => {
     const text = item.textContent;
     if (text.includes('@') || text.includes('+')) {
         item.style.cursor = 'pointer';
-        item.title = 'Kopyalamak için tıklayın';
+        item.title = translations[currentLang]['copy-hint'];
 
         item.addEventListener('click', async (e) => {
             e.preventDefault();
@@ -1742,7 +1554,7 @@ contactDetails.forEach(item => {
                 await navigator.clipboard.writeText(cleanText);
 
                 const originalText = item.innerHTML;
-                item.textContent = 'Kopyalandı! ✓';
+                item.textContent = translations[currentLang]['copy-success'];
                 item.style.color = '#22c55e';
 
                 setTimeout(() => {
