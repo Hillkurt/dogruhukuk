@@ -1,3 +1,37 @@
+// ===== Loading Screen Language Detection =====
+// Detect browser language and apply to loading screen immediately
+(function () {
+    const loaderTranslations = {
+        tr: 'Hukuk Bürosu',
+        de: 'Rechtsanwaltskanzlei',
+        en: 'Law Firm'
+    };
+
+    // Get browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    let detectedLang = 'de'; // Default to German
+
+    if (browserLang.startsWith('tr')) {
+        detectedLang = 'tr';
+    } else if (browserLang.startsWith('en')) {
+        detectedLang = 'en';
+    } else if (browserLang.startsWith('de')) {
+        detectedLang = 'de';
+    }
+
+    // Store detected language for later use (use 'lang' key to match main app)
+    if (!localStorage.getItem('lang')) {
+        localStorage.setItem('lang', detectedLang);
+    }
+
+    // Apply translation to loading screen immediately
+    const loaderSubtitle = document.querySelector('.loader-spinner');
+    if (loaderSubtitle) {
+        const savedLang = localStorage.getItem('lang') || detectedLang;
+        loaderSubtitle.textContent = loaderTranslations[savedLang] || loaderTranslations['de'];
+    }
+})();
+
 // ===== Page Loader =====
 const pageLoader = document.getElementById('pageLoader');
 
@@ -94,6 +128,8 @@ const translations = {
         'nav-vision': 'VİZYONUMUZ',
         'nav-contact': 'İLETİŞİM',
         'header-btn': 'Randevu Al',
+        'loader-subtitle': 'Hukuk Bürosu',
+        'whatsapp-tooltip': 'Bize Yazın',
 
         // Top Bar & Page Title
         'top-address': 'Mannheim, Almanya & Ankara, Türkiye',
@@ -199,6 +235,16 @@ const translations = {
         'form-success': 'Başarıyla Gönderildi! ✓',
         'copy-hint': 'Kopyalamak için tıklayın',
         'copy-success': 'Kopyalandı! ✓',
+
+        // Search Modal
+        'search-placeholder': 'Ne arıyorsunuz?',
+        'search-quick': 'Hızlı Erişim:',
+        'search-link-1': 'Miras Hukuku',
+        'search-link-2': 'Veraset İlamı',
+        'search-link-3': 'Gayrimenkul',
+        'search-link-4': 'Aile Hukuku',
+        'search-link-5': 'İş Hukuku',
+        'search-link-6': 'Borçlar Hukuku',
 
         // Info Banner
         'info-text': 'Almanya\'da yaşıyorsanız, Türk vatandaşlığına sahipseniz veya Mavi Kart sahibiyseniz ve Türkiye\'de Türk hukuku kapsamında danışmanlık ve temsile ihtiyaç duyduğunuz hukuki bir meseleniz varsa, <strong>Türk konsolosluğundan alınmış bir vekaletname</strong> ile Türkiye\'ye bizzat gitmenize gerek kalmadan sizi Türkiye\'deki mahkemelerde temsil edebilirim.',
@@ -420,6 +466,7 @@ const translations = {
         'process-step3-desc': 'Türkiye\'deki mahkemelerde sizi temsil eder, düzenli bilgilendirmelerle süreci takip ederiz.',
         'process-step4-title': 'Sonuç ve Teslim',
         'process-step4-desc': 'Davanız sonuçlandığında tüm belgeler size iletilir. Başarılı sonuç garantili çalışma.',
+        'process-cta': 'Hemen Başlayın',
 
         // FAQ / SSS
         'faq-tag': 'SSS',
@@ -447,6 +494,8 @@ const translations = {
         'nav-vision': 'UNSERE VISION',
         'nav-contact': 'KONTAKT',
         'header-btn': 'Termin vereinbaren',
+        'loader-subtitle': 'Rechtsanwaltskanzlei',
+        'whatsapp-tooltip': 'Schreiben Sie uns',
 
         // Top Bar & Page Title
         'top-address': 'Mannheim, Deutschland & Ankara, Türkei',
@@ -559,6 +608,16 @@ const translations = {
         'form-success': 'Erfolgreich gesendet! ✓',
         'copy-hint': 'Klicken zum Kopieren',
         'copy-success': 'Kopiert! ✓',
+
+        // Search Modal
+        'search-placeholder': 'Was suchen Sie?',
+        'search-quick': 'Schnellzugriff:',
+        'search-link-1': 'Erbrecht',
+        'search-link-2': 'Erbschein',
+        'search-link-3': 'Immobilienrecht',
+        'search-link-4': 'Familienrecht',
+        'search-link-5': 'Arbeitsrecht',
+        'search-link-6': 'Schuldrecht',
 
         // Info Banner
         'info-text': 'Wenn Sie in Deutschland leben, die türkische Staatsbürgerschaft besitzen oder Inhaber einer Blauen Karte sind und rechtliche Angelegenheiten in der Türkei haben, die eine Beratung und Vertretung im türkischen Recht erfordern, kann ich Sie mit einer <strong>Vollmacht des türkischen Konsulats</strong> vor türkischen Gerichten vertreten, ohne dass Sie persönlich in die Türkei reisen müssen.',
@@ -780,6 +839,7 @@ const translations = {
         'process-step3-desc': 'Wir vertreten Sie vor türkischen Gerichten und halten Sie mit regelmäßigen Updates auf dem Laufenden.',
         'process-step4-title': 'Ergebnis & Übergabe',
         'process-step4-desc': 'Wenn Ihr Fall abgeschlossen ist, werden alle Dokumente an Sie übergeben. Garantiert erfolgreiches Arbeiten.',
+        'process-cta': 'Jetzt beginnen',
 
         // FAQ / SSS
         'faq-tag': 'FAQ',
@@ -807,6 +867,8 @@ const translations = {
         'nav-vision': 'OUR VISION',
         'nav-contact': 'CONTACT',
         'header-btn': 'Book Appointment',
+        'loader-subtitle': 'Law Firm',
+        'whatsapp-tooltip': 'Write to us',
 
         // Top Bar & Page Title
         'top-address': 'Mannheim, Germany & Ankara, Turkey',
@@ -912,6 +974,16 @@ const translations = {
         'form-success': 'Sent Successfully! ✓',
         'copy-hint': 'Click to copy',
         'copy-success': 'Copied! ✓',
+
+        // Search Modal
+        'search-placeholder': 'What are you looking for?',
+        'search-quick': 'Quick Access:',
+        'search-link-1': 'Inheritance Law',
+        'search-link-2': 'Certificate of Inheritance',
+        'search-link-3': 'Real Estate Law',
+        'search-link-4': 'Family Law',
+        'search-link-5': 'Labor Law',
+        'search-link-6': 'Obligations Law',
 
         // Info Banner
         'info-text': 'If you live in Germany, hold Turkish citizenship or are a Blue Card holder and have a legal matter in Turkey requiring consultation and representation under Turkish law, I can represent you in Turkish courts with a <strong>power of attorney from the Turkish consulate</strong>, without you needing to travel to Turkey personally.',
@@ -1133,6 +1205,7 @@ const translations = {
         'process-step3-desc': 'We represent you in Turkish courts and keep you informed with regular updates on the process.',
         'process-step4-title': 'Result & Delivery',
         'process-step4-desc': 'Once your case is concluded, all documents are delivered to you. Guaranteed successful work.',
+        'process-cta': 'Get Started Now',
 
         // FAQ / SSS
         'faq-tag': 'FAQ',
@@ -1232,6 +1305,12 @@ function applyLanguage(lang) {
     // Update page title
     if (t['page-title']) {
         document.title = t['page-title'];
+    }
+
+    // Update search input placeholder
+    const searchInputEl = document.getElementById('searchInput');
+    if (searchInputEl && t['search-placeholder']) {
+        searchInputEl.placeholder = t['search-placeholder'];
     }
 
     // Specialty: Navigation dropdown link (preserves SVG arrow)
@@ -1567,8 +1646,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach((el, index) => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = `all 0.6s ease ${index * 0.05}s`;
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = `all 0.3s ease ${index * 0.02}s`;
     revealObserver.observe(el);
 });
 
@@ -1583,7 +1662,7 @@ const whyObserver = new IntersectionObserver((entries, observer) => {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }, delay);
-            delay += 80;
+            delay += 40;
             observer.unobserve(entry.target);
         }
     });
@@ -1591,8 +1670,8 @@ const whyObserver = new IntersectionObserver((entries, observer) => {
 
 whyCards.forEach(card => {
     card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = 'all 0.5s ease';
+    card.style.transform = 'translateY(15px)';
+    card.style.transition = 'all 0.25s ease';
     whyObserver.observe(card);
 });
 
@@ -1607,7 +1686,7 @@ const statObserver = new IntersectionObserver((entries, observer) => {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }, delay);
-            delay += 100;
+            delay += 50;
             observer.unobserve(entry.target);
         }
     });
@@ -1615,8 +1694,8 @@ const statObserver = new IntersectionObserver((entries, observer) => {
 
 statCards.forEach(card => {
     card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'all 0.5s ease';
+    card.style.transform = 'translateY(15px)';
+    card.style.transition = 'all 0.25s ease';
     statObserver.observe(card);
 });
 
@@ -1746,13 +1825,13 @@ document.head.appendChild(style);
 const heroContent = document.querySelector('.hero-content');
 if (heroContent) {
     heroContent.style.opacity = '0';
-    heroContent.style.transform = 'translateY(40px)';
+    heroContent.style.transform = 'translateY(25px)';
 
     setTimeout(() => {
-        heroContent.style.transition = 'all 1s ease';
+        heroContent.style.transition = 'all 0.5s ease';
         heroContent.style.opacity = '1';
         heroContent.style.transform = 'translateY(0)';
-    }, 200);
+    }, 100);
 }
 
 // ===== Dropdown Menu - Mobile Touch Support =====
@@ -1822,3 +1901,123 @@ console.log('%c⚖️ DOĞRU HUKUK BÜROSU', 'font-size: 24px; font-weight: bold
 console.log('%cTürk Hukuku Danışmanlığı', 'font-size: 14px; color: #c9a962;');
 console.log('%cMannheim & Ankara', 'font-size: 12px; color: #737373;');
 console.log('%c📧 avukat.hasandogru@outlook.de', 'font-size: 11px; color: #525252;');
+
+// ===== Search Functionality =====
+const searchBtn = document.getElementById('searchBtn');
+const searchModal = document.getElementById('searchModal');
+const searchClose = document.getElementById('searchClose');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+// Multilingual search data
+const searchDataByLang = {
+    tr: [
+        { title: 'Miras Hukuku', desc: 'Miras davaları, veraset, vasiyetname, reddi miras', url: 'miras-hukuku.html', icon: '⚖️' },
+        { title: 'Veraset İlamı', desc: 'Mirasçılık belgesi nasıl alınır, gerekli belgeler', url: 'veraset-ilami.html', icon: '🧾' },
+        { title: 'Gayrimenkul Hukuku', desc: 'Tapu işlemleri, kira davaları, taşınmaz satışı', url: 'gayrimenkul.html', icon: '🏠' },
+        { title: 'İş Hukuku', desc: 'Kıdem tazminatı, işe iade, iş kazası', url: 'is-hukuku.html', icon: '⚙️' },
+        { title: 'Boşanma Davaları', desc: 'Anlaşmalı boşanma, velayet, nafaka, mal paylaşımı', url: 'bosanma.html', icon: '💔' },
+        { title: 'Borçlar Hukuku', desc: 'Sözleşmeler, alacak takibi, tazminat', url: 'borclar.html', icon: '📄' },
+        { title: 'İletişim', desc: 'Randevu al, telefon, e-posta', url: 'index.html#iletisim', icon: '📞' },
+        { title: 'Hakkımızda', desc: 'Avukat Hasan Doğru hakkında', url: 'index.html#hakkimizda', icon: '👤' },
+        { title: 'Impressum', desc: 'Yasal bilgiler, künye', url: 'impressum.html', icon: '📋' },
+        { title: 'Datenschutz', desc: 'Veri koruma, KVKK, GDPR', url: 'datenschutz.html', icon: '🔒' }
+    ],
+    de: [
+        { title: 'Erbrecht', desc: 'Erbschaftsverfahren, Erbschein, Testament, Erbausschlagung', url: 'miras-hukuku.html', icon: '⚖️' },
+        { title: 'Erbschein', desc: 'Wie bekommt man einen Erbschein, erforderliche Dokumente', url: 'veraset-ilami.html', icon: '🧾' },
+        { title: 'Immobilienrecht', desc: 'Grundbuch, Mietstreitigkeiten, Immobilienverkauf', url: 'gayrimenkul.html', icon: '🏠' },
+        { title: 'Arbeitsrecht', desc: 'Abfindung, Kündigungsschutz, Arbeitsunfall', url: 'is-hukuku.html', icon: '⚙️' },
+        { title: 'Scheidung', desc: 'Einvernehmliche Scheidung, Sorgerecht, Unterhalt, Vermögensaufteilung', url: 'bosanma.html', icon: '💔' },
+        { title: 'Schuldrecht', desc: 'Verträge, Forderungseinzug, Schadensersatz', url: 'borclar.html', icon: '📄' },
+        { title: 'Kontakt', desc: 'Termin vereinbaren, Telefon, E-Mail', url: 'index.html#iletisim', icon: '📞' },
+        { title: 'Über uns', desc: 'Über Rechtsanwalt Hasan Doğru', url: 'index.html#hakkimizda', icon: '👤' },
+        { title: 'Impressum', desc: 'Rechtliche Informationen', url: 'impressum.html', icon: '📋' },
+        { title: 'Datenschutz', desc: 'Datenschutz, DSGVO', url: 'datenschutz.html', icon: '🔒' }
+    ],
+    en: [
+        { title: 'Inheritance Law', desc: 'Inheritance cases, certificate of inheritance, will, rejection of inheritance', url: 'miras-hukuku.html', icon: '⚖️' },
+        { title: 'Certificate of Inheritance', desc: 'How to get inheritance certificate, required documents', url: 'veraset-ilami.html', icon: '🧾' },
+        { title: 'Real Estate Law', desc: 'Title deed, rental disputes, property sale', url: 'gayrimenkul.html', icon: '🏠' },
+        { title: 'Labor Law', desc: 'Severance pay, reinstatement, work accident', url: 'is-hukuku.html', icon: '⚙️' },
+        { title: 'Divorce Cases', desc: 'Uncontested divorce, custody, alimony, property division', url: 'bosanma.html', icon: '💔' },
+        { title: 'Code of Obligations', desc: 'Contracts, debt collection, compensation', url: 'borclar.html', icon: '📄' },
+        { title: 'Contact', desc: 'Make appointment, phone, email', url: 'index.html#iletisim', icon: '📞' },
+        { title: 'About Us', desc: 'About Attorney Hasan Doğru', url: 'index.html#hakkimizda', icon: '👤' },
+        { title: 'Imprint', desc: 'Legal information', url: 'impressum.html', icon: '📋' },
+        { title: 'Privacy Policy', desc: 'Data protection, GDPR', url: 'datenschutz.html', icon: '🔒' }
+    ]
+};
+
+const searchNoResultsText = {
+    tr: 'Sonuç bulunamadı',
+    de: 'Keine Ergebnisse gefunden',
+    en: 'No results found'
+};
+
+const searchPlaceholderText = {
+    tr: 'Ara...',
+    de: 'Suchen...',
+    en: 'Search...'
+};
+
+if (searchBtn && searchModal) {
+    searchBtn.addEventListener('click', () => {
+        searchModal.classList.add('active');
+        searchInput.placeholder = searchPlaceholderText[currentLang] || searchPlaceholderText.de;
+        setTimeout(() => searchInput.focus(), 100);
+    });
+
+    searchClose.addEventListener('click', () => {
+        searchModal.classList.remove('active');
+    });
+
+    searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+            searchModal.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+            searchModal.classList.remove('active');
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            searchModal.classList.add('active');
+            searchInput.placeholder = searchPlaceholderText[currentLang] || searchPlaceholderText.de;
+            setTimeout(() => searchInput.focus(), 100);
+        }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        if (query.length < 2) {
+            searchResults.innerHTML = '';
+            return;
+        }
+
+        const searchData = searchDataByLang[currentLang] || searchDataByLang.de;
+        const filtered = searchData.filter(item =>
+            item.title.toLowerCase().includes(query) ||
+            item.desc.toLowerCase().includes(query)
+        );
+
+        const noResultsMsg = searchNoResultsText[currentLang] || searchNoResultsText.de;
+
+        if (filtered.length === 0) {
+            searchResults.innerHTML = `<p style="text-align:center; color: var(--text-light); padding: 2rem;">${noResultsMsg}</p>`;
+        } else {
+            searchResults.innerHTML = filtered.map(item => `
+                <a href="${item.url}" class="search-result-item">
+                    <span class="icon">${item.icon}</span>
+                    <div>
+                        <div class="title">${item.title}</div>
+                        <div class="desc">${item.desc}</div>
+                    </div>
+                </a>
+            `).join('');
+        }
+    });
+}
+

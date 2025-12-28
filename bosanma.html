@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Türkiye'de boşanma davası açma - Almanya'dan prosedür, masraflar ve destek. Anlaşmalı ve çekişmeli boşanma, velayet, nafaka, mal paylaşımı.">
+    <meta name="keywords"
+        content="türkiye boşanma, almanya türkiye boşanma, anlaşmalı boşanma, çekişmeli boşanma, velayet, nafaka, mal paylaşımı, tanıma tenfiz">
+    <title>Boşanma Davaları | Doğru Hukuk Bürosu - Türk Hukuku Uzmanı</title>
+    <link rel="icon" type="image/png" href="logo_v4.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+
+        .service-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a962' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .service-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-hero-icon svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--gold);
+        }
+
+        .service-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero p {
+            color: var(--white);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .service-hero .btn {
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-hero .btn:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .content-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .content-section h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .content-section p,
+        .content-section li {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-section ul,
+        .content-section ol {
+            padding-left: 1.5rem;
+        }
+
+        .content-section strong {
+            color: var(--primary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d0e8ef 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        .quote-box {
+            background: var(--off-white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            border-left: 4px solid var(--gold);
+        }
+
+        .quote-box p {
+            margin: 0 0 0.5rem;
+            color: var(--text);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--off-white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--gold);
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .process-timeline {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1.5rem;
+            background: var(--off-white);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .process-step-number {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .process-step-content h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .process-step-content p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        .note-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #ffc107;
+            margin: 1.5rem 0;
+        }
+
+        .note-box p {
+            color: #856404;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            padding: 0;
+        }
+
+        .cta-section p {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section .btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .other-services {
+            margin-top: 3rem;
+        }
+
+        .other-services h2 {
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-link {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .service-link-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-link-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+        }
+
+        .service-link-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left"><span class="top-item"><svg class="top-icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg><span>Mannheim, Almanya & Ankara, Türkiye</span></span></div>
+        </div>
+    </div>
+    <header class="header scrolled">
+        <div class="container"><a href="index.html" class="logo">
+                <div class="logo-icon"><img src="logo_v4.png" alt="Logo"></div>
+                <div class="logo-text"><span class="logo-title">DOĞRU</span><span class="logo-subtitle">HUKUK
+                        BÜROSU</span></div>
+            </a>
+            <nav class="nav"><a href="index.html" class="nav-link">ANASAYFA</a><a href="index.html#hizmetler"
+                    class="nav-link active">HUKUK ALANLARIMIZ</a><a href="index.html#hakkimizda"
+                    class="nav-link">HAKKIMIZDA</a><a href="index.html#iletisim" class="nav-link">İLETİŞİM</a></nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="service-page">
+            <a href="index.html#hizmetler" class="back-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>Tüm Hukuk Alanları</a>
+
+            <div class="service-hero">
+                <div class="service-hero-content">
+                    <div class="service-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                        </svg></div>
+                    <h1>Türkiye'de Boşanma Davası Açma</h1>
+                    <p>Almanya'da yaşıyor ancak Türk vatandaşlığına sahip olup Türkiye'de boşanmak mı istiyorsunuz?
+                        Prosedür, masraflar ve Almanya'dan destek hakkında bilgi edinin.</p>
+                    <a href="index.html#iletisim" class="btn">📞 Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🇩🇪 Almanya'da Yaşıyorsanız Kendinize Şu Soruları Soruyorsunuzdur:</h3>
+                <div class="quote-box">
+                    <p>"Almanya'da yaşıyorsam Türkiye'de boşanma süreci nasıl işliyor?"</p>
+                    <p>"Mahkemeye şahsen gitmem gerekiyor mu?"</p>
+                    <p>"Türkiye'de güvenilir bir avukatı nasıl bulabilirim?"</p>
+                </div>
+                <p>Bu belirsizlikler anlaşılabilir ve ben tam da bu noktada size destek olabilirim.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>👨‍⚖️ Size Nasıl Yardımcı Olabilirim?</h2>
+                <p>Türk aile hukuku konusunda uzmanlaşmış bir avukat olarak, <strong>Almanya'da yaşıyor olsanız
+                        bile</strong>, Türkiye'deki tüm boşanma sürecinde size rehberlik edeceğim.</p>
+                <p><strong>Türkiye'ye şahsen gelmenize gerek yok:</strong> Türk konsolosluğu aracılığıyla düzenlenmiş
+                    basit bir vekaletname yeterlidir. Bu, sizi Türkiye'deki mahkemede verimli, yasal ve gereksiz stres
+                    yaşamadan tam olarak temsil etmemi sağlar.</p>
+                <p>Ayrılık çoğu zaman duygusal açıdan stresli bir süreçtir ve bu nedenle bu dönemde destek almak daha da
+                    önemlidir. Amacım, yükünüzün bir kısmını hafifletmek ve sahip olabileceğiniz endişe ve
+                    belirsizlikleri
+                    azaltmaktır.</p>
+                <p>Siz davanızı bana anlatırsınız, ben de <strong>gerekli belgelerin hazırlanmasından davanın
+                        sonuçlanmasına kadar tüm süreci yönetirim.</strong> Bu size zaman ve para kazandırır.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>⚖️ Yasal Dayanak</h2>
+                <p>Türkiye'de boşanma <strong>Türk Medeni Kanunu</strong>'na tabidir. Bu kanun, bir evliliğin hangi
+                    şartlarda sona erdirilebileceğini düzenler.</p>
+                <p>Almanya'da yaşıyor olsanız bile, <strong>Türk vatandaşlarına genel olarak Türk hukuku
+                        uygulanmaktadır</strong> – özellikle evlilik Türkiye'de veya Türk vatandaşlığına sahip eşlerden
+                    biri tarafından gerçekleştirilmişse.</p>
+                <p>Bu şu anlama gelir: <strong>Boşanma Türk hukukuna göre ve Türk hakimi tarafından
+                        yapılmalıdır.</strong></p>
+            </div>
+
+            <div class="content-section">
+                <h2>📋 Boşanma Süreci Nasıl İşler?</h2>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="process-step-number">1</div>
+                        <div class="process-step-content">
+                            <h4>Vekaletname Hazırlığı</h4>
+                            <p>Türkiye'ye bizzat gelmenize gerek yok. Vekaletnamenizi Almanya'daki Türk Konsolosluğu
+                                aracılığıyla düzenleyebilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step-number">2</div>
+                        <div class="process-step-content">
+                            <h4>Dava Açılması</h4>
+                            <p>Sizi Türk Aile Mahkemesi'nde temsil ediyorum. Tüm dilekçeler ve belgeler sizin adınıza
+                                hazırlanır.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step-number">3</div>
+                        <div class="process-step-content">
+                            <h4>Duruşma Süreci</h4>
+                            <p>E-Duruşma sistemi (UYAP) sayesinde mahkeme duruşmalarına online katılım sağlanabilir.
+                                Almanya'dan rahatlıkla hazır bulunabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step-number">4</div>
+                        <div class="process-step-content">
+                            <h4>Karar ve Kesinleşme</h4>
+                            <p>Mahkeme kararı sonrası gerekli tescil işlemleri yapılır ve boşanma kesinleşir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="info-card">
+                    <h3>✅ Anlaşmalı Boşanma</h3>
+                    <p>Tarafların her konuda uzlaşması durumunda kısa sürede sonuçlanır.</p>
+                    <ul>
+                        <li>Evliliğin en az 1 yıl sürmüş olması</li>
+                        <li>Protokol hazırlanması</li>
+                        <li>Tarafların birlikte mahkemeye başvurması</li>
+                        <li><strong>Süre:</strong> Birkaç haftadan birkaç aya kadar</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>⚔️ Çekişmeli Boşanma</h3>
+                    <p>Taraflar arasında anlaşmazlık varsa sebeplerin ispatı gerekir.</p>
+                    <ul>
+                        <li>Aldatma, Şiddet, Terk</li>
+                        <li>Geçimsizlik, Suistimal</li>
+                        <li>Akıl hastalığı</li>
+                        <li><strong>Süre:</strong> Birkaç aydan bir yıla kadar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>💰 Masraflar</h2>
+                <p>Boşanma davası masrafları şunlardan oluşur:</p>
+                <ul>
+                    <li><strong>Mahkeme masrafları:</strong> Dava açılışı ve harçlar</li>
+                    <li><strong>Çeviri ve tasdik masrafları:</strong> Belgelerin yeminli tercümesi</li>
+                    <li><strong>Konsolosluk ücretleri:</strong> Vekaletname düzenleme</li>
+                    <li><strong>Avukatlık ücreti:</strong> Sürecin yönetimi ve temsil</li>
+                </ul>
+                <p>Süreç şeffaf bir şekilde yönetilir ve <strong>tüm masraflar önceden bildirilir.</strong></p>
+                <div class="note-box">
+                    <p><strong>Not:</strong> İlk görüşme ücretlidir. Tüm süreci, beklenen masrafları ve sonraki adımları
+                        şeffaf, açık ve kişisel olarak açıklayacağım.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>👶 Velayet ve Nafaka</h2>
+                <ul>
+                    <li><strong>Velayet:</strong> Çocuğun hangi ebeveynde kalacağı mahkeme tarafından belirlenir</li>
+                    <li><strong>Ortak velayet:</strong> İstisnai durumlarda verilir</li>
+                    <li><strong>Kişisel ilişki kurma hakkı:</strong> Velayeti olmayan ebeveyn için düzenlenir</li>
+                    <li><strong>İştirak nafakası:</strong> Çocukların bakımı için ödenen nafaka</li>
+                    <li><strong>Yoksulluk nafakası:</strong> Boşanma sonrası zor duruma düşen eş için</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🏠 Mal Paylaşımı</h2>
+                <ul>
+                    <li><strong>Evlilik öncesi mallar:</strong> Kişisel mülkiyet sayılır</li>
+                    <li><strong>Miras veya bağış yoluyla alınan mallar:</strong> Kişiseldir</li>
+                    <li><strong>Evlilik süresince kazanılan mallar:</strong> Ortaktır ve paylaşılır</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>🔄 Tanıma ve Tenfiz</h2>
+                <p>Türkiye'de alınan boşanma kararının Almanya'da geçerli olması için <strong>tanıma ve tenfiz</strong>
+                    işlemi yapılması gerekebilir. Bu süreçte de size yardımcı olabilirim.</p>
+            </div>
+
+            <div class="cta-section">
+                <h2>Boşanma Sürecinde Yardıma mı İhtiyacınız Var?</h2>
+                <p>Almanya'dan Türkiye'deki boşanma davanız için uzman desteği alın.</p>
+                <a href="index.html#iletisim" class="btn">📞 Randevu Al</a>
+            </div>
+
+            <div class="other-services">
+                <h2>Diğer Hukuk Alanlarımız</h2>
+                <div class="services-grid">
+                    <a href="miras-hukuku.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 3v18M3 12l9-9 9 9M3 12h18" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></div>
+                        <div class="service-link-title">Miras Hukuku</div>
+                    </a>
+                    <a href="veraset-ilami.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <path d="M7 8h10M7 12h10M7 16h6" />
+                            </svg></div>
+                        <div class="service-link-title">Veraset İlamı</div>
+                    </a>
+                    <a href="gayrimenkul.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+                            </svg></div>
+                        <div class="service-link-title">Gayrimenkul Hukuku</div>
+                    </a>
+                    <a href="is-hukuku.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2" />
+                                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                            </svg></div>
+                        <div class="service-link-title">İş Hukuku</div>
+                    </a>
+                    <a href="borclar.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg></div>
+                        <div class="service-link-title">Borçlar Hukuku</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/905332375918" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg></a>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Türkiye İş Hukuku - Haksız fesih, kıdem tazminatı, ihbar tazminatı, işe iade davası, iş kazası, fazla mesai alacakları.">
+    <meta name="keywords"
+        content="iş hukuku, kıdem tazminatı, ihbar tazminatı, işe iade davası, iş kazası, fazla mesai, mobbing, SGK">
+    <title>İş Hukuku | Doğru Hukuk Bürosu - Türk Hukuku Uzmanı</title>
+    <link rel="icon" type="image/png" href="logo_v4.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+
+        .service-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a962' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .service-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-hero-icon svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--gold);
+        }
+
+        .service-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero p {
+            color: var(--white);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .service-hero .btn {
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-hero .btn:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .content-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .content-section p,
+        .content-section li {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-section ul {
+            padding-left: 1.5rem;
+        }
+
+        .content-section strong {
+            color: var(--primary);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--off-white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--gold);
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #ffc107;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box li {
+            color: #856404;
+        }
+
+        .deadline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .deadline-card {
+            background: var(--off-white);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            border-top: 4px solid var(--gold);
+        }
+
+        .deadline-card .time {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .deadline-card .label {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            padding: 0;
+        }
+
+        .cta-section p {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section .btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .other-services {
+            margin-top: 3rem;
+        }
+
+        .other-services h2 {
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-link {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .service-link-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-link-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+        }
+
+        .service-link-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left"><span class="top-item"><svg class="top-icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg><span>Mannheim, Almanya & Ankara, Türkiye</span></span></div>
+        </div>
+    </div>
+    <header class="header scrolled">
+        <div class="container"><a href="index.html" class="logo">
+                <div class="logo-icon"><img src="logo_v4.png" alt="Logo"></div>
+                <div class="logo-text"><span class="logo-title">DOĞRU</span><span class="logo-subtitle">HUKUK
+                        BÜROSU</span></div>
+            </a>
+            <nav class="nav"><a href="index.html" class="nav-link">ANASAYFA</a><a href="index.html#hizmetler"
+                    class="nav-link active">HUKUK ALANLARIMIZ</a><a href="index.html#hakkimizda"
+                    class="nav-link">HAKKIMIZDA</a><a href="index.html#iletisim" class="nav-link">İLETİŞİM</a></nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="service-page">
+            <a href="index.html#hizmetler" class="back-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>Tüm Hukuk Alanları</a>
+
+            <div class="service-hero">
+                <div class="service-hero-content">
+                    <div class="service-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+                        </svg></div>
+                    <h1>İş Hukuku</h1>
+                    <p>İş hukuku, çalışan ile işveren arasındaki iş ilişkisini düzenleyen, hem işçilerin haklarını hem
+                        işverenin yükümlülüklerini güvence altına alan hukuk dalıdır.</p>
+                    <a href="index.html#iletisim" class="btn">📞 Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>📌 İş Hukuku Hangi Konuları Kapsar?</h2>
+                <ul>
+                    <li><strong>Haksız fesih ve işe iade davaları:</strong> İşten çıkarılma durumunda haklarınız</li>
+                    <li><strong>Kıdem ve ihbar tazminatı talepleri:</strong> Çalışma süresine göre tazminat hesaplama
+                    </li>
+                    <li><strong>Fazla mesai, hafta tatili, yıllık izin alacakları:</strong> Ödenmeyen işçi hakları</li>
+                    <li><strong>SGK prim uyuşmazlıkları ve hizmet tespiti:</strong> Sigortasız çalışma davaları</li>
+                    <li><strong>İş kazası ve meslek hastalığı davaları:</strong> Tazminat talepleri</li>
+                    <li><strong>Disiplin işlemleri ve personel savunmaları:</strong> İşyerinde disiplin süreçleri</li>
+                    <li><strong>Toplu iş sözleşmeleri ve sendikal süreçler:</strong> İşçi-işveren toplu görüşmeleri</li>
+                </ul>
+            </div>
+
+            <div class="content-grid">
+                <div class="info-card">
+                    <h3>👷 Çalışanlar İçin</h3>
+                    <ul>
+                        <li>Haksız işten çıkarılma</li>
+                        <li>Ödenmeyen alacaklar</li>
+                        <li>Mobbing ve hak ihlalleri</li>
+                        <li>İş kazası tazminatı</li>
+                        <li>Sigortasız çalıştırılma</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>🏢 İşverenler İçin</h3>
+                    <ul>
+                        <li>Yasalara uygun sözleşmeler hazırlama</li>
+                        <li>İhtar ve fesih süreçleri</li>
+                        <li>Risk yönetimi</li>
+                        <li>İş davalarında savunma</li>
+                        <li>Personel yönetimi danışmanlığı</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Neden Uzman Desteği?</h3>
+                <p>İş hukuku süreçleri <strong>hak düşürücü süreler</strong> içerir. Zamanında ve doğru adım
+                    atılmazsa hak kaybı yaşanabilir.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>⏰ Önemli Yasal Süreler</h2>
+                <div class="deadline-grid">
+                    <div class="deadline-card">
+                        <div class="time">30 Gün</div>
+                        <div class="label">İşe İade Davası</div>
+                    </div>
+                    <div class="deadline-card">
+                        <div class="time">5 Yıl</div>
+                        <div class="label">Alacak Davaları</div>
+                    </div>
+                    <div class="deadline-card">
+                        <div class="time">10 Yıl</div>
+                        <div class="label">İş Kazası Davaları</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>İş Hukuku Konusunda Yardıma mı İhtiyacınız Var?</h2>
+                <p>Türkiye'deki iş uyuşmazlıklarınız için uzman desteği alın.</p>
+                <a href="index.html#iletisim" class="btn">📞 Randevu Al</a>
+            </div>
+
+            <div class="other-services">
+                <h2>Diğer Hukuk Alanlarımız</h2>
+                <div class="services-grid">
+                    <a href="miras-hukuku.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 3v18M3 12l9-9 9 9M3 12h18" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></div>
+                        <div class="service-link-title">Miras Hukuku</div>
+                    </a>
+                    <a href="veraset-ilami.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <path d="M7 8h10M7 12h10M7 16h6" />
+                            </svg></div>
+                        <div class="service-link-title">Veraset İlamı</div>
+                    </a>
+                    <a href="gayrimenkul.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+                            </svg></div>
+                        <div class="service-link-title">Gayrimenkul Hukuku</div>
+                    </a>
+                    <a href="bosanma.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                            </svg></div>
+                        <div class="service-link-title">Aile Hukuku</div>
+                    </a>
+                    <a href="borclar.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg></div>
+                        <div class="service-link-title">Borçlar Hukuku</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/905332375918" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg></a>
+</body>
+
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Türkiye'de Miras Hukuku ve İşlemleri - Yasal mirasçılar, saklı pay, mirasın reddi, veraset ilamı. Almanya-Türkiye miras işlemleri.">
+    <meta name="keywords"
+        content="miras hukuku, veraset, yasal mirasçılar, saklı pay, mirasın reddi, veraset ilamı, erbrecht, türk miras hukuku">
+    <title>Miras Hukuku | Doğru Hukuk Bürosu - Türk Hukuku Uzmanı</title>
+    <link rel="icon" type="image/png" href="logo_v4.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+
+        .service-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a962' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .service-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-hero-icon svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--gold);
+        }
+
+        .service-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero p {
+            color: var(--white);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .service-hero .btn {
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-hero .btn:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .content-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .content-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .content-section h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .content-section p,
+        .content-section li {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-section ul,
+        .content-section ol {
+            padding-left: 1.5rem;
+        }
+
+        .content-section strong {
+            color: var(--primary);
+        }
+
+        .country-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .country-section.turkey {
+            border-left: 4px solid #e74c3c;
+        }
+
+        .country-section.germany {
+            border-left: 4px solid #000;
+        }
+
+        .country-flag {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .comparison-table th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d0e8ef 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            padding: 0;
+        }
+
+        .cta-section p {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section .btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .other-services {
+            margin-top: 3rem;
+        }
+
+        .other-services h2 {
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-link {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .service-link-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-link-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--gold);
+        }
+
+        .service-link-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left"><span class="top-item"><svg class="top-icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg><span>Mannheim, Almanya & Ankara, Türkiye</span></span></div>
+        </div>
+    </div>
+    <header class="header scrolled">
+        <div class="container"><a href="index.html" class="logo">
+                <div class="logo-icon"><img src="logo_v4.png" alt="Logo"></div>
+                <div class="logo-text"><span class="logo-title">DOĞRU</span><span class="logo-subtitle">HUKUK
+                        BÜROSU</span></div>
+            </a>
+            <nav class="nav"><a href="index.html" class="nav-link">ANASAYFA</a><a href="index.html#hizmetler"
+                    class="nav-link active">HUKUK ALANLARIMIZ</a><a href="index.html#hakkimizda"
+                    class="nav-link">HAKKIMIZDA</a><a href="index.html#iletisim" class="nav-link">İLETİŞİM</a></nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="service-page">
+            <a href="index.html#hizmetler" class="back-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>Tüm Hukuk Alanları</a>
+
+            <div class="service-hero">
+                <div class="service-hero-content">
+                    <div class="service-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 3v18M3 12l9-9 9 9M3 12h18" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg></div>
+                    <h1>Türkiye'de Miras Hukuku ve İşlemleri</h1>
+                    <p>Miras hukuku, bir kişinin ölümüyle birlikte geride bıraktığı malvarlığının (tereke), haklarının
+                        ve borçlarının yasal mirasçılarına veya vasiyetname ile belirlenen kişilere nasıl geçeceğini
+                        düzenleyen hukuk dalıdır.</p>
+                    <a href="index.html#iletisim" class="btn">📞 Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>🌍 Türkiye ve Almanya Arasında Malvarlığı</h4>
+                <p>Türkiye ve Almanya arasında malvarlığı bulunan vatandaşlar için süreç her iki ülke hukukunu da
+                    ilgilendirebilmektedir. Her iki ülkede ayrı ayrı işlemler gerekir.</p>
+            </div>
+
+            <!-- TÜRK MİRAS HUKUKU -->
+            <div class="content-section">
+                <h2><span class="country-flag">🇹🇷</span> TÜRK MİRAS HUKUKU</h2>
+                <p>Medeni Kanun esas alınır. Vefat eden kişinin Türkiye'deki malvarlığı Türk hukukuna tabidir.</p>
+
+                <div class="country-section turkey">
+                    <h3>1. Yasal Mirasçılar</h3>
+                    <p>Türk Medeni Kanunu'na göre mirasçılar "zümre" (derece) sistemine göre belirlenir:</p>
+                    <ul>
+                        <li><strong>Birinci Zümre:</strong> Altsoy (Çocuklar, torunlar). Mirasın en büyük kısmını
+                            alırlar.</li>
+                        <li><strong>İkinci Zümre:</strong> Ana ve baba. Altsoy yoksa miras ana ve babaya, onlar yoksa
+                            kardeşlere geçer.</li>
+                        <li><strong>Üçüncü Zümre:</strong> Büyükanne ve büyükbaba ile onların altsoyu (Amca, hala,
+                            teyze).</li>
+                        <li><strong>Evlat edinilen çocuklar</strong> da yasal mirasçıdır.</li>
+                        <li><strong>Sağ kalan eş</strong>, her zümre ile birlikte belli oranlarda miras payı alır.</li>
+                    </ul>
+                </div>
+
+                <div class="country-section turkey">
+                    <h3>2. Saklı Pay (Pflichtteil) Nedir?</h3>
+                    <p>Miras bırakan, mirasının tamamı üzerinde serbestçe tasarruf edemez. Kanun, bazı yakın akrabaların
+                        mirastan mahrum bırakılmasını engellemek için onlara "Saklı Pay" hakkı tanımıştır:</p>
+                    <ul>
+                        <li><strong>Altsoy için saklı pay:</strong> Yasal miras payının yarısıdır.</li>
+                        <li><strong>Ana ve baba için saklı pay:</strong> Yasal miras payının dörtte biridir.</li>
+                        <li><strong>Sağ kalan eş için saklı pay:</strong> Yasal miras payının tamamıdır (1. ve 2. zümre
+                            ile birlikte ise).</li>
+                    </ul>
+                </div>
+
+                <div class="country-section turkey">
+                    <h3>3. Mirasın Reddi</h3>
+                    <ul>
+                        <li>Mirasçılar, ölüm tarihinden itibaren <strong>3 ay</strong> içinde sulh hukuk mahkemesine
+                            başvurarak mirası reddedebilirler.</li>
+                        <li>Aksi halde miras zımnen (örtülü) kabul edilmiş sayılır.</li>
+                    </ul>
+                </div>
+
+                <div class="country-section turkey">
+                    <h3>4. Veraset İlamı (Mirasçılık Belgesi)</h3>
+                    <ul>
+                        <li>Noter ya da Sulh Hukuk Mahkemesi'nden alınır.</li>
+                        <li>Mirasçıların yasal olarak kim olduğunu gösterir.</li>
+                    </ul>
+                </div>
+
+                <div class="country-section turkey">
+                    <h3>5. Vergilendirme</h3>
+                    <ul>
+                        <li>Veraset ve intikal vergisi ödenir.</li>
+                        <li>Mirasın değeri, veraset ilamıyla ve taşınmaz/mal bildirimleriyle belirlenir.</li>
+                        <li>Türkiye'de vergi oranı <strong>%1 ile %30</strong> arasında değişir.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ALMAN MİRAS HUKUKU -->
+            <div class="content-section">
+                <h2><span class="country-flag">🇩🇪</span> ALMAN MİRAS HUKUKU (Erbrecht)</h2>
+                <p>BGB (Alman Medeni Kanunu) esas alınır. Vefat eden kişi Almanya'da yerleşikse (domicile), genellikle
+                    Alman hukuku uygulanır. Çifte vatandaşlık ve malvarlığının nerede olduğu önemlidir.</p>
+
+                <div class="country-section germany">
+                    <h3>1. Yasal Mirasçılar</h3>
+                    <ul>
+                        <li>Eşi, çocukları, torunları; yoksa ebeveynler ve kardeşler.</li>
+                        <li>Eşin payı, mirasın zümresine göre değişir.</li>
+                        <li>Evlilik mal rejimi miras payını etkiler (örn: Zugewinngemeinschaft varsa eşin payı %50
+                            olabilir).</li>
+                    </ul>
+                </div>
+
+                <div class="country-section germany">
+                    <h3>2. Mirasın Reddi (Ausschlagung der Erbschaft)</h3>
+                    <ul>
+                        <li>Miras, <strong>6 hafta</strong> içinde reddedilmelidir.</li>
+                        <li>Kişi Almanya dışında yaşıyorsa bu süre <strong>6 aya</strong> çıkar.</li>
+                        <li>Ret yapılmazsa miras kabul edilmiş sayılır (bazen borçlarıyla birlikte!).</li>
+                    </ul>
+                </div>
+
+                <div class="country-section germany">
+                    <h3>3. Erbschein (Mirasçılık Sertifikası)</h3>
+                    <ul>
+                        <li>Almanya'daki mirasçılar, yerel sulh mahkemesinden (Nachlassgericht) Erbschein talep eder.
+                        </li>
+                        <li>Noter vasıtasıyla başvuru yapılır, ücretlidir.</li>
+                        <li>Yabancı belgeler yeminli tercüme ve apostil ister.</li>
+                    </ul>
+                </div>
+
+                <div class="country-section germany">
+                    <h3>4. Vergilendirme (Erbschaftsteuer)</h3>
+                    <ul>
+                        <li>Almanya'da miras vergisi vardır.</li>
+                        <li>Vergi oranı mirasçı ile vefat eden arasındaki akrabalık derecesine göre <strong>%7 -
+                                %50</strong> arasında değişir.</li>
+                        <li>Çocuklar için vergi muafiyeti daha yüksektir (örneğin: 400.000 €).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Çifte Vatandaşlık -->
+            <div class="content-section">
+                <h2>🌍 Çifte Vatandaşlık ve Uluslararası Durumlar</h2>
+
+                <h3>1. Hangi Hukuk Uygulanır?</h3>
+                <ul>
+                    <li>Türk vatandaşının Türkiye'deki malları için Türk hukuku uygulanır.</li>
+                    <li>Alman vatandaşı ya da Almanya'da ikamet eden biri için Alman hukuku geçerli olabilir.</li>
+                    <li>Avrupa Miras Tüzüğü (EU-Erbrechtsverordnung), 2015'ten beri geçerlidir (Almanya buna dahildir,
+                        Türkiye değildir).</li>
+                    <li>Kişi vasiyetname ile mirası hangi ülke hukukuna göre düzenleyeceğini belirleyebilir (hukuk
+                        seçimi - Rechtswahl).</li>
+                </ul>
+
+                <h3>2. Malvarlığı Türkiye ve Almanya'da ise</h3>
+                <ul>
+                    <li>Her iki ülkede ayrı ayrı işlemler gerekir.</li>
+                    <li>Türk tarafında veraset ilamı, Alman tarafında Erbschein çıkarılır.</li>
+                    <li>Mirasın taksiminde noter ve yeminli tercümanlar gerekebilir.</li>
+                </ul>
+            </div>
+
+            <!-- Karşılaştırma Tablosu -->
+            <div class="content-section">
+                <h2>✅ Yapılması Gerekenler (Özet Karşılaştırma)</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Adım</th>
+                            <th>🇹🇷 Türkiye</th>
+                            <th>🇩🇪 Almanya</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ölüm belgesi alınması</strong></td>
+                            <td>Nüfus müdürlüğü veya hastane</td>
+                            <td>Standesamt (nüfus dairesi)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mirasçılık belgesi</strong></td>
+                            <td>Noter veya Sulh Hukuk Mahkemesi</td>
+                            <td>Nachlassgericht'ten Erbschein alınır</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mirasın reddi</strong></td>
+                            <td>3 ay içinde</td>
+                            <td>6 hafta / 6 ay içinde</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vergi işlemleri</strong></td>
+                            <td>Veraset ve intikal vergisi</td>
+                            <td>Erbschaftsteuer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tapu ve banka işlemleri</strong></td>
+                            <td>Türkiye'deki tapu ve bankalarda beyan</td>
+                            <td>Almanya'daki kurumlara bildirim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cta-section">
+                <h2>Miras Hukuku Konusunda Yardıma mı İhtiyacınız Var?</h2>
+                <p>Türkiye ve Almanya'daki miras işlemleriniz için uzman desteği alın.</p>
+                <a href="index.html#iletisim" class="btn">📞 Randevu Al</a>
+            </div>
+
+            <div class="other-services">
+                <h2>Diğer Hukuk Alanlarımız</h2>
+                <div class="services-grid">
+                    <a href="veraset-ilami.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <path d="M7 8h10M7 12h10M7 16h6" />
+                            </svg></div>
+                        <div class="service-link-title">Veraset İlamı</div>
+                    </a>
+                    <a href="gayrimenkul.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+                            </svg></div>
+                        <div class="service-link-title">Gayrimenkul Hukuku</div>
+                    </a>
+                    <a href="bosanma.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                            </svg></div>
+                        <div class="service-link-title">Aile Hukuku</div>
+                    </a>
+                    <a href="is-hukuku.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2" />
+                                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                            </svg></div>
+                        <div class="service-link-title">İş Hukuku</div>
+                    </a>
+                    <a href="borclar.html" class="service-link">
+                        <div class="service-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg></div>
+                        <div class="service-link-title">Borçlar Hukuku</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/905332375918" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg></a>
+</body>
+
+</html>
