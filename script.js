@@ -35,11 +35,21 @@
 // ===== Page Loader =====
 const pageLoader = document.getElementById('pageLoader');
 
+// Hide loader when page fully loads
 window.addEventListener('load', () => {
     setTimeout(() => {
-        pageLoader.classList.add('hidden');
+        if (pageLoader) {
+            pageLoader.classList.add('hidden');
+        }
     }, 800); // Show loader for 0.8 seconds minimum
 });
+
+// Fallback: Force hide loader after 3 seconds max (in case load event doesn't fire)
+setTimeout(() => {
+    if (pageLoader && !pageLoader.classList.contains('hidden')) {
+        pageLoader.classList.add('hidden');
+    }
+}, 3000);
 
 // ===== Back to Top Button =====
 const backToTopBtn = document.getElementById('backToTop');

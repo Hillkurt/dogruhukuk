@@ -30,6 +30,26 @@
         </div>
     </div>
 
+    <!-- Inline Loader Script (Only on first visit) -->
+    <script>
+        (function () {
+            var loader = document.getElementById('pageLoader');
+            if (!loader) return;
+
+            // Check if this is the first visit in this session
+            if (sessionStorage.getItem('loaderShown')) {
+                // Not first visit - hide loader immediately
+                loader.style.display = 'none';
+            } else {
+                // First visit - show loader then hide after delay
+                sessionStorage.setItem('loaderShown', 'true');
+                setTimeout(function () {
+                    loader.classList.add('hidden');
+                }, 2000);
+            }
+        })();
+    </script>
+
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Sayfa başına dön">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -316,22 +336,52 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-icon">⚖️</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a962" stroke-width="1.5"
+                            style="width:56px;height:56px;">
+                            <path d="M12 3v18" />
+                            <path d="M5 6l7-3 7 3" />
+                            <path d="M5 6v6c0 2 1.5 3.5 3.5 3.5S12 14 12 12V6" />
+                            <path d="M12 6v6c0 2 1.5 3.5 3.5 3.5S19 14 19 12V6" />
+                        </svg>
+                    </div>
                     <span class="stat-number" data-count="500">0</span>
                     <span class="stat-label" data-i18n="stat-1">Başarılı Dava</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">📅</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a962" stroke-width="1.5"
+                            style="width:56px;height:56px;">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
                     <span class="stat-number" data-count="15">0</span>
                     <span class="stat-label" data-i18n="stat-2">Yıllık Deneyim</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">⭐</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a962" stroke-width="1.5"
+                            style="width:56px;height:56px;">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
                     <span class="stat-number" data-count="98">0</span>
                     <span class="stat-label" data-i18n="stat-3">% Müvekkil Memnuniyeti</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">🌍</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a962" stroke-width="1.5"
+                            style="width:56px;height:56px;">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
                     <span class="stat-number">2</span>
                     <span class="stat-label" data-i18n="stat-4">Ülkede Ofis</span>
                 </div>
@@ -346,7 +396,13 @@
                 <div class="about-image">
                     <div class="image-frame">
                         <div class="image-placeholder">
-                            <span class="placeholder-icon">👨‍⚖️</span>
+                            <span class="placeholder-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    style="width:48px;height:48px;">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                            </span>
                             <span class="placeholder-text">Av. Hasan Doğru</span>
                         </div>
                     </div>
@@ -446,7 +502,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="miras-col1-title" data-i18n="miras-col1-title">📌 Miras Hukuku Hangi Alanları
+                            <h4 class="miras-col1-title" data-i18n="miras-col1-title">Miras Hukuku Hangi Alanları
                                 Kapsar?</h4>
                             <ul class="service-list miras-col1-list">
                                 <li><strong>Yasal Mirasçılık:</strong> Kimlerin hangi oranda mirasçı olduğunu belirler.
@@ -461,7 +517,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="miras-col2-title" data-i18n="miras-col2-title">🧾 Miras Süreci Nasıl İşler?</h4>
+                            <h4 class="miras-col2-title" data-i18n="miras-col2-title">Miras Süreci Nasıl İşler?</h4>
                             <ol class="service-steps miras-col2-list">
                                 <li>Vefat gerçekleşir ve nüfus müdürlüğüne bildirilir.</li>
                                 <li>Veraset ilamı alınır (noterden veya mahkemeden).</li>
@@ -473,17 +529,17 @@
                     </div>
 
                     <div class="service-info-box">
-                        <h4 class="miras-info-title" data-i18n="miras-info-title">🧠 Kimler Mirasçıdır?</h4>
+                        <h4 class="miras-info-title" data-i18n="miras-info-title">Kimler Mirasçıdır?</h4>
                         <div class="info-grid miras-info-list">
-                            <span>✓ Eş, çocuklar, torunlar</span>
-                            <span>✓ Anne-baba, kardeşler</span>
-                            <span>✓ Daha uzak akrabalar (önceki gruplar yoksa)</span>
-                            <span>✓ Evlatlıklar da yasal mirasçıdır</span>
+                            <span>• Eş, çocuklar, torunlar</span>
+                            <span>• Anne-baba, kardeşler</span>
+                            <span>• Daha uzak akrabalar (önceki gruplar yoksa)</span>
+                            <span>• Evlatlıklar da yasal mirasçıdır</span>
                         </div>
                     </div>
 
                     <div class="service-warning">
-                        <h4 class="miras-warning-title" data-i18n="miras-warning-title">⚠️ Önemli Uyarılar</h4>
+                        <h4 class="miras-warning-title" data-i18n="miras-warning-title">Önemli Uyarılar</h4>
                         <ul class="miras-warning-list">
                             <li>Her miras, sadece mal değil <strong>borç da içerebilir</strong>. Gerekirse reddi miras
                                 hakkınızı kullanabilirsiniz.</li>
@@ -492,6 +548,16 @@
                             <li>Haklarınızı zamanında kullanmanız için <strong>profesyonel destek</strong> önemlidir.
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="service-detail-btn-wrapper">
+                        <a href="miras-hukuku.html" class="btn btn-detail" data-i18n="detail-btn">
+                            <span>Detaylı Bilgi</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </article>
@@ -523,7 +589,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="veraset-col1-title">📌 Kimler Alabilir?</h4>
+                            <h4 class="veraset-col1-title">Kimler Alabilir?</h4>
                             <p class="veraset-col1-desc">Veraset ilamı, yasal mirasçılar tarafından alınabilir:</p>
                             <ul class="service-list veraset-col1-list">
                                 <li>Eş</li>
@@ -534,7 +600,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="veraset-col2-title">📌 Nereden Alınır?</h4>
+                            <h4 class="veraset-col2-title">Nereden Alınır?</h4>
                             <ul class="service-list veraset-col2-list">
                                 <li><strong>Noterden:</strong> Tüm mirasçılar Türk vatandaşı ise ve soybağı net ise</li>
                                 <li><strong>Sulh Hukuk Mahkemesi'nden:</strong> Daha karmaşık durumlar veya yabancı
@@ -544,22 +610,32 @@
                     </div>
 
                     <div class="service-info-box">
-                        <h4 class="veraset-info-title">📋 Gerekli Belgeler</h4>
+                        <h4 class="veraset-info-title">Gerekli Belgeler</h4>
                         <div class="info-grid veraset-info-list">
-                            <span>✓ Vefat eden kişinin ölüm belgesi veya nüfus kayıt örneği</span>
-                            <span>✓ Mirasçıların kimlik fotokopileri</span>
-                            <span>✓ Noter başvurularında nüfus kayıt örneği (vukuatlı)</span>
+                            <span>• Vefat eden kişinin ölüm belgesi veya nüfus kayıt örneği</span>
+                            <span>• Mirasçıların kimlik fotokopileri</span>
+                            <span>• Noter başvurularında nüfus kayıt örneği (vukuatlı)</span>
                         </div>
                     </div>
 
                     <div class="service-warning">
-                        <h4 class="veraset-warning-title">⚠️ Dikkat Edilmesi Gerekenler</h4>
+                        <h4 class="veraset-warning-title">Dikkat Edilmesi Gerekenler</h4>
                         <ul class="veraset-warning-list">
                             <li>Veraset ilamı alınmadan <strong>miras işlemleri başlatılamaz</strong>.</li>
                             <li>Her mirasçı <strong>ayrı ayrı başvuru</strong> yapabilir.</li>
                             <li>Yabancı ülkelerde yaşayanlar için <strong>noter onaylı tercüme ve apostil</strong>
                                 gerekebilir.</li>
                         </ul>
+                    </div>
+
+                    <div class="service-detail-btn-wrapper">
+                        <a href="veraset-ilami.html" class="btn btn-detail" data-i18n="detail-btn">
+                            <span>Detaylı Bilgi</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </article>
@@ -590,7 +666,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="gayrimenkul-col1-title" data-i18n="gayr-col1-title">📌 Gayrimenkul Hukuku Hangi
+                            <h4 class="gayrimenkul-col1-title" data-i18n="gayr-col1-title">Gayrimenkul Hukuku Hangi
                                 Alanları Kapsar?</h4>
                             <ul class="service-list gayrimenkul-col1-list">
                                 <li>Tapu iptal ve tescil davaları</li>
@@ -603,7 +679,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="gayrimenkul-col2-title" data-i18n="gayr-col2-title">🧾 Neden Hukuki Destek
+                            <h4 class="gayrimenkul-col2-title" data-i18n="gayr-col2-title">Neden Hukuki Destek
                                 Almalısınız?</h4>
                             <p class="gayrimenkul-col2-desc" data-i18n="gayr-col2-desc">Taşınmaz işlemlerinde yapılan
                                 küçük bir hata, büyük maddi
@@ -615,6 +691,16 @@
                                 <li>Ortak mülkiyetler <strong>hukuka uygun</strong> şekilde bölüştürülür</li>
                             </ul>
                         </div>
+                    </div>
+
+                    <div class="service-detail-btn-wrapper">
+                        <a href="gayrimenkul.html" class="btn btn-detail" data-i18n="detail-btn">
+                            <span>Detaylı Bilgi</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </article>
@@ -647,7 +733,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="is-col1-title" data-i18n="is-col1-title">📌 İş Hukuku Hangi Konuları Kapsar?</h4>
+                            <h4 class="is-col1-title" data-i18n="is-col1-title">İş Hukuku Hangi Konuları Kapsar?</h4>
                             <ul class="service-list is-col1-list">
                                 <li>Haksız fesih ve işe iade davaları</li>
                                 <li>Kıdem ve ihbar tazminatı talepleri</li>
@@ -660,7 +746,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="is-col2-title" data-i18n="is-col2-title">👷 Kimler İçin Gereklidir?</h4>
+                            <h4 class="is-col2-title" data-i18n="is-col2-title">Kimler İçin Gereklidir?</h4>
                             <div class="service-group is-col2-group1">
                                 <h5>Çalışanlar için:</h5>
                                 <p>Haksız işten çıkarılma, ödenmeyen alacaklar, mobbing, hak ihlalleri.</p>
@@ -673,7 +759,7 @@
                     </div>
 
                     <div class="service-warning">
-                        <h4 class="is-warning-title">⚠️ Önemli Süreler</h4>
+                        <h4 class="is-warning-title">Önemli Süreler</h4>
                         <p class="is-warning-text">İş hukuku süreçleri hak düşürücü süreler içerir. Zamanında ve doğru
                             adım atılmazsa hak kaybı
                             yaşanabilir:</p>
@@ -682,6 +768,16 @@
                             <li>Alacak davaları için <strong>5 yıl</strong></li>
                             <li>İş kazaları için <strong>10 yıl</strong></li>
                         </ul>
+                    </div>
+
+                    <div class="service-detail-btn-wrapper">
+                        <a href="is-hukuku.html" class="btn btn-detail" data-i18n="detail-btn">
+                            <span>Detaylı Bilgi</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </article>
@@ -715,19 +811,19 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="bosanma-col1-title" data-i18n="bosanma-col1-title">📌 Anlaşmalı Boşanma</h4>
+                            <h4 class="bosanma-col1-title" data-i18n="bosanma-col1-title">Anlaşmalı Boşanma</h4>
                             <p class="bosanma-col1-desc">Tarafların her konuda uzlaşması durumunda, kısa sürede ve tek
                                 celsede sonuçlanabilir.</p>
                             <h5 class="bosanma-col1-sub">Şartlar:</h5>
                             <ul class="service-list bosanma-col1-list">
-                                <li>✔ Evliliğin en az 1 yıl sürmüş olması</li>
-                                <li>✔ Protokol hazırlanması (mal paylaşımı, nafaka, velayet gibi)</li>
-                                <li>✔ Tarafların birlikte mahkemeye başvurması</li>
+                                <li>Evliliğin en az 1 yıl sürmüş olması</li>
+                                <li>Protokol hazırlanması (mal paylaşımı, nafaka, velayet gibi)</li>
+                                <li>Tarafların birlikte mahkemeye başvurması</li>
                             </ul>
                         </div>
 
                         <div class="service-column">
-                            <h4 class="bosanma-col2-title" data-i18n="bosanma-col2-title">📌 Çekişmeli Boşanma</h4>
+                            <h4 class="bosanma-col2-title" data-i18n="bosanma-col2-title">Çekişmeli Boşanma</h4>
                             <p class="bosanma-col2-desc">Taraflar arasında anlaşmazlık varsa; sebeplerin ispatlanması,
                                 tanıklar, deliller ve uzun
                                 yargılama süreci söz konusudur.</p>
@@ -744,7 +840,7 @@
                     </div>
 
                     <div class="service-info-box">
-                        <h4 class="bosanma-info-title" data-i18n="bosanma-info-title">👶 Velayet ve Nafaka</h4>
+                        <h4 class="bosanma-info-title" data-i18n="bosanma-info-title">Velayet ve Nafaka</h4>
                         <p class="bosanma-info-text">
                             Boşanma sürecinde en hassas konulardan biri çocukların velayeti ve nafaka konusudur.
                             Mahkeme, <strong>çocuğun üstün yararını</strong> gözeterek karar verir.
@@ -753,7 +849,7 @@
                     </div>
 
                     <div class="service-warning">
-                        <h4 class="bosanma-warning-title">⚠️ Unutmayın!</h4>
+                        <h4 class="bosanma-warning-title">Unutmayın!</h4>
                         <ul class="bosanma-warning-list">
                             <li>Mal paylaşımı, boşanma davasından <strong>ayrı bir dava</strong> olarak açılabilir.</li>
                             <li>Boşanma sonrası <strong>soyadı kullanımı, nafaka iptali/artırımı, velayet
@@ -761,6 +857,16 @@
                             <li>Avukat desteği, hem süreci hızlandırır hem de <strong>hak kayıplarınızı önler</strong>.
                             </li>
                         </ul>
+                    </div>
+
+                    <div class="service-detail-btn-wrapper">
+                        <a href="bosanma.html" class="btn btn-detail" data-i18n="detail-btn">
+                            <span>Detaylı Bilgi</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </article>
@@ -792,7 +898,7 @@
 
                     <div class="service-columns">
                         <div class="service-column">
-                            <h4 class="borclar-col1-title" data-i18n="borclar-col1-title">📌 Borçlar Hukuku Hangi
+                            <h4 class="borclar-col1-title" data-i18n="borclar-col1-title">Borçlar Hukuku Hangi
                                 Konuları Kapsar?</h4>
                             <ul class="service-list borclar-col1-list">
                                 <li>Sözleşme hazırlama ve incelenmesi (satış, kira, hizmet, vekâlet, taşeronluk vb.)
@@ -806,7 +912,7 @@
                         </div>
 
                         <div class="service-column">
-                            <h4 class="borclar-col2-title" data-i18n="borclar-col2-title">👥 Kimler İçin Gerekli?</h4>
+                            <h4 class="borclar-col2-title" data-i18n="borclar-col2-title">Kimler İçin Gerekli?</h4>
                             <div class="service-group borclar-col2-group1">
                                 <h5>Bireyler:</h5>
                                 <p>Alacak-verecek ilişkileri, tazminat davaları, hizmet veya kira sözleşmeleriyle ilgili
@@ -818,17 +924,25 @@
                                     yüklenici ilişkileri, teminat ve sorumluluk düzenlemeleri.</p>
                             </div>
                         </div>
-                    </div>
+                        <div class="service-warning">
+                            <h4 class="borclar-warning-title" data-i18n="borclar-warning-title">Neden Önemlidir?</h4>
+                            <p class="borclar-warning-text">
+                                Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava
+                                süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve
+                                bireysel ilişkilerde güven sağlar.
+                            </p>
+                        </div>
 
-                    <div class="service-warning">
-                        <h4 class="borclar-warning-title" data-i18n="borclar-warning-title">⚠️ Neden Önemlidir?</h4>
-                        <p class="borclar-warning-text">
-                            Yanlış veya eksik hazırlanmış bir sözleşme, ileride uzun ve maddi kayıplı dava
-                            süreçlerine yol açabilir. <strong>Güçlü bir hukuki altyapı</strong>, ticari ve
-                            bireysel ilişkilerde güven sağlar.
-                        </p>
+                        <div class="service-detail-btn-wrapper">
+                            <a href="borclar.html" class="btn btn-detail" data-i18n="detail-btn">
+                                <span>Detaylı Bilgi</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
             </article>
         </div>
     </section>
@@ -847,27 +961,56 @@
 
             <div class="why-grid">
                 <div class="why-card" data-index="1">
-                    <div class="why-icon">🚫</div>
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="8.5" cy="7" r="4" />
+                            <path d="M17 11l2 2 4-4" />
+                        </svg>
+                    </div>
                     <h4>Aracı Yok</h4>
                     <p>Üçüncü şahıs aracılığı olmadan doğrudan avukatınızla çalışırsınız. Tüm süreç şeffaf ve net.</p>
                 </div>
                 <div class="why-card" data-index="2">
-                    <div class="why-icon">📞</div>
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
                     <h4>Doğrudan İletişim</h4>
                     <p>Avukatınıza her zaman doğrudan ulaşabilirsiniz. Sorularınız anında yanıtlanır.</p>
                 </div>
                 <div class="why-card" data-index="3">
-                    <div class="why-icon">🎓</div>
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
                     <h4>Türk Hukuku Deneyimi</h4>
                     <p>15 yılı aşkın Türk hukuku deneyimi ve derin bilgi birikimi ile yanınızdayız.</p>
                 </div>
                 <div class="why-card" data-index="4">
-                    <div class="why-icon">🌍</div>
-                    <h4>Almanya & Türkiye</h4>
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h4>Almanya &amp; Türkiye</h4>
                     <p>Her iki ülkede de ofisler ve geniş müvekkil ağı. Nerede olursanız olun ulaşılabilir.</p>
                 </div>
                 <div class="why-card" data-index="5">
-                    <div class="why-icon">⭐</div>
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
                     <h4>Yüksek Memnuniyet</h4>
                     <p>Google değerlendirmelerinde kanıtlanmış yüksek müvekkil memnuniyeti.</p>
                 </div>
@@ -880,7 +1023,12 @@
         <div class="container">
             <div class="vision-grid">
                 <div class="vision-card">
-                    <div class="vision-icon">🔭</div>
+                    <div class="vision-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
                     <h3 class="vision-title" data-i18n="vision-title">VİZYONUMUZ</h3>
                     <p class="vision-text-1" data-i18n="vision-text-1">
                         Hukukun üstünlüğüne ilişkin güçlü bir anlayışla, öncelikli hedefimiz müvekkillerimizin
@@ -899,7 +1047,13 @@
                 </div>
 
                 <div class="vision-card">
-                    <div class="vision-icon">🎯</div>
+                    <div class="vision-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
                     <h3 class="mission-title" data-i18n="mission-title">MİSYONUMUZ</h3>
                     <p class="mission-text-1" data-i18n="mission-text-1">
                         Amacımız, evrensel hukuk ilkelerine bağlı kalarak müvekkillerimizin ihtiyaç ve
@@ -935,7 +1089,13 @@
 
             <div class="process-steps">
                 <div class="process-card">
-                    <div class="process-card-icon">📞</div>
+                    <div class="process-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            style="width:22px;height:22px;color:#c9a962;">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
                     <div class="process-card-number">01</div>
                     <h4 class="process-card-title" data-i18n="process-step1-title">Ücretsiz İlk Görüşme</h4>
                     <p class="process-card-desc" data-i18n="process-step1-desc">Hukuki durumunuzu değerlendirir,
@@ -949,7 +1109,16 @@
                 </div>
 
                 <div class="process-card">
-                    <div class="process-card-icon">📝</div>
+                    <div class="process-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            style="width:22px;height:22px;color:#c9a962;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                    </div>
                     <div class="process-card-number">02</div>
                     <h4 class="process-card-title" data-i18n="process-step2-title">Vekaletname Alımı</h4>
                     <p class="process-card-desc" data-i18n="process-step2-desc">Türk konsolosluğundan vekaletname alarak
@@ -963,7 +1132,14 @@
                 </div>
 
                 <div class="process-card">
-                    <div class="process-card-icon">⚖️</div>
+                    <div class="process-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            style="width:22px;height:22px;color:#c9a962;">
+                            <path d="M12 3v18" />
+                            <path d="M5 6l7-3 7 3" />
+                            <path d="M5 6v6a7 7 0 0 0 7 7 7 7 0 0 0 7-7V6" />
+                        </svg>
+                    </div>
                     <div class="process-card-number">03</div>
                     <h4 class="process-card-title" data-i18n="process-step3-title">Dava Takibi</h4>
                     <p class="process-card-desc" data-i18n="process-step3-desc">Türkiye'deki mahkemelerde sizi temsil
@@ -977,7 +1153,12 @@
                 </div>
 
                 <div class="process-card">
-                    <div class="process-card-icon">🎯</div>
+                    <div class="process-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            style="width:22px;height:22px;color:#c9a962;">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </div>
                     <div class="process-card-number">04</div>
                     <h4 class="process-card-title" data-i18n="process-step4-title">Sonuç ve Teslim</h4>
                     <p class="process-card-desc" data-i18n="process-step4-desc">Davanız sonuçlandığında tüm belgeler

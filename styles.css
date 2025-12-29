@@ -709,6 +709,51 @@ img {
     color: var(--primary);
 }
 
+/* Detay Butonu */
+.btn-detail {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--white);
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(36, 54, 46, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-detail:hover::before {
+    left: 100%;
+}
+
+.btn-detail:hover {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 98, 0.4);
+}
+
+.btn-detail:hover svg {
+    transform: translateX(5px);
+}
+
+.service-detail-btn-wrapper {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
 .btn-full {
     width: 100%;
     justify-content: center;
@@ -1542,8 +1587,30 @@ img {
 }
 
 .why-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(36, 54, 46, 0.08);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.why-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.why-card:hover .why-icon {
+    background: var(--gold);
+}
+
+.why-card:hover .why-icon svg {
+    color: var(--primary-dark);
 }
 
 .why-card h4 {
@@ -1568,39 +1635,50 @@ img {
 
 /* ===== Vision ===== */
 .vision {
-    padding: 6rem 0;
+    padding: 5rem 0;
     background: var(--primary);
 }
 
 .vision-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .vision-card {
-    padding: 3rem;
-    border: 1px solid rgba(201, 169, 98, 0.3);
-    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-left: 3px solid var(--gold);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .vision-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    display: none;
 }
 
 .vision-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--gold);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     letter-spacing: 0.1em;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.vision-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
 }
 
 .vision-card p {
     color: var(--gray-300);
-    font-size: 1rem;
-    line-height: 1.9;
-    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
 }
 
 .vision-card strong {
@@ -1992,6 +2070,113 @@ img {
     .process-connector {
         width: 2px;
         height: 30px;
+    }
+}
+
+/* Process Cards (Alternative Layout) */
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+}
+
+.process-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.process-card:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+}
+
+.process-card-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.process-card-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--gold);
+}
+
+.process-card-number {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.process-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.process-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+}
+
+.process-arrow svg {
+    width: 24px;
+    height: 24px;
+    color: var(--gold);
+}
+
+.process-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        padding: 0.5rem 0;
     }
 }
 
