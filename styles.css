@@ -3184,3 +3184,144 @@ img {
         font-size: 0.9rem;
     }
 }
+
+/* ===== Enhanced Mobile Responsiveness ===== */
+@media (max-width: 480px) {
+
+    /* Improve text contrast on mobile */
+    .about-text p,
+    .service-column p,
+    .service-list li,
+    .service-group p,
+    .faq-answer p,
+    .process-card-desc {
+        color: var(--text);
+        font-size: 0.95rem;
+    }
+
+    /* Service cards mobile improvements */
+    .service-detail {
+        margin-bottom: 1.5rem;
+    }
+
+    .service-header {
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+    }
+
+    .service-icon-large {
+        width: 45px;
+        height: 45px;
+    }
+
+    .service-icon-large svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .service-header-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-header-content p {
+        font-size: 0.85rem;
+    }
+
+    .service-body {
+        padding: 1.25rem;
+    }
+
+    .service-column {
+        margin-bottom: 1.5rem;
+    }
+
+    .service-column h4 {
+        font-size: 1rem;
+    }
+
+    /* Stats icons mobile */
+    .stat-icon svg {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    /* Better button spacing */
+    .service-detail-btn-wrapper {
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+    }
+
+    .btn-detail {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    /* Hero section mobile */
+    .hero-features {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .hero-feature {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    /* Process cards mobile */
+    .process-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .process-card-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .process-card-title {
+        font-size: 1rem;
+    }
+
+    .process-card-desc {
+        font-size: 0.85rem;
+    }
+
+    /* About section mobile */
+    .about-image {
+        order: -1;
+    }
+
+    .image-placeholder {
+        padding: 1.5rem;
+    }
+
+    .placeholder-icon svg {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    /* Footer mobile */
+    .footer-column {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Better touch targets */
+    .nav-link,
+    .dropdown-menu a,
+    .lang-btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
