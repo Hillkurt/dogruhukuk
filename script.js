@@ -317,6 +317,21 @@ const translations = {
         'subpage-cta': '📞 Ücretsiz Danışmanlık',
         'subpage-cta-bottom': '📞 Randevu Al',
 
+        // Cookie Banner (TR)
+        'cookie-logo': 'Çerez Ayarları',
+        'cookie-title': 'Gizlilik Ayarlarınız',
+        'cookie-desc': 'Bu web sitesi, size en iyi deneyimi sunmak için çerezler kullanmaktadır. Hangi çerezlerin kullanılacağını buradan yönetebilirsiniz.',
+        'cookie-privacy-link': 'Gizlilik Politikası',
+        'cookie-essential': 'Temel',
+        'cookie-essential-desc': 'Web sitesinin çalışması için gerekli',
+        'cookie-functional': 'İşlevsel',
+        'cookie-functional-desc': 'Tercihlerinizi hatırlar',
+        'cookie-analytics': 'Analitik',
+        'cookie-analytics-desc': 'Ziyaretçi istatistiklerini toplar',
+        'cookie-accept-all': 'Tümünü Kabul Et',
+        'cookie-deny-all': 'Tümünü Reddet',
+        'cookie-save': 'Ayarları Kaydet',
+
         // Services - Miras (TR)
         'miras-subtitle': 'Miras Hukuku Nedir? Hangi Durumları Kapsar?',
         'miras-intro': 'Miras hukuku, bir kişinin vefatından sonra geride bıraktığı malvarlığının kanuni mirasçılara nasıl geçeceğini düzenleyen hukuk dalıdır. Aile içi paylaşım, vasiyet, mal rejimi, reddi miras gibi pek çok konuyu kapsar.',
@@ -696,6 +711,21 @@ const translations = {
         'subpage-cta': '📞 Kostenlose Beratung',
         'subpage-cta-bottom': '📞 Termin vereinbaren',
 
+        // Cookie Banner (DE)
+        'cookie-logo': 'Cookie-Einstellungen',
+        'cookie-title': 'Ihre Datenschutzeinstellungen',
+        'cookie-desc': 'Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten. Sie können hier verwalten, welche Cookies verwendet werden.',
+        'cookie-privacy-link': 'Datenschutzerklärung',
+        'cookie-essential': 'Erforderlich',
+        'cookie-essential-desc': 'Für den Betrieb der Website notwendig',
+        'cookie-functional': 'Funktional',
+        'cookie-functional-desc': 'Speichert Ihre Präferenzen',
+        'cookie-analytics': 'Statistik',
+        'cookie-analytics-desc': 'Sammelt Besucherstatistiken',
+        'cookie-accept-all': 'Alle akzeptieren',
+        'cookie-deny-all': 'Alle ablehnen',
+        'cookie-save': 'Einstellungen speichern',
+
         // Services - Miras (DE)
         'miras-subtitle': 'Was ist das Erbrecht? Was deckt es ab?',
         'miras-intro': 'Das Erbrecht regelt den Übergang des Vermögens einer Person nach deren Tod auf die gesetzlichen Erben. Es umfasst viele Themen wie die Aufteilung innerhalb der Familie, Testamente, Güterstände und Erbausschlagung.',
@@ -1067,6 +1097,21 @@ const translations = {
         'subpage-footer': '© 2024 DOĞRU Law Firm. All rights reserved.',
         'subpage-cta': '📞 Free Consultation',
         'subpage-cta-bottom': '📞 Book Appointment',
+
+        // Cookie Banner (EN)
+        'cookie-logo': 'Cookie Settings',
+        'cookie-title': 'Your Privacy Settings',
+        'cookie-desc': 'This website uses cookies to provide you with the best experience. You can manage which cookies are used here.',
+        'cookie-privacy-link': 'Privacy Policy',
+        'cookie-essential': 'Essential',
+        'cookie-essential-desc': 'Required for the website to function',
+        'cookie-functional': 'Functional',
+        'cookie-functional-desc': 'Remembers your preferences',
+        'cookie-analytics': 'Analytics',
+        'cookie-analytics-desc': 'Collects visitor statistics',
+        'cookie-accept-all': 'Accept All',
+        'cookie-deny-all': 'Deny All',
+        'cookie-save': 'Save Settings',
 
         // Services - Miras (EN)
         'miras-subtitle': 'What is Inheritance Law? What Does It Cover?',
@@ -2055,3 +2100,97 @@ if (searchBtn && searchModal) {
     });
 }
 
+// ===== Cookie Consent Banner =====
+const cookieOverlay = document.getElementById('cookieOverlay');
+const cookieSettingsBtn = document.getElementById('cookieSettingsBtn');
+const cookieClose = document.getElementById('cookieClose');
+const cookieAcceptAll = document.getElementById('cookieAcceptAll');
+const cookieDenyAll = document.getElementById('cookieDenyAll');
+const cookieSave = document.getElementById('cookieSave');
+const cookieFunctional = document.getElementById('cookieFunctional');
+const cookieAnalytics = document.getElementById('cookieAnalytics');
+
+// Check if cookie consent has been given
+function checkCookieConsent() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent && cookieOverlay) {
+        // Show cookie banner after a short delay
+        setTimeout(() => {
+            cookieOverlay.classList.add('active');
+        }, 1000);
+    }
+}
+
+// Save cookie preferences
+function saveCookiePreferences(functional, analytics) {
+    const preferences = {
+        essential: true, // Always required
+        functional: functional,
+        analytics: analytics,
+        timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+    if (cookieOverlay) {
+        cookieOverlay.classList.remove('active');
+    }
+}
+
+// Cookie button handlers
+if (cookieSettingsBtn) {
+    cookieSettingsBtn.addEventListener('click', () => {
+        if (cookieOverlay) {
+            // Load saved preferences
+            const saved = localStorage.getItem('cookieConsent');
+            if (saved) {
+                const prefs = JSON.parse(saved);
+                if (cookieFunctional) cookieFunctional.checked = prefs.functional;
+                if (cookieAnalytics) cookieAnalytics.checked = prefs.analytics;
+            }
+            cookieOverlay.classList.add('active');
+        }
+    });
+}
+
+if (cookieClose) {
+    cookieClose.addEventListener('click', () => {
+        if (cookieOverlay) {
+            cookieOverlay.classList.remove('active');
+        }
+    });
+}
+
+if (cookieAcceptAll) {
+    cookieAcceptAll.addEventListener('click', () => {
+        if (cookieFunctional) cookieFunctional.checked = true;
+        if (cookieAnalytics) cookieAnalytics.checked = true;
+        saveCookiePreferences(true, true);
+    });
+}
+
+if (cookieDenyAll) {
+    cookieDenyAll.addEventListener('click', () => {
+        if (cookieFunctional) cookieFunctional.checked = false;
+        if (cookieAnalytics) cookieAnalytics.checked = false;
+        saveCookiePreferences(false, false);
+    });
+}
+
+if (cookieSave) {
+    cookieSave.addEventListener('click', () => {
+        const functional = cookieFunctional ? cookieFunctional.checked : false;
+        const analytics = cookieAnalytics ? cookieAnalytics.checked : false;
+        saveCookiePreferences(functional, analytics);
+    });
+}
+
+// Close on overlay click
+if (cookieOverlay) {
+    cookieOverlay.addEventListener('click', (e) => {
+        if (e.target === cookieOverlay) {
+            cookieOverlay.classList.remove('active');
+        }
+    });
+}
+
+// Check consent on page load
+document.addEventListener('DOMContentLoaded', checkCookieConsent);
