@@ -54,31 +54,35 @@ setTimeout(() => {
 // ===== Back to Top Button =====
 const backToTopBtn = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-        backToTopBtn.classList.add('visible');
-    } else {
-        backToTopBtn.classList.remove('visible');
-    }
-});
-
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
     });
-});
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // ===== Header Scroll =====
 const header = document.getElementById('header');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
 
 // ===== Theme Toggle =====
 const themeToggle = document.getElementById('themeToggle');
@@ -87,15 +91,17 @@ let currentTheme = localStorage.getItem('theme') || 'dark';
 // Apply saved theme on load
 document.documentElement.setAttribute('data-theme', currentTheme);
 
-themeToggle.addEventListener('click', () => {
-    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    localStorage.setItem('theme', currentTheme);
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        localStorage.setItem('theme', currentTheme);
 
-    // Show notification
-    const themeNames = { 'dark': 'Koyu Tema', 'light': 'Açık Tema' };
-    showThemeNotification(themeNames[currentTheme] + ' ✓');
-});
+        // Show notification
+        const themeNames = { 'dark': 'Koyu Tema', 'light': 'Açık Tema' };
+        showThemeNotification(themeNames[currentTheme] + ' ✓');
+    });
+}
 
 function showThemeNotification(message) {
     const existing = document.querySelector('.theme-notification');
@@ -304,6 +310,12 @@ const translations = {
         'bosanma-title': 'Boşanma Davaları',
         'borclar-title': 'Borçlar Hukuku',
         'service-cta': 'Randevu Al',
+        'detail-btn': 'Detaylı Bilgi',
+        'back-link': 'Tüm Hukuk Alanları',
+        'subpage-address': 'Mannheim, Almanya & Ankara, Türkiye',
+        'subpage-footer': '© 2024 Doğru Hukuk Bürosu. Tüm hakları saklıdır.',
+        'subpage-cta': '📞 Ücretsiz Danışmanlık',
+        'subpage-cta-bottom': '📞 Randevu Al',
 
         // Services - Miras (TR)
         'miras-subtitle': 'Miras Hukuku Nedir? Hangi Durumları Kapsar?',
@@ -677,6 +689,12 @@ const translations = {
         'bosanma-title': 'Scheidungsverfahren',
         'borclar-title': 'Schuldrecht',
         'service-cta': 'Termin vereinbaren',
+        'detail-btn': 'Detaillierte Informationen',
+        'back-link': 'Alle Rechtsbereiche',
+        'subpage-address': 'Mannheim, Deutschland & Ankara, Türkei',
+        'subpage-footer': '© 2024 DOĞRU Rechtsanwaltskanzlei. Alle Rechte vorbehalten.',
+        'subpage-cta': '📞 Kostenlose Beratung',
+        'subpage-cta-bottom': '📞 Termin vereinbaren',
 
         // Services - Miras (DE)
         'miras-subtitle': 'Was ist das Erbrecht? Was deckt es ab?',
@@ -1043,6 +1061,12 @@ const translations = {
         'bosanma-title': 'Divorce Proceedings',
         'borclar-title': 'Law of Obligations',
         'service-cta': 'Book Appointment',
+        'detail-btn': 'Detailed Information',
+        'back-link': 'All Legal Areas',
+        'subpage-address': 'Mannheim, Germany & Ankara, Turkey',
+        'subpage-footer': '© 2024 DOĞRU Law Firm. All rights reserved.',
+        'subpage-cta': '📞 Free Consultation',
+        'subpage-cta-bottom': '📞 Book Appointment',
 
         // Services - Miras (EN)
         'miras-subtitle': 'What is Inheritance Law? What Does It Cover?',
